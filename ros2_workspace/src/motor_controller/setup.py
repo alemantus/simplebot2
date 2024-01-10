@@ -11,11 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=[
-        'setuptools',
-        'rclpy',
-        'geometry_msgs',
-    ],
+    install_requires=['setuptools'],
     zip_safe=True,
     maintainer='alexander',
     maintainer_email='alexander@todo.todo',
@@ -24,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'kinematics2serial = motor_controller.kinematics2serial:main'
         ],
     },
 )
-

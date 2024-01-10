@@ -9,6 +9,7 @@ docker run --network host \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
+    --device=/dev/ttyACM0 \
     -it \
     ros2 bash
 

@@ -1,0 +1,21 @@
+[8.376s] Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/test_nodes': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/test_nodes build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed
+[10.626s] running egg_info
+[10.634s] writing ../build/test_nodes/test_nodes.egg-info/PKG-INFO
+[10.641s] writing dependency_links to ../build/test_nodes/test_nodes.egg-info/dependency_links.txt
+[10.647s] writing entry points to ../build/test_nodes/test_nodes.egg-info/entry_points.txt
+[10.652s] writing requirements to ../build/test_nodes/test_nodes.egg-info/requires.txt
+[10.657s] writing top-level names to ../build/test_nodes/test_nodes.egg-info/top_level.txt
+[10.689s] reading manifest file '../build/test_nodes/test_nodes.egg-info/SOURCES.txt'
+[10.703s] writing manifest file '../build/test_nodes/test_nodes.egg-info/SOURCES.txt'
+[10.709s] running build
+[10.712s] running build_py
+[10.718s] running install
+[10.724s] running install_lib
+[10.735s] running install_data
+[10.742s] running install_egg_info
+[10.756s] removing '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes-0.0.0-py3.6.egg-info' (and everything under it)
+[10.769s] Copying ../build/test_nodes/test_nodes.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes-0.0.0-py3.6.egg-info
+[10.797s] running install_scripts
+[10.938s] Installing send_cmd_vel script to /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/test_nodes
+[10.956s] writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log'
+[11.164s] Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/test_nodes' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/test_nodes build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed

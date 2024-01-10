@@ -1,0 +1,165 @@
+[0.000000] (-) TimerEvent: {}
+[0.001438] (motor_controller) JobQueued: {'identifier': 'motor_controller', 'dependencies': OrderedDict()}
+[0.001724] (test_nodes) JobQueued: {'identifier': 'test_nodes', 'dependencies': OrderedDict()}
+[0.005217] (motor_controller) JobStarted: {'identifier': 'motor_controller'}
+[0.097360] (-) TimerEvent: {}
+[0.139482] (test_nodes) JobStarted: {'identifier': 'test_nodes'}
+[0.197577] (-) TimerEvent: {}
+[0.299615] (-) TimerEvent: {}
+[0.404139] (-) TimerEvent: {}
+[0.505076] (-) TimerEvent: {}
+[0.606024] (-) TimerEvent: {}
+[0.707033] (-) TimerEvent: {}
+[0.808089] (-) TimerEvent: {}
+[0.909037] (-) TimerEvent: {}
+[1.010018] (-) TimerEvent: {}
+[1.111036] (-) TimerEvent: {}
+[1.212022] (-) TimerEvent: {}
+[1.312995] (-) TimerEvent: {}
+[1.413935] (-) TimerEvent: {}
+[1.514854] (-) TimerEvent: {}
+[1.615845] (-) TimerEvent: {}
+[1.716841] (-) TimerEvent: {}
+[1.817844] (-) TimerEvent: {}
+[1.918848] (-) TimerEvent: {}
+[2.019843] (-) TimerEvent: {}
+[2.120816] (-) TimerEvent: {}
+[2.221750] (-) TimerEvent: {}
+[2.322828] (-) TimerEvent: {}
+[2.423839] (-) TimerEvent: {}
+[2.526158] (-) TimerEvent: {}
+[2.630573] (-) TimerEvent: {}
+[2.734393] (-) TimerEvent: {}
+[2.835388] (-) TimerEvent: {}
+[2.936396] (-) TimerEvent: {}
+[3.037335] (-) TimerEvent: {}
+[3.138333] (-) TimerEvent: {}
+[3.239314] (-) TimerEvent: {}
+[3.340278] (-) TimerEvent: {}
+[3.441199] (-) TimerEvent: {}
+[3.542187] (-) TimerEvent: {}
+[3.643167] (-) TimerEvent: {}
+[3.744188] (-) TimerEvent: {}
+[3.845229] (-) TimerEvent: {}
+[3.946222] (-) TimerEvent: {}
+[4.047202] (-) TimerEvent: {}
+[4.149998] (-) TimerEvent: {}
+[4.251001] (-) TimerEvent: {}
+[4.351953] (-) TimerEvent: {}
+[4.452855] (-) TimerEvent: {}
+[4.553847] (-) TimerEvent: {}
+[4.654878] (-) TimerEvent: {}
+[4.756989] (-) TimerEvent: {}
+[4.860627] (-) TimerEvent: {}
+[4.964111] (-) TimerEvent: {}
+[5.067540] (-) TimerEvent: {}
+[5.171497] (-) TimerEvent: {}
+[5.276594] (-) TimerEvent: {}
+[5.382526] (-) TimerEvent: {}
+[5.485196] (-) TimerEvent: {}
+[5.589353] (-) TimerEvent: {}
+[5.693313] (-) TimerEvent: {}
+[5.797184] (-) TimerEvent: {}
+[5.901307] (-) TimerEvent: {}
+[6.005209] (-) TimerEvent: {}
+[6.109105] (-) TimerEvent: {}
+[6.216475] (-) TimerEvent: {}
+[6.321247] (-) TimerEvent: {}
+[6.428164] (-) TimerEvent: {}
+[6.531983] (-) TimerEvent: {}
+[6.635609] (-) TimerEvent: {}
+[6.739151] (-) TimerEvent: {}
+[6.843034] (-) TimerEvent: {}
+[6.946956] (-) TimerEvent: {}
+[7.050774] (-) TimerEvent: {}
+[7.154619] (-) TimerEvent: {}
+[7.258493] (-) TimerEvent: {}
+[7.362374] (-) TimerEvent: {}
+[7.466362] (-) TimerEvent: {}
+[7.570334] (-) TimerEvent: {}
+[7.674278] (-) TimerEvent: {}
+[7.778299] (-) TimerEvent: {}
+[7.882333] (-) TimerEvent: {}
+[7.986302] (-) TimerEvent: {}
+[8.090394] (-) TimerEvent: {}
+[8.194791] (-) TimerEvent: {}
+[8.256855] (test_nodes) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/test_nodes', 'build', '--build-base', '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build', 'install', '--record', '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/Documents/simplebot2/ros2_workspace/test_nodes', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'jetson', 'LD_LIBRARY_PATH': '/opt/ros/galactic/install/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:', 'SHLVL': '1', 'HOME': '/home/alexander', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/home/alexander/Documents/simplebot2/ros2_workspace/install:/opt/ros/galactic/install', 'ROS_DISTRO': 'galactic', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'PKG_CONFIG_PATH': '/opt/ros/galactic/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/galactic/install/lib/pkgconfig', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/galactic/install/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_ROOT': '/opt/ros/galactic', 'AMENT_PREFIX_PATH': '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller:/opt/ros/galactic/install', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'PWD': '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes', 'PYTHONPATH': '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:/opt/ros/galactic/install/lib/python3.6/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/galactic/install'}, 'shell': False}
+[8.302689] (motor_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_controller', 'build', '--build-base', '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build', 'install', '--record', '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'jetson', 'LD_LIBRARY_PATH': '/opt/ros/galactic/install/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/install/lib:/usr/local/cuda-10.2/targets/aarch64-linux/lib:', 'SHLVL': '1', 'HOME': '/home/alexander', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/home/alexander/Documents/simplebot2/ros2_workspace/install:/opt/ros/galactic/install', 'ROS_DISTRO': 'galactic', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'PKG_CONFIG_PATH': '/opt/ros/galactic/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/galactic/install/lib/pkgconfig', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/galactic/install/bin:/usr/local/cuda-10.2/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_ROOT': '/opt/ros/galactic', 'AMENT_PREFIX_PATH': '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller:/opt/ros/galactic/install', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'PWD': '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller', 'PYTHONPATH': '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:/opt/ros/galactic/install/lib/python3.6/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/galactic/install'}, 'shell': False}
+[8.323895] (-) TimerEvent: {}
+[8.429919] (-) TimerEvent: {}
+[8.534098] (-) TimerEvent: {}
+[8.637838] (-) TimerEvent: {}
+[8.741056] (-) TimerEvent: {}
+[8.844237] (-) TimerEvent: {}
+[8.947440] (-) TimerEvent: {}
+[9.050683] (-) TimerEvent: {}
+[9.153703] (-) TimerEvent: {}
+[9.256945] (-) TimerEvent: {}
+[9.361048] (-) TimerEvent: {}
+[9.465096] (-) TimerEvent: {}
+[9.568979] (-) TimerEvent: {}
+[9.672831] (-) TimerEvent: {}
+[9.776700] (-) TimerEvent: {}
+[9.880665] (-) TimerEvent: {}
+[9.984568] (-) TimerEvent: {}
+[10.086669] (-) TimerEvent: {}
+[10.190782] (-) TimerEvent: {}
+[10.293450] (-) TimerEvent: {}
+[10.398636] (-) TimerEvent: {}
+[10.474508] (test_nodes) StdoutLine: {'line': b'running egg_info\n'}
+[10.486799] (test_nodes) StdoutLine: {'line': b'writing ../build/test_nodes/test_nodes.egg-info/PKG-INFO\n'}
+[10.495565] (test_nodes) StdoutLine: {'line': b'writing dependency_links to ../build/test_nodes/test_nodes.egg-info/dependency_links.txt\n'}
+[10.500267] (-) TimerEvent: {}
+[10.506940] (test_nodes) StdoutLine: {'line': b'writing entry points to ../build/test_nodes/test_nodes.egg-info/entry_points.txt\n'}
+[10.515375] (test_nodes) StdoutLine: {'line': b'writing requirements to ../build/test_nodes/test_nodes.egg-info/requires.txt\n'}
+[10.520772] (test_nodes) StdoutLine: {'line': b'writing top-level names to ../build/test_nodes/test_nodes.egg-info/top_level.txt\n'}
+[10.546531] (test_nodes) StdoutLine: {'line': b"reading manifest file '../build/test_nodes/test_nodes.egg-info/SOURCES.txt'\n"}
+[10.562895] (test_nodes) StdoutLine: {'line': b"writing manifest file '../build/test_nodes/test_nodes.egg-info/SOURCES.txt'\n"}
+[10.570750] (test_nodes) StdoutLine: {'line': b'running build\n'}
+[10.575833] (test_nodes) StdoutLine: {'line': b'running build_py\n'}
+[10.581934] (test_nodes) StdoutLine: {'line': b'copying test_nodes/send_cmd_vel.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build/lib/test_nodes\n'}
+[10.587957] (test_nodes) StdoutLine: {'line': b'running install\n'}
+[10.595056] (test_nodes) StdoutLine: {'line': b'running install_lib\n'}
+[10.600450] (-) TimerEvent: {}
+[10.609831] (test_nodes) StdoutLine: {'line': b'copying /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build/lib/test_nodes/send_cmd_vel.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes\n'}
+[10.623639] (test_nodes) StdoutLine: {'line': b'byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes/send_cmd_vel.py to send_cmd_vel.cpython-36.pyc\n'}
+[10.638913] (test_nodes) StdoutLine: {'line': b'running install_data\n'}
+[10.647181] (test_nodes) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.652144] (motor_controller) StdoutLine: {'line': b'running egg_info\n'}
+[10.657162] (motor_controller) StdoutLine: {'line': b'writing ../../build/motor_controller/motor_controller.egg-info/PKG-INFO\n'}
+[10.658228] (motor_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/motor_controller/motor_controller.egg-info/dependency_links.txt\n'}
+[10.664516] (motor_controller) StdoutLine: {'line': b'writing entry points to ../../build/motor_controller/motor_controller.egg-info/entry_points.txt\n'}
+[10.665344] (motor_controller) StdoutLine: {'line': b'writing requirements to ../../build/motor_controller/motor_controller.egg-info/requires.txt\n'}
+[10.666092] (motor_controller) StdoutLine: {'line': b'writing top-level names to ../../build/motor_controller/motor_controller.egg-info/top_level.txt\n'}
+[10.684221] (motor_controller) StdoutLine: {'line': b"reading manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'\n"}
+[10.700395] (motor_controller) StdoutLine: {'line': b"writing manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'\n"}
+[10.701305] (-) TimerEvent: {}
+[10.701980] (motor_controller) StdoutLine: {'line': b'running build\n'}
+[10.702841] (motor_controller) StdoutLine: {'line': b'running build_py\n'}
+[10.703651] (motor_controller) StdoutLine: {'line': b'running install\n'}
+[10.712754] (motor_controller) StdoutLine: {'line': b'running install_lib\n'}
+[10.713615] (test_nodes) StdoutLine: {'line': b"removing '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[10.719262] (motor_controller) StdoutLine: {'line': b'running install_data\n'}
+[10.722754] (test_nodes) StdoutLine: {'line': b'Copying ../build/test_nodes/test_nodes.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages/test_nodes-0.0.0-py3.6.egg-info\n'}
+[10.723634] (motor_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[10.740759] (test_nodes) StdoutLine: {'line': b'running install_scripts\n'}
+[10.756468] (motor_controller) StdoutLine: {'line': b"removing '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages/motor_controller-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[10.757401] (motor_controller) StdoutLine: {'line': b'Copying ../../build/motor_controller/motor_controller.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages/motor_controller-0.0.0-py3.6.egg-info\n'}
+[10.771886] (motor_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[10.804280] (-) TimerEvent: {}
+[10.906583] (-) TimerEvent: {}
+[10.989988] (motor_controller) StdoutLine: {'line': b'Installing kinematics2serial script to /home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/motor_controller\n'}
+[10.996992] (motor_controller) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log'\n"}
+[11.006813] (-) TimerEvent: {}
+[11.023817] (test_nodes) StdoutLine: {'line': b'Installing send_cmd_vel script to /home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/test_nodes\n'}
+[11.031778] (test_nodes) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log'\n"}
+[11.112260] (-) TimerEvent: {}
+[11.216248] (motor_controller) CommandEnded: {'returncode': 0}
+[11.218626] (-) TimerEvent: {}
+[11.332663] (-) TimerEvent: {}
+[11.431203] (motor_controller) JobEnded: {'identifier': 'motor_controller', 'rc': 0}
+[11.435202] (-) TimerEvent: {}
+[11.444254] (test_nodes) CommandEnded: {'returncode': 0}
+[11.526273] (test_nodes) JobEnded: {'identifier': 'test_nodes', 'rc': 0}
+[11.536835] (-) TimerEvent: {}
+[11.546354] (-) EventReactorShutdown: {}
