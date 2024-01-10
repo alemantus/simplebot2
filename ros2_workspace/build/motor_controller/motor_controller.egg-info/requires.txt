@@ -1,0 +1,3 @@
+setuptools
+rclpy
+geometry_msgs

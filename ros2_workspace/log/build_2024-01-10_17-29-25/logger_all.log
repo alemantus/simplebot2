@@ -1,0 +1,124 @@
+[2.746s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.747s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb565ed30>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb565ed30>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb566f0b8>)
+[2.878s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.879s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.879s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.880s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.880s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.882s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.882s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alexander/Documents/simplebot2/ros2_workspace'
+[2.883s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.884s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.884s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.885s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.885s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.886s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.887s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.179s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.181s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.182s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.183s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.183s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.187s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.188s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.189s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.190s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.191s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.191s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.192s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.193s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.193s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.194s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.195s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.196s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['ignore', 'ignore_ament_install']
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ignore'
+[3.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ignore_ament_install'
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['colcon_pkg']
+[3.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'colcon_pkg'
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['colcon_meta']
+[3.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'colcon_meta'
+[3.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['ros']
+[3.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ros'
+[3.220s] DEBUG:colcon.colcon_core.package_identification:Package 'src/motor_controller' with type 'ros.ament_python' and name 'motor_controller'
+[3.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.376s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_args' from command line to 'None'
+[3.376s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_target' from command line to 'None'
+[3.377s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.377s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[3.377s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_clean_first' from command line to 'False'
+[3.378s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_force_configure' from command line to 'False'
+[3.378s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'ament_cmake_args' from command line to 'None'
+[3.379s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[3.379s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.379s] DEBUG:colcon.colcon_core.verb:Building package 'motor_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller', 'merge_install': False, 'path': '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller', 'symlink_install': False, 'test_result_base': None}
+[3.381s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.391s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.393s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller' with build type 'ament_python'
+[3.394s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_controller', 'ament_prefix_path')
+[3.411s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.ps1'
+[3.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.dsv'
+[3.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.sh'
+[3.428s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.698s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller'
+[5.701s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.701s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.010s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[11.422s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[11.440s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller' for CMake module files
+[11.446s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller' for CMake config files
+[11.453s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib'
+[11.454s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/bin'
+[11.455s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/pkgconfig/motor_controller.pc'
+[11.457s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages'
+[11.457s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_controller', 'pythonpath')
+[11.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.ps1'
+[11.462s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.dsv'
+[11.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.sh'
+[11.468s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/bin'
+[11.468s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_controller)
+[11.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.ps1'
+[11.479s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.dsv'
+[11.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.sh'
+[11.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.bash'
+[11.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.zsh'
+[11.506s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/colcon-core/packages/motor_controller)
+[11.510s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.512s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.513s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.513s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.562s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[11.563s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.564s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.564s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[11.565s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[11.566s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[11.568s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.ps1'
+[11.577s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alexander/Documents/simplebot2/ros2_workspace/install/_local_setup_util_ps1.py'
+[11.592s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.ps1'
+[11.600s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.sh'
+[11.605s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alexander/Documents/simplebot2/ros2_workspace/install/_local_setup_util_sh.py'
+[11.608s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.sh'
+[11.617s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.bash'
+[11.621s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.bash'
+[11.630s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.zsh'
+[11.636s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.zsh'
