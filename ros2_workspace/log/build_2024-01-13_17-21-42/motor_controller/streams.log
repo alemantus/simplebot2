@@ -1,0 +1,21 @@
+[8.558s] Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[10.819s] running egg_info
+[10.826s] writing ../../build/motor_controller/motor_controller.egg-info/PKG-INFO
+[10.829s] writing dependency_links to ../../build/motor_controller/motor_controller.egg-info/dependency_links.txt
+[10.832s] writing entry points to ../../build/motor_controller/motor_controller.egg-info/entry_points.txt
+[10.834s] writing requirements to ../../build/motor_controller/motor_controller.egg-info/requires.txt
+[10.836s] writing top-level names to ../../build/motor_controller/motor_controller.egg-info/top_level.txt
+[10.863s] reading manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'
+[10.876s] writing manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'
+[10.878s] running build
+[10.879s] running build_py
+[10.883s] running install
+[10.889s] running install_lib
+[10.903s] running install_data
+[10.912s] running install_egg_info
+[10.925s] removing '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages/motor_controller-0.0.0-py3.6.egg-info' (and everything under it)
+[10.929s] Copying ../../build/motor_controller/motor_controller.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages/motor_controller-0.0.0-py3.6.egg-info
+[10.942s] running install_scripts
+[11.170s] Installing kinematics2serial script to /home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/motor_controller
+[11.178s] writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log'
+[11.344s] Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed

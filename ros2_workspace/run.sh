@@ -10,6 +10,7 @@ docker run --network host \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
     --device=/dev/ttyACM0 \
+    --device=/dev/input/js0 \
     -it \
     ros2 bash
 

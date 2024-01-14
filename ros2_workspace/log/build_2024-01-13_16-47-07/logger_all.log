@@ -1,0 +1,256 @@
+[2.633s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.634s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f83a4f518>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=2, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f83a4f518>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f83a4f860>)
+[2.763s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.767s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.767s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alexander/Documents/simplebot2/ros2_workspace'
+[2.768s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.769s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.769s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.770s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.770s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.770s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.771s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.771s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.771s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.054s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.054s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.055s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.056s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.056s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.059s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.060s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.060s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.061s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.062s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.063s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.063s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.064s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.064s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.065s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.065s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.066s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.066s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.066s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.067s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.067s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.068s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.069s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extensions ['ignore', 'ignore_ament_install']
+[3.070s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extension 'ignore'
+[3.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extension 'ignore_ament_install'
+[3.071s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extensions ['colcon_pkg']
+[3.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extension 'colcon_pkg'
+[3.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extensions ['colcon_meta']
+[3.072s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extension 'colcon_meta'
+[3.073s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extensions ['ros']
+[3.073s] Level 1:colcon.colcon_core.package_identification:_identify(src/ds4_driver) by extension 'ros'
+[3.093s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ds4_driver' with type 'ros.ament_cmake' and name 'ds4_driver'
+[3.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['ignore', 'ignore_ament_install']
+[3.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ignore'
+[3.095s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ignore_ament_install'
+[3.095s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['colcon_pkg']
+[3.096s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'colcon_pkg'
+[3.096s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['colcon_meta']
+[3.096s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'colcon_meta'
+[3.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extensions ['ros']
+[3.097s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_controller) by extension 'ros'
+[3.101s] DEBUG:colcon.colcon_core.package_identification:Package 'src/motor_controller' with type 'ros.ament_python' and name 'motor_controller'
+[3.101s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extensions ['ignore', 'ignore_ament_install']
+[3.102s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extension 'ignore'
+[3.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extension 'ignore_ament_install'
+[3.103s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extensions ['colcon_pkg']
+[3.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extension 'colcon_pkg'
+[3.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extensions ['colcon_meta']
+[3.104s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extension 'colcon_meta'
+[3.105s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extensions ['ros']
+[3.105s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_nodes) by extension 'ros'
+[3.108s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_nodes' with type 'ros.ament_python' and name 'test_nodes'
+[3.109s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.110s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.111s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.111s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.111s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.261s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_args' from command line to 'None'
+[3.262s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_target' from command line to 'None'
+[3.262s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.263s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[3.263s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_clean_first' from command line to 'False'
+[3.263s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'cmake_force_configure' from command line to 'False'
+[3.263s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'ament_cmake_args' from command line to 'None'
+[3.264s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[3.264s] Level 5:colcon.colcon_core.verb:set package 'ds4_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.264s] DEBUG:colcon.colcon_core.verb:Building package 'ds4_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver', 'merge_install': False, 'path': '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver', 'symlink_install': False, 'test_result_base': None}
+[3.269s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_args' from command line to 'None'
+[3.269s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_target' from command line to 'None'
+[3.269s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.270s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[3.270s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_clean_first' from command line to 'False'
+[3.270s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'cmake_force_configure' from command line to 'False'
+[3.271s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'ament_cmake_args' from command line to 'None'
+[3.271s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[3.271s] Level 5:colcon.colcon_core.verb:set package 'motor_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.272s] DEBUG:colcon.colcon_core.verb:Building package 'motor_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller', 'merge_install': False, 'path': '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller', 'symlink_install': False, 'test_result_base': None}
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_args' from command line to 'None'
+[3.276s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_target' from command line to 'None'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[3.277s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[3.278s] Level 5:colcon.colcon_core.verb:set package 'test_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.279s] DEBUG:colcon.colcon_core.verb:Building package 'test_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes', 'merge_install': False, 'path': '/home/alexander/Documents/simplebot2/ros2_workspace/src/test_nodes', 'symlink_install': False, 'test_result_base': None}
+[3.280s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.288s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.290s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver' with build type 'ament_cmake'
+[3.293s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver'
+[3.316s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.318s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.318s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.405s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller' with build type 'ament_python'
+[3.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_controller', 'ament_prefix_path')
+[3.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.ps1'
+[3.421s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.dsv'
+[3.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/ament_prefix_path.sh'
+[3.431s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.432s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake /home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver -DCMAKE_INSTALL_PREFIX=/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver
+[6.218s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller'
+[6.222s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.223s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[13.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/motor_controller' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[13.650s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller' for CMake module files
+[13.656s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller' for CMake config files
+[13.664s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib'
+[13.666s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/bin'
+[13.668s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/pkgconfig/motor_controller.pc'
+[13.670s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/lib/python3.6/site-packages'
+[13.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_controller', 'pythonpath')
+[13.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.ps1'
+[13.679s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.dsv'
+[13.682s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/hook/pythonpath.sh'
+[13.687s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/bin'
+[13.688s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_controller)
+[13.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.ps1'
+[13.702s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.dsv'
+[13.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.sh'
+[13.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.bash'
+[13.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/motor_controller/package.zsh'
+[13.736s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller/share/colcon-core/packages/motor_controller)
+[13.750s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/test_nodes' with build type 'ament_python'
+[13.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_nodes', 'ament_prefix_path')
+[13.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/ament_prefix_path.ps1'
+[13.764s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/ament_prefix_path.dsv'
+[13.767s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/ament_prefix_path.sh'
+[13.772s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.773s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[16.493s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alexander/Documents/simplebot2/ros2_workspace/src/test_nodes'
+[16.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[16.498s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[20.209s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/test_nodes': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_nodes build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed
+[23.511s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes' for CMake module files
+[23.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/test_nodes' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_nodes build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed
+[23.525s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes' for CMake config files
+[23.541s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib'
+[23.543s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/bin'
+[23.547s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/pkgconfig/test_nodes.pc'
+[23.549s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/lib/python3.6/site-packages'
+[23.550s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_nodes', 'pythonpath')
+[23.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/pythonpath.ps1'
+[23.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/pythonpath.dsv'
+[23.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/hook/pythonpath.sh'
+[23.588s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/bin'
+[23.589s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_nodes)
+[23.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/package.ps1'
+[23.619s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/package.dsv'
+[23.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/package.sh'
+[23.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/package.bash'
+[23.655s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/test_nodes/package.zsh'
+[23.666s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes/share/colcon-core/packages/test_nodes)
+[25.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake /home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver -DCMAKE_INSTALL_PREFIX=/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver
+[25.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake --build /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver -- -j2 -l2
+[120.365s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake --build /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver -- -j2 -l2
+[121.525s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake --install /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver
+[122.813s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ds4_driver)
+[122.816s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver' for CMake module files
+[122.822s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/Documents/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/Documents/simplebot2/ros2_workspace/install/motor_controller /usr/local/bin/cmake --install /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4_driver
+[122.826s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver' for CMake config files
+[122.833s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'cmake_prefix_path')
+[122.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.ps1'
+[122.839s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.dsv'
+[122.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.sh'
+[122.846s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib'
+[122.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'ld_library_path_lib')
+[122.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.ps1'
+[122.851s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.dsv'
+[122.853s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.sh'
+[122.855s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/bin'
+[122.856s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib/pkgconfig/ds4_driver.pc'
+[122.857s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages'
+[122.858s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'pythonpath')
+[122.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.ps1'
+[122.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.dsv'
+[122.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.sh'
+[122.868s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/bin'
+[122.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.ps1'
+[122.876s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.dsv'
+[122.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.sh'
+[122.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.bash'
+[122.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.zsh'
+[122.889s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/colcon-core/packages/ds4_driver)
+[123.610s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ds4_driver)
+[123.612s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver' for CMake module files
+[123.620s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver' for CMake config files
+[123.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'cmake_prefix_path')
+[123.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.ps1'
+[123.637s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.dsv'
+[123.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/cmake_prefix_path.sh'
+[123.645s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib'
+[123.646s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'ld_library_path_lib')
+[123.648s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.ps1'
+[123.651s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.dsv'
+[123.653s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/ld_library_path_lib.sh'
+[123.656s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/bin'
+[123.656s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib/pkgconfig/ds4_driver.pc'
+[123.658s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages'
+[123.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('ds4_driver', 'pythonpath')
+[123.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.ps1'
+[123.663s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.dsv'
+[123.665s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/hook/pythonpath.sh'
+[123.669s] Level 1:colcon.colcon_core.environment:checking '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/bin'
+[123.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.ps1'
+[123.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.dsv'
+[123.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.sh'
+[123.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.bash'
+[123.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/ds4_driver/package.zsh'
+[123.693s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4_driver/share/colcon-core/packages/ds4_driver)
+[123.695s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[123.702s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[123.702s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[123.703s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[123.753s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[123.755s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[123.757s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[123.757s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[123.758s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[123.758s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[123.761s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.ps1'
+[123.771s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alexander/Documents/simplebot2/ros2_workspace/install/_local_setup_util_ps1.py'
+[123.786s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.ps1'
+[123.795s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.sh'
+[123.800s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alexander/Documents/simplebot2/ros2_workspace/install/_local_setup_util_sh.py'
+[123.803s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.sh'
+[123.813s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.bash'
+[123.817s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.bash'
+[123.826s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alexander/Documents/simplebot2/ros2_workspace/install/local_setup.zsh'
+[123.830s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alexander/Documents/simplebot2/ros2_workspace/install/setup.zsh'

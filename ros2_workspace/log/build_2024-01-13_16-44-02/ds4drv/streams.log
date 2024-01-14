@@ -1,0 +1,22 @@
+[8.375s] Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4drv': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ds4drv build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log --single-version-externally-managed
+[10.624s] running egg_info
+[10.633s] writing ../../build/ds4drv/ds4drv.egg-info/PKG-INFO
+[10.636s] writing dependency_links to ../../build/ds4drv/ds4drv.egg-info/dependency_links.txt
+[10.639s] writing entry points to ../../build/ds4drv/ds4drv.egg-info/entry_points.txt
+[10.640s] writing requirements to ../../build/ds4drv/ds4drv.egg-info/requires.txt
+[10.641s] writing top-level names to ../../build/ds4drv/ds4drv.egg-info/top_level.txt
+[10.655s] reading manifest file '../../build/ds4drv/ds4drv.egg-info/SOURCES.txt'
+[10.658s] reading manifest template 'MANIFEST.in'
+[10.661s] adding license file 'LICENSE'
+[10.673s] writing manifest file '../../build/ds4drv/ds4drv.egg-info/SOURCES.txt'
+[10.679s] running build
+[10.683s] running build_py
+[10.692s] running install
+[10.695s] running install_lib
+[10.716s] running install_egg_info
+[10.727s] removing '/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv-0.5.1-py3.6.egg-info' (and everything under it)
+[10.731s] Copying ../../build/ds4drv/ds4drv.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv-0.5.1-py3.6.egg-info
+[10.735s] running install_scripts
+[11.022s] Installing ds4drv script to /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/ds4drv
+[11.033s] writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log'
+[11.289s] Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4drv' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ds4drv build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log --single-version-externally-managed

@@ -1,0 +1,9 @@
+{
+  "package_name": "ds4_driver",
+  "non_idl_tuples": [
+    "/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver:msg/Feedback.msg",
+    "/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver:msg/Status.msg",
+    "/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver:msg/Report.msg",
+    "/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4_driver:msg/Trackpad.msg"
+  ]
+}

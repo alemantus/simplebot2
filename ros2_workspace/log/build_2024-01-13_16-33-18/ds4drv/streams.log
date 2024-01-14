@@ -1,0 +1,108 @@
+[6.115s] Invoking command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4drv': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ds4drv build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log --single-version-externally-managed
+[8.261s] running egg_info
+[8.269s] creating ../../build/ds4drv/ds4drv.egg-info
+[8.275s] writing ../../build/ds4drv/ds4drv.egg-info/PKG-INFO
+[8.280s] writing dependency_links to ../../build/ds4drv/ds4drv.egg-info/dependency_links.txt
+[8.286s] writing entry points to ../../build/ds4drv/ds4drv.egg-info/entry_points.txt
+[8.292s] writing requirements to ../../build/ds4drv/ds4drv.egg-info/requires.txt
+[8.297s] writing top-level names to ../../build/ds4drv/ds4drv.egg-info/top_level.txt
+[8.311s] writing manifest file '../../build/ds4drv/ds4drv.egg-info/SOURCES.txt'
+[8.329s] reading manifest file '../../build/ds4drv/ds4drv.egg-info/SOURCES.txt'
+[8.333s] reading manifest template 'MANIFEST.in'
+[8.339s] adding license file 'LICENSE'
+[8.355s] writing manifest file '../../build/ds4drv/ds4drv.egg-info/SOURCES.txt'
+[8.361s] running build
+[8.364s] running build_py
+[8.369s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build
+[8.372s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib
+[8.376s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.380s] copying ds4drv/__main__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.386s] copying ds4drv/device.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.391s] copying ds4drv/logger.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.397s] copying ds4drv/utils.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.404s] copying ds4drv/backend.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.410s] copying ds4drv/action.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.418s] copying ds4drv/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.421s] copying ds4drv/daemon.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.428s] copying ds4drv/exceptions.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.435s] copying ds4drv/config.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.442s] copying ds4drv/eventloop.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.453s] copying ds4drv/uinput.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv
+[8.459s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.463s] copying ds4drv/actions/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.469s] copying ds4drv/actions/status.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.475s] copying ds4drv/actions/btsignal.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.486s] copying ds4drv/actions/battery.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.492s] copying ds4drv/actions/binding.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.498s] copying ds4drv/actions/input.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.504s] copying ds4drv/actions/dump.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.509s] copying ds4drv/actions/led.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions
+[8.516s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends
+[8.520s] copying ds4drv/backends/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends
+[8.526s] copying ds4drv/backends/hidraw.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends
+[8.533s] copying ds4drv/backends/bluetooth.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends
+[8.540s] creating /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/packages
+[8.544s] copying ds4drv/packages/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/packages
+[8.554s] copying ds4drv/packages/timerfd.py -> /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/packages
+[8.566s] running install
+[8.572s] running install_lib
+[8.580s] creating /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.584s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/__main__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.589s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/device.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.593s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/logger.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.597s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/utils.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.602s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backend.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.606s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/action.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.611s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.614s] creating /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends
+[8.622s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends
+[8.623s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends/hidraw.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends
+[8.624s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/backends/bluetooth.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends
+[8.626s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/daemon.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.640s] creating /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.641s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.642s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/status.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.642s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/btsignal.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.643s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/battery.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.644s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/binding.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.645s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/input.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.645s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/dump.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.661s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/actions/led.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions
+[8.670s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/exceptions.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.672s] creating /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/packages
+[8.674s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/packages/__init__.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/packages
+[8.676s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/packages/timerfd.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/packages
+[8.678s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/config.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.680s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/eventloop.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.682s] copying /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build/lib/ds4drv/uinput.py -> /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv
+[8.695s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/__main__.py to __main__.cpython-36.pyc
+[8.713s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/device.py to device.cpython-36.pyc
+[8.727s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/logger.py to logger.cpython-36.pyc
+[8.740s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/utils.py to utils.cpython-36.pyc
+[8.744s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backend.py to backend.cpython-36.pyc
+[8.753s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/action.py to action.cpython-36.pyc
+[8.760s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/__init__.py to __init__.cpython-36.pyc
+[8.766s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends/__init__.py to __init__.cpython-36.pyc
+[8.778s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends/hidraw.py to hidraw.cpython-36.pyc
+[8.802s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/backends/bluetooth.py to bluetooth.cpython-36.pyc
+[8.809s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/daemon.py to daemon.cpython-36.pyc
+[8.817s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/__init__.py to __init__.cpython-36.pyc
+[8.822s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/status.py to status.cpython-36.pyc
+[8.828s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/btsignal.py to btsignal.cpython-36.pyc
+[8.835s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/battery.py to battery.cpython-36.pyc
+[8.853s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/binding.py to binding.cpython-36.pyc
+[8.875s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/input.py to input.cpython-36.pyc
+[8.885s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/dump.py to dump.cpython-36.pyc
+[8.899s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/actions/led.py to led.cpython-36.pyc
+[8.908s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/exceptions.py to exceptions.cpython-36.pyc
+[8.918s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/packages/__init__.py to __init__.cpython-36.pyc
+[8.926s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/packages/timerfd.py to timerfd.cpython-36.pyc
+[8.932s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/config.py to config.cpython-36.pyc
+[8.972s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/eventloop.py to eventloop.cpython-36.pyc
+[8.991s] byte-compiling /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv/uinput.py to uinput.cpython-36.pyc
+[9.039s] running install_egg_info
+[9.067s] Copying ../../build/ds4drv/ds4drv.egg-info to /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages/ds4drv-0.5.1-py3.6.egg-info
+[9.091s] running install_scripts
+[9.479s] Installing ds4drv script to /home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/bin
+[9.499s] writing list of installed files to '/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log'
+[9.784s] Invoked command in '/home/alexander/Documents/simplebot2/ros2_workspace/src/ds4drv' returned '0': PYTHONPATH=/home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/prefix_override:/home/alexander/Documents/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/ds4drv build --build-base /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/build install --record /home/alexander/Documents/simplebot2/ros2_workspace/build/ds4drv/install.log --single-version-externally-managed

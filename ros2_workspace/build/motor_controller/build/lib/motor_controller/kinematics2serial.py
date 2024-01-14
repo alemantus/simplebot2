@@ -26,7 +26,7 @@ class MechDriveNode(Node):
 
         # Replace "COMx" with the actual COM port of your device
         self.ser = serial.Serial("/dev/ttyACM0", baudrate=115200, timeout=10)
-        time.sleep(1)
+        #time.sleep(1)
         # Start the thread for reading serial responses
         self.serial_thread = threading.Thread(target=self.read_serial)
         self.serial_thread.daemon = True
@@ -41,7 +41,7 @@ class MechDriveNode(Node):
                     self.get_logger().info(f"Received response: {response}")
                 except:
                     self.get_logger().info(f"read")
-            time.sleep(1)
+            #time.sleep(1)
 
     def send_motor_commands(self, front_left, front_right, back_left, back_right):
         command = f"{front_left},{front_right},{back_left},{back_right}\n".encode()
@@ -63,8 +63,7 @@ class MechDriveNode(Node):
         self.get_logger().info(f"fl, fr, bl, br: {front_left}, {front_right}, {back_left}, {back_right}")
         self.send_motor_commands(front_left, front_right, back_left, back_right)
 
-    def rad_per_sec_to_meters_per_sec(self, rad_per_sec):
-        radius = 0.07/2
+    def rad_per_sec_to_meters_per_sec(rad_per_sec, radius):
         linear_velocity = radius * rad_per_sec
         return linear_velocity
 
