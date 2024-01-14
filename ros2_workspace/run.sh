@@ -1,3 +1,4 @@
+sudo chmod a+rw /dev/input/event7
 docker container prune
 
 docker run --network host \
@@ -10,7 +11,7 @@ docker run --network host \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
     --device=/dev/ttyACM0 \
-    --device=/dev/input/js0 \
+    --device=/dev/input/event7 \
     -it \
     ros2 bash
 
