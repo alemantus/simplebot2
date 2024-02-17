@@ -12,14 +12,14 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN groupadd alexander
 # Add a new user and grant sudo privileges
-RUN useradd -m $USERNAME && \
+RUN useradd -u 1001 -g alexander -m $USERNAME && \
     echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME
 
 # Set user to the newly created user
 USER $USERNAME
-RUN sudo usermod -a -G messagebus $USERNAME
 RUN mkdir -p /home/alexander/Documents/simplebot2/ros2_workspace
 # Set the working directory
 WORKDIR /home/alexander/Documents/simplebot2/ros2_workspace
@@ -27,8 +27,8 @@ WORKDIR /home/alexander/Documents/simplebot2/ros2_workspace
 RUN pip install setuptools==58.2.0
 RUN pip install pyserial
 
-RUN sudo apt update && sudo apt install -y ros-humble-joy* 
+RUN sudo apt update && sudo apt install -y ros-humble-joy* -y
 # RUN colcon build --symlink-install
 
-# Define the command to run on container start
-CMD ["/bin/bash"]
+ADD ros-entrypoint.sh /ros-entrypoint.sh
+ENTRYPOINT [ "/ros-entrypoint.sh" ]
