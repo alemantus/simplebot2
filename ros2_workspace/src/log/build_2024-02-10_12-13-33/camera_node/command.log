@@ -1,0 +1,2 @@
+Invoking command in '/home/alexander/simplebot2/ros2_workspace/src/build/camera_node': /usr/local/bin/cmake /home/alexander/simplebot2/ros2_workspace/src/ros2-camera-node -DCMAKE_INSTALL_PREFIX=/home/alexander/simplebot2/ros2_workspace/src/install/camera_node
+Invoked command in '/home/alexander/simplebot2/ros2_workspace/src/build/camera_node' returned '1': /usr/local/bin/cmake /home/alexander/simplebot2/ros2_workspace/src/ros2-camera-node -DCMAKE_INSTALL_PREFIX=/home/alexander/simplebot2/ros2_workspace/src/install/camera_node

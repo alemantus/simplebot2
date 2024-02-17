@@ -1,0 +1,188 @@
+[0.000000] (-) TimerEvent: {}
+[0.000569] (motor_controller) JobQueued: {'identifier': 'motor_controller', 'dependencies': OrderedDict()}
+[0.000748] (test_nodes) JobQueued: {'identifier': 'test_nodes', 'dependencies': OrderedDict()}
+[0.001007] (usb_cam) JobQueued: {'identifier': 'usb_cam', 'dependencies': OrderedDict()}
+[0.001371] (motor_controller) JobStarted: {'identifier': 'motor_controller'}
+[0.097132] (-) TimerEvent: {}
+[0.202477] (-) TimerEvent: {}
+[0.303510] (-) TimerEvent: {}
+[0.413034] (-) TimerEvent: {}
+[0.422723] (test_nodes) JobStarted: {'identifier': 'test_nodes'}
+[0.513504] (-) TimerEvent: {}
+[0.614786] (-) TimerEvent: {}
+[0.719280] (-) TimerEvent: {}
+[0.807067] (usb_cam) JobStarted: {'identifier': 'usb_cam'}
+[0.819480] (-) TimerEvent: {}
+[0.923695] (-) TimerEvent: {}
+[1.024984] (-) TimerEvent: {}
+[1.125894] (-) TimerEvent: {}
+[1.226718] (-) TimerEvent: {}
+[1.327882] (-) TimerEvent: {}
+[1.428892] (-) TimerEvent: {}
+[1.529957] (-) TimerEvent: {}
+[1.631068] (-) TimerEvent: {}
+[1.732077] (-) TimerEvent: {}
+[1.833108] (-) TimerEvent: {}
+[1.934137] (-) TimerEvent: {}
+[2.035186] (-) TimerEvent: {}
+[2.136283] (-) TimerEvent: {}
+[2.236982] (-) TimerEvent: {}
+[2.340103] (-) TimerEvent: {}
+[2.442041] (-) TimerEvent: {}
+[2.546195] (-) TimerEvent: {}
+[2.647183] (-) TimerEvent: {}
+[2.748205] (-) TimerEvent: {}
+[2.849223] (-) TimerEvent: {}
+[2.950276] (-) TimerEvent: {}
+[3.051278] (-) TimerEvent: {}
+[3.152486] (-) TimerEvent: {}
+[3.253158] (-) TimerEvent: {}
+[3.353891] (-) TimerEvent: {}
+[3.454614] (-) TimerEvent: {}
+[3.555315] (-) TimerEvent: {}
+[3.655967] (-) TimerEvent: {}
+[3.756724] (-) TimerEvent: {}
+[3.857571] (-) TimerEvent: {}
+[3.959188] (-) TimerEvent: {}
+[4.060108] (-) TimerEvent: {}
+[4.135793] (usb_cam) JobProgress: {'identifier': 'usb_cam', 'progress': 'cmake'}
+[4.139916] (usb_cam) Command: {'cmd': ['/usr/local/bin/cmake', '/home/alexander/simplebot2/ros2_workspace/src/usb_cam', '-DCMAKE_INSTALL_PREFIX=/home/alexander/simplebot2/ros2_workspace/install/usb_cam'], 'cwd': '/home/alexander/simplebot2/ros2_workspace/build/usb_cam', 'env': OrderedDict([('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONIOENCODING', 'utf-8'), ('HOSTNAME', 'nano'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/home/alexander'), ('OLDPWD', '/home/alexander/simplebot2'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/alexander/simplebot2/ros2_workspace/install:/opt/ros/humble/install:/home/alexander/Documents/simplebot2/ros2_workspace/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/home/alexander/simplebot2/ros2_workspace/install/ds4drv/bin:/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('AMENT_PREFIX_PATH', '/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PWD', '/home/alexander/simplebot2/ros2_workspace/build/usb_cam'), ('CUDA_HOME', '/usr/local/cuda'), ('PYTHONPATH', '/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install:/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv')]), 'shell': False}
+[4.160288] (-) TimerEvent: {}
+[4.261135] (-) TimerEvent: {}
+[4.362112] (-) TimerEvent: {}
+[4.464368] (-) TimerEvent: {}
+[4.559937] (usb_cam) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/install/share/ament_cmake_auto/cmake)\n'}
+[4.564526] (-) TimerEvent: {}
+[4.667216] (-) TimerEvent: {}
+[4.770274] (-) TimerEvent: {}
+[4.873471] (-) TimerEvent: {}
+[4.976480] (-) TimerEvent: {}
+[5.079599] (-) TimerEvent: {}
+[5.182864] (-) TimerEvent: {}
+[5.285781] (-) TimerEvent: {}
+[5.389075] (-) TimerEvent: {}
+[5.492069] (-) TimerEvent: {}
+[5.595322] (-) TimerEvent: {}
+[5.696140] (-) TimerEvent: {}
+[5.797342] (-) TimerEvent: {}
+[5.898046] (-) TimerEvent: {}
+[5.999764] (-) TimerEvent: {}
+[6.102266] (-) TimerEvent: {}
+[6.204634] (-) TimerEvent: {}
+[6.305795] (-) TimerEvent: {}
+[6.408671] (-) TimerEvent: {}
+[6.471685] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[6.500805] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[6.508844] (-) TimerEvent: {}
+[6.523125] (test_nodes) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/test_nodes', 'build', '--build-base', '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/build', 'install', '--record', '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/simplebot2/ros2_workspace/src/test_nodes', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'nano', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:', 'HOME': '/home/alexander', 'OLDPWD': '/home/alexander/simplebot2', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install:/opt/ros/humble/install:/home/alexander/Documents/simplebot2/ros2_workspace/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4drv/bin:/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_ROOT': '/opt/ros/humble', 'AMENT_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'PWD': '/home/alexander/simplebot2/ros2_workspace/build/test_nodes', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install'}, 'shell': False}
+[6.541166] (motor_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_controller', 'build', '--build-base', '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/build', 'install', '--record', '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/simplebot2/ros2_workspace/src/motor_controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'nano', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:', 'HOME': '/home/alexander', 'OLDPWD': '/home/alexander/simplebot2', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install:/opt/ros/humble/install:/home/alexander/Documents/simplebot2/ros2_workspace/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4drv/bin:/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'ROS_ROOT': '/opt/ros/humble', 'AMENT_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'PWD': '/home/alexander/simplebot2/ros2_workspace/build/motor_controller', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install'}, 'shell': False}
+[6.561569] (usb_cam) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[6.609005] (-) TimerEvent: {}
+[6.664614] (usb_cam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.709159] (-) TimerEvent: {}
+[6.804650] (usb_cam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.809297] (-) TimerEvent: {}
+[6.911814] (-) TimerEvent: {}
+[7.014547] (-) TimerEvent: {}
+[7.117810] (-) TimerEvent: {}
+[7.218484] (-) TimerEvent: {}
+[7.280397] (usb_cam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[7.294217] (usb_cam) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[7.318633] (-) TimerEvent: {}
+[7.420482] (-) TimerEvent: {}
+[7.521226] (-) TimerEvent: {}
+[7.543986] (usb_cam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[7.621386] (-) TimerEvent: {}
+[7.714977] (test_nodes) StdoutLine: {'line': b'running egg_info\n'}
+[7.719814] (motor_controller) StdoutLine: {'line': b'running egg_info\n'}
+[7.727408] (-) TimerEvent: {}
+[7.736071] (test_nodes) StdoutLine: {'line': b"writing manifest file '../../build/test_nodes/test_nodes.egg-info/SOURCES.txt'\n"}
+[7.739309] (test_nodes) StdoutLine: {'line': b'running build\n'}
+[7.743260] (test_nodes) StdoutLine: {'line': b'running build_py\n'}
+[7.745419] (test_nodes) StdoutLine: {'line': b'running install\n'}
+[7.748769] (motor_controller) StdoutLine: {'line': b"writing manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'\n"}
+[7.749374] (motor_controller) StdoutLine: {'line': b'running build\n'}
+[7.750919] (motor_controller) StdoutLine: {'line': b'running build_py\n'}
+[7.751408] (motor_controller) StdoutLine: {'line': b'copying motor_controller/kinematics2serial.py -> /home/alexander/simplebot2/ros2_workspace/build/motor_controller/build/lib/motor_controller\n'}
+[7.751895] (motor_controller) StdoutLine: {'line': b'running install\n'}
+[7.752301] (test_nodes) StdoutLine: {'line': b'running install_lib\n'}
+[7.752697] (motor_controller) StdoutLine: {'line': b'running install_lib\n'}
+[7.753061] (test_nodes) StdoutLine: {'line': b'running install_data\n'}
+[7.758002] (motor_controller) StdoutLine: {'line': b'byte-compiling /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller/kinematics2serial.py to kinematics2serial.cpython-310.pyc\n'}
+[7.758769] (test_nodes) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.759269] (test_nodes) StdoutLine: {'line': b"removing '/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[7.767594] (test_nodes) StdoutLine: {'line': b'Copying ../../build/test_nodes/test_nodes.egg-info to /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes-0.0.0-py3.10.egg-info\n'}
+[7.768207] (motor_controller) StdoutLine: {'line': b'running install_data\n'}
+[7.768803] (test_nodes) StdoutLine: {'line': b'running install_scripts\n'}
+[7.769242] (motor_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.775426] (motor_controller) StdoutLine: {'line': b"removing '/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[7.775988] (motor_controller) StdoutLine: {'line': b'Copying ../../build/motor_controller/motor_controller.egg-info to /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info\n'}
+[7.780926] (motor_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[7.827572] (-) TimerEvent: {}
+[7.859659] (test_nodes) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log'\n"}
+[7.872675] (motor_controller) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log'\n"}
+[7.927765] (-) TimerEvent: {}
+[8.021908] (test_nodes) CommandEnded: {'returncode': 0}
+[8.028413] (-) TimerEvent: {}
+[8.131441] (-) TimerEvent: {}
+[8.233377] (-) TimerEvent: {}
+[8.266146] (test_nodes) JobEnded: {'identifier': 'test_nodes', 'rc': 0}
+[8.269754] (motor_controller) CommandEnded: {'returncode': 0}
+[8.333524] (-) TimerEvent: {}
+[8.434520] (-) TimerEvent: {}
+[8.476008] (motor_controller) JobEnded: {'identifier': 'motor_controller', 'rc': 0}
+[8.534692] (-) TimerEvent: {}
+[8.635337] (-) TimerEvent: {}
+[8.736040] (-) TimerEvent: {}
+[8.836726] (-) TimerEvent: {}
+[8.937595] (-) TimerEvent: {}
+[9.038318] (-) TimerEvent: {}
+[9.105851] (usb_cam) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/cmake/opencv4/OpenCVConfig.cmake:86 (find_package):\n'}
+[9.107470] (usb_cam) StderrLine: {'line': b'  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake\n'}
+[9.108745] (usb_cam) StderrLine: {'line': b'  --help-policy CMP0146" for policy details.  Use the cmake_policy command to\n'}
+[9.109580] (usb_cam) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[9.110087] (usb_cam) StderrLine: {'line': b'\n'}
+[9.110402] (usb_cam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[9.110729] (usb_cam) StderrLine: {'line': b'  /usr/lib/cmake/opencv4/OpenCVConfig.cmake:108 (find_host_package)\n'}
+[9.111059] (usb_cam) StderrLine: {'line': b'  /opt/ros/humble/install/share/cv_bridge/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[9.111381] (usb_cam) StderrLine: {'line': b'  /opt/ros/humble/install/share/cv_bridge/cmake/cv_bridgeConfig.cmake:41 (include)\n'}
+[9.111700] (usb_cam) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[9.112032] (usb_cam) StderrLine: {'line': b'  CMakeLists.txt:27 (ament_auto_find_build_dependencies)\n'}
+[9.112360] (usb_cam) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[9.112688] (usb_cam) StderrLine: {'line': b'\x1b[0m\n'}
+[9.138522] (-) TimerEvent: {}
+[9.239217] (-) TimerEvent: {}
+[9.339911] (-) TimerEvent: {}
+[9.440604] (-) TimerEvent: {}
+[9.541231] (-) TimerEvent: {}
+[9.641955] (-) TimerEvent: {}
+[9.742589] (-) TimerEvent: {}
+[9.843216] (-) TimerEvent: {}
+[9.943932] (-) TimerEvent: {}
+[10.044900] (-) TimerEvent: {}
+[10.146605] (-) TimerEvent: {}
+[10.249673] (-) TimerEvent: {}
+[10.350313] (-) TimerEvent: {}
+[10.451008] (-) TimerEvent: {}
+[10.551828] (-) TimerEvent: {}
+[10.652907] (-) TimerEvent: {}
+[10.754278] (-) TimerEvent: {}
+[10.854940] (-) TimerEvent: {}
+[10.955585] (-) TimerEvent: {}
+[11.021677] (usb_cam) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[11.042015] (usb_cam) StdoutLine: {'line': b"--   No package 'libavcodec' found\n"}
+[11.042934] (usb_cam) StderrLine: {'line': b'\x1b[31mCMake Error at /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.27/Modules/FindPkgConfig.cmake:607 (message):\n'}
+[11.043506] (usb_cam) StderrLine: {'line': b'  A required package was not found\n'}
+[11.044150] (usb_cam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[11.044612] (usb_cam) StderrLine: {'line': b'  /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.27/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)\n'}
+[11.045039] (usb_cam) StderrLine: {'line': b'  CMakeLists.txt:33 (pkg_check_modules)\n'}
+[11.045942] (usb_cam) StderrLine: {'line': b'\n'}
+[11.046296] (usb_cam) StderrLine: {'line': b'\x1b[0m\n'}
+[11.046616] (usb_cam) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[11.055745] (-) TimerEvent: {}
+[11.093762] (usb_cam) CommandEnded: {'returncode': 1}
+[11.156541] (-) TimerEvent: {}
+[11.257364] (-) TimerEvent: {}
+[11.361087] (-) TimerEvent: {}
+[11.369545] (usb_cam) JobEnded: {'identifier': 'usb_cam', 'rc': 1}
+[11.380954] (-) EventReactorShutdown: {}

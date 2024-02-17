@@ -1,0 +1,30 @@
+[6.509s] Invoking command in '/home/alexander/simplebot2/ros2_workspace/src/motor_controller': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_controller build --build-base /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build install --record /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/install.log --single-version-externally-managed
+[7.651s] running egg_info
+[7.655s] creating ../build/motor_controller/motor_controller.egg-info
+[7.664s] writing manifest file '../build/motor_controller/motor_controller.egg-info/SOURCES.txt'
+[7.676s] writing manifest file '../build/motor_controller/motor_controller.egg-info/SOURCES.txt'
+[7.678s] running build
+[7.679s] running build_py
+[7.679s] creating /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build
+[7.680s] creating /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build/lib
+[7.680s] creating /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build/lib/motor_controller
+[7.681s] copying motor_controller/send_cmd_vel.py -> /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build/lib/motor_controller
+[7.681s] copying motor_controller/__init__.py -> /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build/lib/motor_controller
+[7.682s] copying motor_controller/kinematics2serial.py -> /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build/lib/motor_controller
+[7.682s] running install
+[7.686s] running install_lib
+[7.689s] creating /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages/motor_controller
+[7.693s] byte-compiling /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages/motor_controller/send_cmd_vel.py to send_cmd_vel.cpython-310.pyc
+[7.695s] byte-compiling /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages/motor_controller/__init__.py to __init__.cpython-310.pyc
+[7.696s] byte-compiling /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages/motor_controller/kinematics2serial.py to kinematics2serial.cpython-310.pyc
+[7.700s] running install_data
+[7.703s] creating /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/share/ament_index
+[7.703s] creating /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/share/ament_index/resource_index
+[7.704s] creating /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/share/ament_index/resource_index/packages
+[7.704s] copying resource/motor_controller -> /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/share/ament_index/resource_index/packages
+[7.705s] copying package.xml -> /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/share/motor_controller
+[7.705s] running install_egg_info
+[7.714s] Copying ../build/motor_controller/motor_controller.egg-info to /home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info
+[7.716s] running install_scripts
+[7.807s] writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/install.log'
+[7.961s] Invoked command in '/home/alexander/simplebot2/ros2_workspace/src/motor_controller' returned '0': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/src/install/motor_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_controller build --build-base /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/build install --record /home/alexander/simplebot2/ros2_workspace/src/build/motor_controller/install.log --single-version-externally-managed

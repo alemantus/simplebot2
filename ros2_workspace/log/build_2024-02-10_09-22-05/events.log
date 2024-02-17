@@ -1,0 +1,111 @@
+[0.000000] (-) TimerEvent: {}
+[0.001003] (motor_controller) JobQueued: {'identifier': 'motor_controller', 'dependencies': OrderedDict()}
+[0.001221] (test_nodes) JobQueued: {'identifier': 'test_nodes', 'dependencies': OrderedDict()}
+[0.001364] (motor_controller) JobStarted: {'identifier': 'motor_controller'}
+[0.097356] (-) TimerEvent: {}
+[0.198515] (-) TimerEvent: {}
+[0.300306] (-) TimerEvent: {}
+[0.375087] (test_nodes) JobStarted: {'identifier': 'test_nodes'}
+[0.400776] (-) TimerEvent: {}
+[0.506026] (-) TimerEvent: {}
+[0.607636] (-) TimerEvent: {}
+[0.709709] (-) TimerEvent: {}
+[0.810755] (-) TimerEvent: {}
+[0.911859] (-) TimerEvent: {}
+[1.013028] (-) TimerEvent: {}
+[1.114050] (-) TimerEvent: {}
+[1.214739] (-) TimerEvent: {}
+[1.315810] (-) TimerEvent: {}
+[1.416859] (-) TimerEvent: {}
+[1.519916] (-) TimerEvent: {}
+[1.621286] (-) TimerEvent: {}
+[1.722638] (-) TimerEvent: {}
+[1.823735] (-) TimerEvent: {}
+[1.925149] (-) TimerEvent: {}
+[2.027583] (-) TimerEvent: {}
+[2.128440] (-) TimerEvent: {}
+[2.229936] (-) TimerEvent: {}
+[2.331018] (-) TimerEvent: {}
+[2.432360] (-) TimerEvent: {}
+[2.533524] (-) TimerEvent: {}
+[2.634501] (-) TimerEvent: {}
+[2.735518] (-) TimerEvent: {}
+[2.836570] (-) TimerEvent: {}
+[2.937940] (-) TimerEvent: {}
+[3.038976] (-) TimerEvent: {}
+[3.139962] (-) TimerEvent: {}
+[3.241012] (-) TimerEvent: {}
+[3.342468] (-) TimerEvent: {}
+[3.443751] (-) TimerEvent: {}
+[3.552136] (-) TimerEvent: {}
+[3.653514] (-) TimerEvent: {}
+[3.755296] (-) TimerEvent: {}
+[3.856326] (-) TimerEvent: {}
+[3.958075] (-) TimerEvent: {}
+[4.059165] (-) TimerEvent: {}
+[4.159803] (-) TimerEvent: {}
+[4.260814] (-) TimerEvent: {}
+[4.361862] (-) TimerEvent: {}
+[4.462848] (-) TimerEvent: {}
+[4.563566] (-) TimerEvent: {}
+[4.664245] (-) TimerEvent: {}
+[4.765348] (-) TimerEvent: {}
+[4.866708] (-) TimerEvent: {}
+[4.968094] (-) TimerEvent: {}
+[5.069562] (-) TimerEvent: {}
+[5.170207] (-) TimerEvent: {}
+[5.271591] (-) TimerEvent: {}
+[5.372275] (-) TimerEvent: {}
+[5.473906] (-) TimerEvent: {}
+[5.575135] (-) TimerEvent: {}
+[5.626544] (motor_controller) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_controller', 'build', '--build-base', '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/build', 'install', '--record', '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/simplebot2/ros2_workspace/src/motor_controller', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'nano', 'GIT_ASKPASS': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:', 'BROWSER': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/helpers/browser.sh', 'HOME': '/home/alexander', 'OLDPWD': '/home/alexander/simplebot2', 'TERM_PROGRAM_VERSION': '1.86.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ceeac2e8-bf02-4b65-9635-9d0307d5a3f5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install:/opt/ros/humble/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-30700f82-226d-4fe3-ad9f-3ec50ecc8c80.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4drv/bin:/opt/ros/humble/install/bin:/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/remote-cli:/home/alexander/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X1","/home/alexander/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-b68715849d.sock', 'ROS_ROOT': '/opt/ros/humble', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install', 'DEBIAN_FRONTEND': 'noninteractive', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/alexander/simplebot2/ros2_workspace/build/motor_controller', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install'}, 'shell': False}
+[5.669657] (test_nodes) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/test_nodes', 'build', '--build-base', '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/build', 'install', '--record', '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log', '--single-version-externally-managed'], 'cwd': '/home/alexander/simplebot2/ros2_workspace/src/test_nodes', 'env': {'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'nano', 'GIT_ASKPASS': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:', 'BROWSER': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/helpers/browser.sh', 'HOME': '/home/alexander', 'OLDPWD': '/home/alexander/simplebot2', 'TERM_PROGRAM_VERSION': '1.86.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-ceeac2e8-bf02-4b65-9635-9d0307d5a3f5.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install:/opt/ros/humble/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-30700f82-226d-4fe3-ad9f-3ec50ecc8c80.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4drv/bin:/opt/ros/humble/install/bin:/home/alexander/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/remote-cli:/home/alexander/.local/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/.X11-unix/X1","/home/alexander/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-b68715849d.sock', 'ROS_ROOT': '/opt/ros/humble', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install', 'DEBIAN_FRONTEND': 'noninteractive', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X1', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/alexander/simplebot2/ros2_workspace/build/test_nodes', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4drv/lib/python3.6/site-packages:/home/alexander/simplebot2/ros2_workspace/install/ds4_driver/lib/python3.6/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/alexander/simplebot2/ros2_workspace/install/ds4_driver:/opt/ros/humble/install'}, 'shell': False}
+[5.675302] (-) TimerEvent: {}
+[5.778333] (-) TimerEvent: {}
+[5.879819] (-) TimerEvent: {}
+[5.980819] (-) TimerEvent: {}
+[6.082666] (-) TimerEvent: {}
+[6.184373] (-) TimerEvent: {}
+[6.285793] (-) TimerEvent: {}
+[6.387325] (-) TimerEvent: {}
+[6.488628] (-) TimerEvent: {}
+[6.590766] (-) TimerEvent: {}
+[6.691423] (-) TimerEvent: {}
+[6.747439] (motor_controller) StdoutLine: {'line': b'running egg_info\n'}
+[6.764478] (motor_controller) StdoutLine: {'line': b"writing manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'\n"}
+[6.767780] (motor_controller) StdoutLine: {'line': b'running build\n'}
+[6.769836] (motor_controller) StdoutLine: {'line': b'running build_py\n'}
+[6.771722] (motor_controller) StdoutLine: {'line': b'copying motor_controller/kinematics2serial.py -> /home/alexander/simplebot2/ros2_workspace/build/motor_controller/build/lib/motor_controller\n'}
+[6.777924] (motor_controller) StdoutLine: {'line': b'running install\n'}
+[6.778383] (motor_controller) StdoutLine: {'line': b'running install_lib\n'}
+[6.778770] (motor_controller) StdoutLine: {'line': b'byte-compiling /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller/kinematics2serial.py to kinematics2serial.cpython-310.pyc\n'}
+[6.784240] (motor_controller) StdoutLine: {'line': b'running install_data\n'}
+[6.784844] (motor_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.790394] (motor_controller) StdoutLine: {'line': b"removing '/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.796639] (-) TimerEvent: {}
+[6.797791] (motor_controller) StdoutLine: {'line': b'Copying ../../build/motor_controller/motor_controller.egg-info to /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info\n'}
+[6.798411] (motor_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[6.813167] (test_nodes) StdoutLine: {'line': b'running egg_info\n'}
+[6.832445] (test_nodes) StdoutLine: {'line': b"writing manifest file '../../build/test_nodes/test_nodes.egg-info/SOURCES.txt'\n"}
+[6.835349] (test_nodes) StdoutLine: {'line': b'running build\n'}
+[6.838650] (test_nodes) StdoutLine: {'line': b'running build_py\n'}
+[6.840606] (test_nodes) StdoutLine: {'line': b'running install\n'}
+[6.842584] (test_nodes) StdoutLine: {'line': b'running install_lib\n'}
+[6.844473] (test_nodes) StdoutLine: {'line': b'running install_data\n'}
+[6.846561] (test_nodes) StdoutLine: {'line': b'running install_egg_info\n'}
+[6.853787] (test_nodes) StdoutLine: {'line': b"removing '/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[6.862029] (test_nodes) StdoutLine: {'line': b'Copying ../../build/test_nodes/test_nodes.egg-info to /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes-0.0.0-py3.10.egg-info\n'}
+[6.864029] (test_nodes) StdoutLine: {'line': b'running install_scripts\n'}
+[6.888072] (motor_controller) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log'\n"}
+[6.896925] (-) TimerEvent: {}
+[6.956304] (test_nodes) StdoutLine: {'line': b"writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log'\n"}
+[6.997181] (-) TimerEvent: {}
+[7.031030] (motor_controller) CommandEnded: {'returncode': 0}
+[7.097752] (-) TimerEvent: {}
+[7.198866] (-) TimerEvent: {}
+[7.269383] (motor_controller) JobEnded: {'identifier': 'motor_controller', 'rc': 0}
+[7.274240] (test_nodes) CommandEnded: {'returncode': 0}
+[7.299509] (-) TimerEvent: {}
+[7.400355] (-) TimerEvent: {}
+[7.469834] (test_nodes) JobEnded: {'identifier': 'test_nodes', 'rc': 0}
+[7.474625] (-) EventReactorShutdown: {}

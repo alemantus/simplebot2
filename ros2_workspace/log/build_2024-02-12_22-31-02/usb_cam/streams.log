@@ -1,0 +1,53 @@
+[3.464s] Invoking command in '/home/alexander/simplebot2/ros2_workspace/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv /usr/local/bin/cmake /home/alexander/simplebot2/ros2_workspace/src/usb_cam -DCMAKE_INSTALL_PREFIX=/home/alexander/simplebot2/ros2_workspace/install/usb_cam
+[3.905s] -- The C compiler identification is GNU 11.4.0
+[4.205s] -- The CXX compiler identification is GNU 11.4.0
+[4.282s] -- Detecting C compiler ABI info
+[4.541s] -- Detecting C compiler ABI info - done
+[4.597s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.601s] -- Detecting C compile features
+[4.608s] -- Detecting C compile features - done
+[4.648s] -- Detecting CXX compiler ABI info
+[4.992s] -- Detecting CXX compiler ABI info - done
+[5.086s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.089s] -- Detecting CXX compile features
+[5.093s] -- Detecting CXX compile features - done
+[5.114s] -- Found ament_cmake_auto: 1.3.6 (/opt/ros/humble/install/share/ament_cmake_auto/cmake)
+[9.317s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[10.494s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[10.532s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[10.604s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[10.716s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[10.862s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[11.388s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[11.408s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[11.676s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[11.748s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[11.991s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[11.995s] -- Found Threads: TRUE  
+[13.596s] [33mCMake Warning (dev) at /usr/lib/cmake/opencv4/OpenCVConfig.cmake:86 (find_package):
+[13.599s]   Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+[13.601s]   --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+[13.603s]   set the policy and suppress this warning.
+[13.605s] 
+[13.607s] Call Stack (most recent call first):
+[13.608s]   /usr/lib/cmake/opencv4/OpenCVConfig.cmake:108 (find_host_package)
+[13.610s]   /opt/ros/humble/install/share/cv_bridge/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[13.612s]   /opt/ros/humble/install/share/cv_bridge/cmake/cv_bridgeConfig.cmake:41 (include)
+[13.613s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[13.616s]   CMakeLists.txt:27 (ament_auto_find_build_dependencies)
+[13.617s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[13.619s] [0m
+[13.777s] -- Found CUDA: /usr/local/cuda (found suitable exact version "12.2") 
+[15.659s] -- Found OpenCV: /usr (found version "4.8.1") 
+[15.698s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[15.702s] -- Checking for module 'libavcodec'
+[15.712s] --   No package 'libavcodec' found
+[15.714s] [31mCMake Error at /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.27/Modules/FindPkgConfig.cmake:607 (message):
+[15.716s]   A required package was not found
+[15.718s] Call Stack (most recent call first):
+[15.720s]   /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.27/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)
+[15.722s]   CMakeLists.txt:33 (pkg_check_modules)
+[15.724s] 
+[15.726s] [0m
+[15.728s] -- Configuring incomplete, errors occurred!
+[15.774s] Invoked command in '/home/alexander/simplebot2/ros2_workspace/build/usb_cam' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alexander/simplebot2/ros2_workspace/install/test_nodes:/home/alexander/simplebot2/ros2_workspace/install/motor_controller:/home/alexander/simplebot2/ros2_workspace/install/joystick_ros2:/home/alexander/simplebot2/ros2_workspace/install/ds4drv /usr/local/bin/cmake /home/alexander/simplebot2/ros2_workspace/src/usb_cam -DCMAKE_INSTALL_PREFIX=/home/alexander/simplebot2/ros2_workspace/install/usb_cam

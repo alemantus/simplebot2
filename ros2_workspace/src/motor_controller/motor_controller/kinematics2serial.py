@@ -12,79 +12,100 @@ from geometry_msgs.msg import Twist
 import threading
 import serial
 import time
+from sensor_msgs.msg import Joy
+import math
+from std_msgs.msg import Float64MultiArray
 
 class MechDriveNode(Node):
     def __init__(self):
         super().__init__('mech_drive_node')
 
-        self.create_subscription(
-            Twist,
-            '/cmd_vel',
-            self.velocity_callback,
-            10
-        )
+        # Subscriptions
+        self.create_subscription(Joy, '/joy', self.velocity_callback, 10)
 
-        # Replace "COMx" with the actual COM port of your device
+        # Publishers
+        self.encoder_pub = self.create_publisher(Float64MultiArray, '/encoder_data', 10)
+
         self.ser = serial.Serial("/dev/ttyACM0", baudrate=115200, timeout=10)
-        #time.sleep(1)
+        self.wheel_radius = 0.067/2
+        self.wheel_circumference = 2*math.pi*self.wheel_radius
+
+
         # Start the thread for reading serial responses
         self.serial_thread = threading.Thread(target=self.read_serial)
         self.serial_thread.daemon = True
         self.serial_thread.start()
 
     def read_serial(self):
+        # Runs in thread
         while True:
-            #response = 1
             response = self.ser.readline().decode().strip()
             if response:
                 try:
-                    self.get_logger().info(f"Received response: {response}")
-                except:
-                    self.get_logger().info(f"read")
-            #time.sleep(1)
+                    #self.get_logger().info(f"Received response: {response}")
+                    # If the response is a byte string, remove the leading "b" and parse the rest
+                    if response.startswith("b'") and response.endswith("'"):
+                        response = response[2:-1]
+                    encoder_data = [float(val) for val in response.split(',')]
+                    self.publish_encoder_data(encoder_data)
+                except ValueError as e:
+                    self.get_logger().warn(f"Error parsing encoder data: {e}")
+                except Exception as ex:
+                    self.get_logger().error(f"Unexpected error: {ex}")
+
+    def publish_encoder_data(self, encoder_data):
+        # Convert rotations per second to linear speed in meters per second
+        encoder_data_mps = [val * self.wheel_circumference for val in encoder_data]
+
+        msg = Float64MultiArray(data=encoder_data_mps)
+        self.encoder_pub.publish(msg)
+
 
     def send_motor_commands(self, front_left, front_right, back_left, back_right):
         command = f"{front_left},{front_right},{back_left},{back_right}\n".encode()
         try:
-            self.get_logger().info(f"writing: {command}")
+            #self.get_logger().info(f"writing: {command}")
             self.ser.write(command)
         except:
             self.get_logger().info(f"error when writing: {command}")
 
+    def map_value(self, value, in_min=-1, in_max=1, out_min=0, out_max=1):
+        # Clamp the input value within the specified range
+        value = max(in_min, min(value, in_max))
+
+        # Map the value from the input range to the output range
+        mapped_value = (value - in_min) / (in_max - in_min) * (out_max - out_min) + out_min
+
+        return mapped_value
 
     def velocity_callback(self, msg):
-        #self.get_logger().info(msg)
-        speed_x = msg.linear.x
-        speed_y = msg.linear.y
-        rotation_z = msg.angular.z
+        # Get relevant twist properties
+        speed_x = float(msg.axes[1])*0.6
+        speed_y = float(msg.axes[0])*0.6
+        rotation_z_left = self.map_value(float(msg.axes[3]))
+        rotation_z_right = self.map_value(float(msg.axes[4]))
+        if (rotation_z_right-rotation_z_left != 0):
+            rotation_z = (rotation_z_right-rotation_z_left) *1.2
+        else:
+            rotation_z = 0
 
-        # Assuming you have a function to calculate individual wheel speeds based on the desired velocity and rotation
+        # Calculate individual motor speed
         front_left, front_right, back_left, back_right = self.calculate_wheel_speeds(speed_x, speed_y, rotation_z)
-        self.get_logger().info(f"fl, fr, bl, br: {front_left}, {front_right}, {back_left}, {back_right}")
         self.send_motor_commands(front_left, front_right, back_left, back_right)
 
-    def rad_per_sec_to_meters_per_sec(rad_per_sec, radius):
-        linear_velocity = radius * rad_per_sec
-        return linear_velocity
+    def rad_per_sec_to_rot_per_sec(self, rad_per_sec):
+        rot_per_sec = rad_per_sec / (2 * math.pi)
+        return rot_per_sec
 
     def calculate_wheel_speeds(self, speed_x, speed_y, rotation_z):
-        # Implement your kinematics calculation here
-        # This is a placeholder and needs to be replaced with actual kinematics calculation
-        # You might need to consider the robot's dimensions, wheel positions, and wheel angles
+
+        # Car parameters
         wheel_r = 0.07/2
 
-        lx_l = -0.09
-        lx_r = 0.09
-
-        ly_front = 0.065
-        ly_back = 0.065
-
-
-        front_left = self.rad_per_sec_to_meters_per_sec(round(1/wheel_r*(speed_x-speed_y-(0.155+0.18)*rotation_z), 2))
-        front_right = self.rad_per_sec_to_meters_per_sec(round(1/wheel_r*(speed_x+speed_y+(0.155+0.18)*rotation_z), 2))
-        back_left = self.rad_per_sec_to_meters_per_sec(round(1/wheel_r*(speed_x+speed_y-(0.155+0.18)*rotation_z), 2))
-        back_right = self.rad_per_sec_to_meters_per_sec(round(1/wheel_r*(speed_x-speed_y+(0.155+0.18)*rotation_z), 2))
-        
+        front_left = self.rad_per_sec_to_rot_per_sec(round(1/wheel_r*(speed_x-speed_y-(0.155+0.18)/2*rotation_z), 2))
+        front_right = self.rad_per_sec_to_rot_per_sec(round(1/wheel_r*(speed_x+speed_y+(0.155+0.18)/2*rotation_z), 2))
+        back_left = self.rad_per_sec_to_rot_per_sec(round(1/wheel_r*(speed_x+speed_y-(0.155+0.18)/2*rotation_z), 2))
+        back_right = self.rad_per_sec_to_rot_per_sec(round(1/wheel_r*(speed_x-speed_y+(0.155+0.18)/2*rotation_z), 2))
 
         return front_left, front_right, back_left, back_right
 

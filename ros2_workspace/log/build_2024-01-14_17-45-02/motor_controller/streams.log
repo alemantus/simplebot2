@@ -1,0 +1,16 @@
+[5.533s] Invoking command in '/home/alexander/simplebot2/ros2_workspace/src/motor_controller': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed
+[6.636s] running egg_info
+[6.652s] writing manifest file '../../build/motor_controller/motor_controller.egg-info/SOURCES.txt'
+[6.652s] running build
+[6.653s] running build_py
+[6.653s] copying motor_controller/kinematics2serial.py -> /home/alexander/simplebot2/ros2_workspace/build/motor_controller/build/lib/motor_controller
+[6.654s] running install
+[6.658s] running install_lib
+[6.664s] byte-compiling /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller/kinematics2serial.py to kinematics2serial.cpython-310.pyc
+[6.668s] running install_data
+[6.670s] running install_egg_info
+[6.677s] removing '/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info' (and everything under it)
+[6.678s] Copying ../../build/motor_controller/motor_controller.egg-info to /home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages/motor_controller-0.0.0-py3.10.egg-info
+[6.684s] running install_scripts
+[6.772s] writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log'
+[6.911s] Invoked command in '/home/alexander/simplebot2/ros2_workspace/src/motor_controller' returned '0': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/build/motor_controller/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/motor_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_controller build --build-base /home/alexander/simplebot2/ros2_workspace/build/motor_controller/build install --record /home/alexander/simplebot2/ros2_workspace/build/motor_controller/install.log --single-version-externally-managed

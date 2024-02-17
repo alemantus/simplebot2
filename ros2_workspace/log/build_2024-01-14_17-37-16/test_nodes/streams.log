@@ -1,0 +1,16 @@
+[4.931s] Invoking command in '/home/alexander/simplebot2/ros2_workspace/src/test_nodes': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_nodes build --build-base /home/alexander/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed
+[5.959s] running egg_info
+[5.976s] writing manifest file '../../build/test_nodes/test_nodes.egg-info/SOURCES.txt'
+[5.977s] running build
+[5.978s] running build_py
+[5.978s] running install
+[5.981s] running install_lib
+[5.984s] creating /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes
+[5.987s] byte-compiling /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes/send_cmd_vel.py to send_cmd_vel.cpython-310.pyc
+[5.989s] byte-compiling /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes/__init__.py to __init__.cpython-310.pyc
+[5.989s] running install_data
+[5.992s] running install_egg_info
+[5.999s] Copying ../../build/test_nodes/test_nodes.egg-info to /home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages/test_nodes-0.0.0-py3.10.egg-info
+[6.003s] running install_scripts
+[6.090s] writing list of installed files to '/home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log'
+[6.230s] Invoked command in '/home/alexander/simplebot2/ros2_workspace/src/test_nodes' returned '0': PYTHONPATH=/home/alexander/simplebot2/ros2_workspace/build/test_nodes/prefix_override:/home/alexander/simplebot2/ros2_workspace/install/test_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/test_nodes build --build-base /home/alexander/simplebot2/ros2_workspace/build/test_nodes/build install --record /home/alexander/simplebot2/ros2_workspace/build/test_nodes/install.log --single-version-externally-managed

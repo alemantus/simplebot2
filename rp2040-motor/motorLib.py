@@ -26,28 +26,28 @@ DEAD_ZONE = 0.0                        # The duty cycle below which the motor's 
 
 # PID values
 VEL_KP = 20.0                             # Velocity proportional (P) gain
-VEL_KI = 0.005                            # Velocity integral (I) gain
-VEL_KD = 0.4                              # Velocity derivative (D) gain
+VEL_KI = 0.00                            # Velocity integral (I) gain
+VEL_KD = 1.2                             # Velocity derivative (D) gain
 
 UPDATE_RATE_ACCUM = 0
 # Free up hardware resources ahead of creating a new Encoder
 gc.collect()
 
 # Create a list of motors with a given speed scale
-MOTOR_PINS = [motor2040.MOTOR_A, motor2040.MOTOR_B, motor2040.MOTOR_C, motor2040.MOTOR_D]
+MOTOR_PINS = [ motor2040.MOTOR_B, motor2040.MOTOR_C, motor2040.MOTOR_A,motor2040.MOTOR_D]
 motors = [Motor(pins, speed_scale=SPEED_SCALE, zeropoint=ZERO_POINT, deadzone=DEAD_ZONE) for pins in MOTOR_PINS]
 
 # Create a list of encoders, using PIO 0, with the given counts per revolution
-ENCODER_PINS = [motor2040.ENCODER_A, motor2040.ENCODER_B, motor2040.ENCODER_C, motor2040.ENCODER_D]
-ENCODER_NAMES = ["C", "D", "B", "A"]
+ENCODER_PINS = [ motor2040.ENCODER_B, motor2040.ENCODER_C, motor2040.ENCODER_A, motor2040.ENCODER_D]
+ENCODER_NAMES = ["A","B", "D", "C"]
 encoders = [Encoder(0, i, ENCODER_PINS[i], counts_per_rev=COUNTS_PER_REV, count_microsteps=True) for i in range(motor2040.NUM_MOTORS)]
 
 CAPTURE_TIME = 0.2  
 # Reverse the direction of the B and D motors and encoders
 #motors[FL].direction(REVERSED_DIR)
 #motors[RL].direction(REVERSED_DIR)
-encoders[B].direction(REVERSED_DIR)
-encoders[D].direction(REVERSED_DIR)
+#encoders[B].direction(REVERSED_DIR)
+#encoders[C].direction(REVERSED_DIR)
 
 # Create the user button
 user_sw = Button(motor2040.USER_SW)
@@ -67,7 +67,7 @@ class MySerial:
         self.poll_results = self.poll_obj.poll(1)
         if self.poll_results:
             self.data = sys.stdin.readline().strip()
-            print(self.data)
+            #print(self.data)
             return self.data
         return None
 
@@ -80,7 +80,7 @@ def set_motor_speeds(motors, speeds):
     for i in range(min(len(speeds), motor2040.NUM_MOTORS)):
         vel_pids[i].setpoint = speeds[i]
 
-def rpm_to_mps(rpm, radius=0.07/2):
+def rpm_to_mps(rpm, radius=0.067/2):
     linear_speed = (rpm * 2 * math.pi * radius) / 60
     return linear_speed
 
@@ -103,11 +103,21 @@ serial_start = None
 # Continually move the motor until the user button is pressed
 while not user_sw.raw():
     # Capture the state of all the encoders
+    rotation_per_second = ""
     for i in range(motor2040.NUM_MOTORS):
         captures[i] = encoders[i].capture()
-    #print(f"rpm motor: {captures[0].revolutions_per_second}")
+        #rotation_per_second.append(captures[i].revolutions_per_second)
+        rotation_per_second = rotation_per_second + f"{captures[i].revolutions_per_second},"
 
-    #print("sup")
+    rotation_per_second=rotation_per_second.rstrip(',')
+    #print(rotation_per_second)
+    UPDATE_RATE_ACCUM += 0.01
+    if UPDATE_RATE_ACCUM >= 0.20:
+        if rotation_per_second != None:
+            #serial_obj.send_serial((f"{rotation_per_second}").encode())
+            pass
+        UPDATE_RATE_ACCUM = 0
+
     for i in range(motor2040.NUM_MOTORS):
         # Calculate the acceleration to apply to the motor to move it closer to the velocity setpoint
         accel = vel_pids[i].calculate(captures[i].revolutions_per_second)
@@ -143,10 +153,7 @@ while not user_sw.raw():
     
     time.sleep(UPDATE_RATE)
     #enc0  = encoders[0].capture()
-    UPDATE_RATE_ACCUM += 0.1
-    if UPDATE_RATE_ACCUM >= 0.50:
-        serial_obj.send_serial((f"rpm motor measured:target -").encode())
-        UPDATE_RATE_ACCUM = 0
+   
 # Stop all the motors
 for m in motors:
     m.disable()
