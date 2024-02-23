@@ -1,3 +1,0 @@
-[console_scripts]
-kinematics2serial = motor_controller.kinematics2serial:main
-

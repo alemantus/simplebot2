@@ -1,3 +1,0 @@
-[console_scripts]
-send_cmd_vel = test_nodes.send_cmd_vel:main
-
