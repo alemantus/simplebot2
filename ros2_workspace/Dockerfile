@@ -12,6 +12,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
 RUN groupadd alexander
 # Add a new user and grant sudo privileges
 RUN useradd -u 1001 -g alexander -m $USERNAME && \
@@ -30,5 +32,11 @@ RUN pip install pyserial
 RUN sudo apt update && sudo apt install -y ros-humble-joy* -y
 # RUN colcon build --symlink-install
 
+RUN sudo code-server --install-extension ms-python.python \
+                     --install-extension ms-vscode-remote.vscode-remote-extensionpack
+
+RUN echo source /opt/ros/humble/install/setup.bash >> /home/alexander/.bashrc
+RUN echo source /opt/ros/humble/setup.bash >> /home/alexander/.bashrc
+RUN echo source /home/alexander/simplebot2/ros2_workspace/install/setup.bash >> /home/alexander/.bashrc
 ADD ros-entrypoint.sh /ros-entrypoint.sh
 ENTRYPOINT [ "/ros-entrypoint.sh" ]
