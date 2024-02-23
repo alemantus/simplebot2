@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.5)
+project(joy2cmdvel)
+
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+# Find dependencies
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+# Build the executable
+add_executable(joy2cmdvel src/joy2cmdvel.cpp)
+ament_target_dependencies(joy2cmdvel rclcpp sensor_msgs geometry_msgs)
+
+# Install the executable
+install(TARGETS
+  joy2cmdvel
+  DESTINATION lib/${PROJECT_NAME})
+
+# Install launch files
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/)
+
+# Define test targets (if any)
+
+# Export dependencies
+ament_export_dependencies(rclcpp sensor_msgs geometry_msgs)
+
+# Export package
+ament_package()
