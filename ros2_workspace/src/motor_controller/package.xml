@@ -7,12 +7,29 @@
   <maintainer email="alexander@todo.todo">alexander</maintainer>
   <license>TODO: License declaration</license>
 
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <!-- Dependencies for Python nodes -->
+  <depend>python3</depend>
+  <depend>rclpy</depend>
+
+
+  <!-- Dependencies for C++ nodes -->
+  <depend>ament_cmake</depend>
+  <depend>rclcpp</depend>
+  
+  <!-- Generel dependencies for nodes -->
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
   <export>
-    <build_type>ament_python</build_type>
+    <!-- Updated export to include both Python and C++ build types -->
+    <build_type>ament_cmake</build_type>
   </export>
 </package>
