@@ -1,6 +1,10 @@
 from setuptools import setup
+import os  
+from glob import glob
 
 package_name = 'motor_controller'
+(os.path.join('share', package_name), glob('launch/*.launch.py')),
+
 
 setup(
     name=package_name,

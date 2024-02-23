@@ -18,15 +18,5 @@ def generate_launch_description():
             executable='kinematics2serial',
             name='motor_controller',
             output='screen'
-        ),
-
-        # Start teleop_twist_joy with ps4 configuration
-        
-        Node(
-            package='teleop_twist_joy',
-            executable='teleop-launch.py',
-            name='teleop_twist_joy',
-            parameters=[{'joy_config': 'ps4'}],
-            output='screen'
         )
     ])
