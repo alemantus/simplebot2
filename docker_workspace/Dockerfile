@@ -29,7 +29,10 @@ WORKDIR /home/alexander/Documents/simplebot2/ros2_workspace
 RUN pip install setuptools==58.2.0
 RUN pip install pyserial
 
-RUN sudo apt update && sudo apt install -y ros-humble-joy* -y
+RUN sudo apt update && \
+    sudo apt install -y ros-humble-joy* -y
+
+RUN sudo apt install avahi-utils -y
 # RUN colcon build --symlink-install
 
 RUN sudo code-server --install-extension ms-python.python \

@@ -23,6 +23,8 @@ run_docker_command docker run --network host \
     --volume="/etc/timezone:/etc/timezone:ro" \
     --device=/dev/input/event2 \
     --device=/dev/ttyACM0 \
+    -v /var/run/dbus:/var/run/dbus \
+    -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -it \
     ros2 bash 
 
