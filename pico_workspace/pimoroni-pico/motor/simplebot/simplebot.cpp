@@ -27,7 +27,7 @@ constexpr float SPEED_SCALE = 3.78;              // The scaling to apply to each
 constexpr int UPDATES = 100;                     // How many times to update the motor per second
 constexpr float UPDATE_RATE = 1.0 / UPDATES;
 constexpr float ZERO_POINT = 0.0;                // The duty cycle that corresponds with zero speed when plotting the motor's speed as a straight line
-constexpr float DEAD_ZONE = 0.0;                 // The duty cycle below which the motor's friction prevents it from moving
+constexpr float DEAD_ZONE = 5;                 // The duty cycle below which the motor's friction prevents it from moving
 
 // PID values
 constexpr float VEL_KP = 20.0;                   // Velocity proportional (P) gain
@@ -91,7 +91,7 @@ int main() {
     MySerial serial_obj;
 
     for(auto i = 0u; i < NUM_MOTORS; i++) {
-        motors[i] = new Motor(MOTOR_PINS[i], NORMAL_DIR, SPEED_SCALE);
+        motors[i] = new Motor(MOTOR_PINS[i], NORMAL_DIR, SPEED_SCALE, 0, 0.1);
         motors[i]->init();
 
         encoders[i] = new Encoder(pio0, i, ENCODER_PINS[i], PIN_UNUSED, NORMAL_DIR, COUNTS_PER_REV, true);
