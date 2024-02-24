@@ -4,15 +4,15 @@
 #include "pid.hpp"
 #include <cstdio>
 #include <cstdlib>
-#include <cstring>
+
 #include <unistd.h>
 #include <sys/select.h> // Include select() function
 
-#include <cstdio>
-#include <cstdlib>
+
 #include <cstring>
 #include <unistd.h>
 #include "pico/stdlib.h"
+#include <string>
 // Wheel friendly names
 constexpr int C = 2;
 constexpr int D = 3;
@@ -32,7 +32,7 @@ constexpr float DEAD_ZONE = 0.0;                 // The duty cycle below which t
 // PID values
 constexpr float VEL_KP = 20.0;                   // Velocity proportional (P) gain
 constexpr float VEL_KI = 0.00;                   // Velocity integral (I) gain
-constexpr float VEL_KD = 1.2;                    // Velocity derivative (D) gain
+constexpr float VEL_KD = 0.0012f;                    // Velocity derivative (D) gain
 
 using namespace plasma;
 using namespace motor;
@@ -128,11 +128,15 @@ int main() {
         
 
         // Capture the state of all the encoders
+        char output[500];
+        int offset = 0; // Keeps track of the current position in the buffer
         char rotation_per_second[256];
         for (uint i = 0; i < NUM_ENCODERS; ++i) {
-            captures[i] = encoders[i]->capture();
-            std::snprintf(rotation_per_second + strlen(rotation_per_second), sizeof(rotation_per_second) - strlen(rotation_per_second), "%.2f,", captures[i].revolutions_per_second());
+            captures[i] = encoders[i]->capture();   
+            //printf("%f", captures[i].revolutions_per_second());
+            offset += sprintf(output + offset, "%f ", captures[i].revolutions_per_second());
         }
+        printf("%s\n", output);
         rotation_per_second[strlen(rotation_per_second) - 1] = '\0'; // Remove trailing comma
 
         // Send data over serial if needed
@@ -145,7 +149,7 @@ int main() {
             motors[i]->speed(motors[i]->speed() + (accel * UPDATE_RATE));
         }
 
-        sleep_ms(UPDATE_RATE * 1000.0f);
+        sleep_ms(UPDATE_RATE);
     }
 
     // Stop all the motors
