@@ -47,7 +47,7 @@ class MechDriveNode(Node):
                     # If the response is a byte string, remove the leading "b" and parse the rest
                     if response.startswith("b'") and response.endswith("'"):
                         response = response[2:-1]
-                    encoder_data = [float(val) for val in response.split(',')]
+                    encoder_data = [float(val) for val in response.split(' ')]
                     self.publish_encoder_data(encoder_data)
                 except ValueError as e:
                     self.get_logger().warn(f"Error parsing encoder data: {e}")
