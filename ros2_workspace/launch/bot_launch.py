@@ -18,6 +18,7 @@ def generate_launch_description():
             executable='kinematics2serial.py',
             name='motor_controller',
             output='screen'
+        ),
 
         Node(
             package='motor_controller2',
