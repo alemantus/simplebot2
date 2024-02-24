@@ -14,9 +14,15 @@ def generate_launch_description():
 
         # Start motor_controller
         Node(
-            package='motor_controller',
-            executable='kinematics2serial',
+            package='motor_controller2',
+            executable='kinematics2serial.py',
             name='motor_controller',
+            output='screen'
+
+        Node(
+            package='motor_controller2',
+            executable='joy2vel',
+            name='joy2vel',
             output='screen'
         )
     ])
