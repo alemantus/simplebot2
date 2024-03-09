@@ -1,0 +1,160 @@
+<robot name="onshape">
+<link name="base_link"></link>
+<joint name="base_link_to_base" type="fixed">
+<parent link="base_link"/>
+<child link="frame2" />
+<origin rpy="0.0 0 0" xyz="0 0 0"/>
+</joint>
+<link name="frame2">
+<visual>
+<origin xyz="0.013397693634033203125 -0.019190251529216773019 0.016505338315628892421" rpy="0 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/frame2.stl"/>
+</geometry>
+<material name="frame2_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.013397693634033203125 -0.019190251529216773019 0.016505338315628892421" rpy="0 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/frame2.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0.01339769362719597616 0.035598667914564202652 0.065722307056853807028" rpy="0 0 0"/>
+<mass value="0.83471239669910590742" />
+<inertia ixx="0.0033281987957472980097" ixy="-1.3809149186762488429e-10"  ixz="-2.9054647173974031066e-12" iyy="0.0021781731379015558878" iyz="0.00043078360211500158752" izz="0.0043042325095105533894" />
+</inertial>
+</link>
+
+<link name="front_left">
+<visual>
+<origin xyz="-0.048588856906500499377 0.0025195016467438879904 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/front_left.stl"/>
+</geometry>
+<material name="front_left_material">
+<color rgba="0.81568627450980391025 0.84705882352941175295 0.68235294117647060652 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.048588856906500499377 0.0025195016467438879904 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/front_left.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 2.0816681711721685133e-16 -0.015531989140698539142" rpy="0 0 0"/>
+<mass value="0.053246309071214095732" />
+<inertia ixx="1.3015782152348844185e-05" ixy="0"  ixz="0" iyy="1.3015782152347993764e-05" iyz="0" izz="1.93168814079787818e-05" />
+</inertial>
+</link>
+
+<joint name="front_left_wheel" type="continuous">
+<origin xyz="-0.082110586913439115309 0.13080974847078327694 0.034005338315628894086" rpy="-3.141592653589793116 -1.570796326794896558 0" />
+<parent link="frame2" />
+<child link="front_left" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="front_right">
+<visual>
+<origin xyz="-0.092487330523870203702 0.030194420845917696594 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/front_right.stl"/>
+</geometry>
+<material name="front_right_material">
+<color rgba="0.61568627450980395466 0.5803921568627451455 0.56470588235294116863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.092487330523870203702 0.030194420845917696594 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/front_right.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-2.3592239273284576484e-16 1.8041124150158793782e-16 -0.015580103226351262047" rpy="0 0 0"/>
+<mass value="0.053246309071214012465" />
+<inertia ixx="1.3016775931929221903e-05" ixy="0"  ixz="0" iyy="1.3016775931929974069e-05" iyz="0" izz="1.931688140797337773e-05" />
+</inertial>
+</link>
+
+<joint name="front_right_wheel" type="continuous">
+<origin xyz="0.10890597418150550768 0.13080974847078327694 0.034005338315628907964" rpy="-3.141592653589793116 1.570796326794896558 0" />
+<parent link="frame2" />
+<child link="front_right" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="rear_left">
+<visual>
+<origin xyz="-0.092487330523870203702 0.030194420845917700064 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_left.stl"/>
+</geometry>
+<material name="rear_left_material">
+<color rgba="0.61568627450980395466 0.5803921568627451455 0.56470588235294116863 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.092487330523870203702 0.030194420845917700064 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_left.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="-2.3592239273284576484e-16 1.8388068845354155201e-16 -0.015580103226351262047" rpy="0 0 0"/>
+<mass value="0.053246309071214012465" />
+<inertia ixx="1.3016775931929213433e-05" ixy="0"  ixz="0" iyy="1.3016775931929972375e-05" iyz="0" izz="1.9316881407973370954e-05" />
+</inertial>
+</link>
+
+<joint name="rear_right_wheel" type="continuous">
+<origin xyz="-0.082110586913439101431 0.00080974847078321698923 0.034005338315628894086" rpy="-3.141592653589793116 -1.570796326794896558 0" />
+<parent link="frame2" />
+<child link="rear_left" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="rear_right">
+<visual>
+<origin xyz="-0.048588856906500499377 0.0025195016467438992661 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_right.stl"/>
+</geometry>
+<material name="rear_right_material">
+<color rgba="0.81568627450980391025 0.84705882352941175295 0.68235294117647060652 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.048588856906500499377 0.0025195016467438992661 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
+<geometry>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_right.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 2.1987620058006029922e-16 -0.015531989140698539142" rpy="0 0 0"/>
+<mass value="0.053246309071214095732" />
+<inertia ixx="1.3015782152348844185e-05" ixy="0"  ixz="0" iyy="1.3015782152347993764e-05" iyz="0" izz="1.9316881407978785188e-05" />
+</inertial>
+</link>
+
+<joint name="rear_left_wheel" type="continuous">
+<origin xyz="0.10890597418150552156 0.00080974847078321698923 0.034005338315628894086" rpy="-3.141592653589793116 1.570796326794896558 0" />
+<parent link="frame2" />
+<child link="rear_right" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>
