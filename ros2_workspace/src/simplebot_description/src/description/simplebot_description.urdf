@@ -9,7 +9,7 @@
 <visual>
 <origin xyz="0.013397693634033203125 -0.019190251529216773019 0.016505338315628892421" rpy="0 -0 0" />
 <geometry>
-<mesh filename="package:///frame2.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/frame2.stl"/>
 </geometry>
 <material name="frame2_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -18,7 +18,7 @@
 <collision>
 <origin xyz="0.013397693634033203125 -0.019190251529216773019 0.016505338315628892421" rpy="0 -0 0" />
 <geometry>
-<mesh filename="package:///frame2.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/frame2.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -32,7 +32,7 @@
 <visual>
 <origin xyz="-0.048588856906500499377 0.0025195016467438879904 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///front_left.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/front_left.stl"/>
 </geometry>
 <material name="front_left_material">
 <color rgba="0.81568627450980391025 0.84705882352941175295 0.68235294117647060652 1.0"/>
@@ -41,7 +41,7 @@
 <collision>
 <origin xyz="-0.048588856906500499377 0.0025195016467438879904 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///front_left.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/front_left.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -64,7 +64,7 @@
 <visual>
 <origin xyz="-0.092487330523870203702 0.030194420845917696594 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///front_right.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/front_right.stl"/>
 </geometry>
 <material name="front_right_material">
 <color rgba="0.61568627450980395466 0.5803921568627451455 0.56470588235294116863 1.0"/>
@@ -73,7 +73,7 @@
 <collision>
 <origin xyz="-0.092487330523870203702 0.030194420845917696594 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///front_right.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/front_right.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -96,7 +96,7 @@
 <visual>
 <origin xyz="-0.092487330523870203702 0.030194420845917700064 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///rear_left.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_left.stl"/>
 </geometry>
 <material name="rear_left_material">
 <color rgba="0.61568627450980395466 0.5803921568627451455 0.56470588235294116863 1.0"/>
@@ -105,7 +105,7 @@
 <collision>
 <origin xyz="-0.092487330523870203702 0.030194420845917700064 -0.059454826762777898685" rpy="1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///rear_left.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_left.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -128,7 +128,7 @@
 <visual>
 <origin xyz="-0.048588856906500499377 0.0025195016467438992661 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///rear_right.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_right.stl"/>
 </geometry>
 <material name="rear_right_material">
 <color rgba="0.81568627450980391025 0.84705882352941175295 0.68235294117647060652 1.0"/>
@@ -137,7 +137,7 @@
 <collision>
 <origin xyz="-0.048588856906500499377 0.0025195016467438992661 0.0097454869585663073117" rpy="-1.570796326794896558 -0 0" />
 <geometry>
-<mesh filename="package:///rear_right.stl"/>
+<mesh filename="file://$(find simplebot_description)/meshes/rear_right.stl"/>
 </geometry>
 </collision>
 <inertial>
