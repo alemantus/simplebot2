@@ -16,6 +16,11 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)  # Add this line
 find_package(rclpy REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 # Include Cpp "include" directory
 include_directories(include)
@@ -44,6 +49,7 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   scripts/kinematics2serial.py
+  scripts/odom.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
