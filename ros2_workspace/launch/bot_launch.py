@@ -25,5 +25,13 @@ def generate_launch_description():
             executable='joy2vel',
             name='joy2vel',
             output='screen'
+        ),
+
+        # Start odom node
+        Node(
+            package='motor_controller2',
+            executable='odom.py',
+            name='odom_node',
+            output='screen'
         )
     ])

@@ -42,6 +42,7 @@ RUN sudo apt install ros-humble-nav2-bringup -y
 RUN sudo apt install ros-humble-joint-state-publisher-gui -y
 RUN sudo apt install ros-humble-xacro -y
 RUN sudo apt install ros-humble-robot-state-publisher -y
+RUN pip install scipy
 # RUN colcon build --symlink-install
 
 RUN sudo code-server --install-extension ms-python.python \
