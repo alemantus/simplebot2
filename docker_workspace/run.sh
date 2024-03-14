@@ -15,12 +15,15 @@ run_docker_command docker run --network host \
     --user 1001:alexander \
     --group-add=dialout \
     --group-add=messagebus \
+    --group-add=gpio \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
+    --device=/dev/i2c-1 \
+    --device=/dev/gpiochip0 \
     --device=/dev/input/event2 \
     --device=/dev/ttyACM0 \
     -v /var/run/dbus:/var/run/dbus \

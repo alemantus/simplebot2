@@ -9,15 +9,15 @@ docker run --network host \
     --user 1001:alexander \
     --group-add=dialout \
     --group-add=messagebus \
+    --group-add=gpio \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
+    --privileged \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
-    --privileged \
     --env="UDEV=1" \
-    --volume=/dev:/dev \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -d --restart unless-stopped \
