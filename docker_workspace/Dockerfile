@@ -19,15 +19,19 @@ RUN groupadd alexander
 RUN useradd -u 1001 -g alexander -m $USERNAME && \
     echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME
-
+    
+ARG GPIO_GID=999
+RUN sudo groupadd --gid ${GPIO_GID} gpio
 # Set user to the newly created user
 USER $USERNAME
 RUN mkdir -p /home/alexander/Documents/simplebot2/ros2_workspace
 # Set the working directory
 WORKDIR /home/alexander/Documents/simplebot2/ros2_workspace
 
-RUN pip install setuptools==58.2.0
-RUN pip install pyserial
+
+RUN sudo code-server --install-extension ms-python.python \
+                     --install-extension ms-vscode-remote.vscode-remote-extensionpack
+
 
 RUN sudo apt update -y && \
     sudo apt install -y ros-humble-joy* -y
@@ -42,11 +46,16 @@ RUN sudo apt install ros-humble-nav2-bringup -y
 RUN sudo apt install ros-humble-joint-state-publisher-gui -y
 RUN sudo apt install ros-humble-xacro -y
 RUN sudo apt install ros-humble-robot-state-publisher -y
-RUN pip install scipy
-# RUN colcon build --symlink-install
 
-RUN sudo code-server --install-extension ms-python.python \
-                     --install-extension ms-vscode-remote.vscode-remote-extensionpack
+RUN pip install scipy
+RUN pip install setuptools==58.2.0
+RUN pip install pyserial
+RUN pip3 install adafruit-circuitpython-lsm6ds
+RUN sudo pip install Jetson.GPIO
+
+# Create GPIO group
+
+
 
 RUN echo source /opt/ros/humble/install/setup.bash >> /home/alexander/.bashrc
 RUN echo source /opt/ros/humble/setup.bash >> /home/alexander/.bashrc
