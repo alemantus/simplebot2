@@ -33,5 +33,23 @@ def generate_launch_description():
             executable='odom.py',
             name='odom_node',
             output='screen'
+        ),
+
+        # Add static transform publisher
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            arguments=['0.0104', '0', '0.099', '0', '0', '0', '1', 'base_link', 'laser'],
+            output='screen'
+        ),
+
+        # Add pointcloud_to_laserscan node with angle filtering
+        Node(
+            package='pointcloud_to_laserscan',
+            executable='pointcloud_to_laserscan_node',
+            name='pointcloud_to_laserscan_node',
+            parameters=[{'target_frame': 'base_link', 'angle_min': -0.5, 'angle_max': 0.5}],
+            remappings=[('cloud_in', 'scan')],
+            output='screen'
         )
     ])
