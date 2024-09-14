@@ -29,7 +29,7 @@ constexpr float ZERO_POINT = 0.0; // The duty cycle that corresponds with zero s
 constexpr float DEAD_ZONE = 5;    // The duty cycle below which the motor's friction prevents it from moving
 
 // PID values
-constexpr float VEL_KP = 22;      // Velocity proportional (P) gain
+constexpr float VEL_KP = 22.0;      // Velocity proportional (P) gain
 constexpr float VEL_KI = 0.0;     // Velocity integral (I) gain
 constexpr float VEL_KD = 0.0012f; // Velocity derivative (D) gain
 
