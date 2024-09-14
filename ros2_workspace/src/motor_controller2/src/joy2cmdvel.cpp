@@ -24,7 +24,7 @@ private:
         float rotation_z_right = msg->axes[4];
         
         if (rotation_z_right-rotation_z_left != 0){
-            rotation_z = (rotation_z_right-rotation_z_left) * 1.2;
+            rotation_z = (rotation_z_right-rotation_z_left);
         }
         else{
             rotation_z = 0;
