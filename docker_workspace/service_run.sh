@@ -7,9 +7,10 @@ yes | docker container prune
 docker run --network host \
     --name ros2 \
     --user 1001:alexander \
-    --group-add=dialout \
+    --group-add $(getent group dialout | cut -d: -f3) \
     --group-add=messagebus \
-    --group-add=gpio \
+    --group-add $(getent group i2c | cut -d: -f3) \
+    --group-add $(getent group gpio | cut -d: -f3) \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
@@ -20,6 +21,6 @@ docker run --network host \
     --env="UDEV=1" \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
-    -d --restart unless-stopped \
+    --restart unless-stopped \
     -it \
-    ros2 bash -c "ros2 launch /home/alexander/simplebot2/ros2_workspace/launch/bot_launch.py; bash"
+    ros2 bash

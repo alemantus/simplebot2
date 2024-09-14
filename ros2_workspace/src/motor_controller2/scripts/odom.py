@@ -30,20 +30,26 @@ class OdometryPublisher(Node):
         self.vy_ = 0.0
         self.vth_ = 0.0
         self.wheel_separation_ = 0.222  # Distance between wheels (meters)
-        self.wheel_separation_length_ = 0.128  # Distance between front and rear wheels (meters)
+        self.wheel_separation_length_ = 0.13  # Distance between front and rear wheels (meters)
 
         self.tf_broadcaster_ = tf2_ros.TransformBroadcaster(self)
 
     def encoder_callback(self, msg):
         # Assuming the encoder message has 4 elements: [front_left, front_right, rear_left, rear_right]
         front_left, front_right, rear_left, rear_right = msg.data
-
+        self.front_left_debug = front_left
+        self.front_right_debug = front_right
         # Update linear velocities directly from encoder readings
-        self.vx_ = (front_left + front_right + rear_left + rear_right) * 0.25  # Average of all wheels
-        self.vy_ = (front_left - front_right - rear_left + rear_right) * 0.25  # Average of opposite wheels
+        #self.vx_ = (front_left + front_right + rear_left + rear_right) * 0.25  # Average of all wheels
+        #self.vy_ = (front_left - front_right - rear_left + rear_right) * 0.25  # Average of opposite wheels
 
         # Calculate angular velocity
+        #self.vth_ = (-front_left + front_right - rear_left + rear_right) / (2 * (self.wheel_separation_ + self.wheel_separation_length_))
+
+        self.vx_ = (front_left + front_right + rear_left + rear_right) * 0.25  # Forward/backward
+        self.vy_ = (-front_left + front_right + rear_left - rear_right) * 0.25  # Left/right
         self.vth_ = (-front_left + front_right - rear_left + rear_right) / (2 * (self.wheel_separation_ + self.wheel_separation_length_))
+
         self.publish_odometry()
         
     def publish_odometry(self):
@@ -77,8 +83,21 @@ class OdometryPublisher(Node):
 
         pose.orientation.x = 0.0
         pose.orientation.y = 0.0
-        pose.orientation.z = math.sin(self.theta_/2)
-        pose.orientation.w = math.cos(self.theta_/2)
+        # may solve front left wheel spinning out of control. 24/08/2024
+        try:
+            pose.orientation.z = math.sin(self.theta_ / 2)
+        except ValueError:
+            pose.orientation.z = 0.0  # or some other default or fallback value
+            print("Invalid theta_, setting pose.orientation.z to 0.")
+        # may solve front left wheel spinning out of control. 24/08/2024
+        try:
+            pose.orientation.w = math.cos(self.theta_ / 2)
+        except ValueError:
+            pose.orientation.w = 0.0  # or some other default or fallback value
+            print(f"theta: {self.theta_}")
+            print(f"front right: {self.front_right_debug}")
+            print(f"front left: {self.front_left_debug}")
+            print("Invalid theta_, setting pose.orientation.w to 0.")
 
         odom_msg.pose.pose = pose
 
