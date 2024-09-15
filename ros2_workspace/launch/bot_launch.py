@@ -1,10 +1,11 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, TimerAction
 from launch_ros.actions import Node
 from launch_ros.actions import SetParameter
 from launch.substitutions import LaunchConfiguration
 import os
 from ament_index_python.packages import get_package_share_directory
+import time 
 
 def generate_launch_description():
     # LiDAR parameters
@@ -20,9 +21,11 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     slam_params_file = LaunchConfiguration(
         'slam_params_file',
-        default=os.path.join(get_package_share_directory("slam_toolbox"),
-                             'config', 'mapper_params_online_async.yaml')
+        default='/home/alexander/simplebot2/ros2_workspace/src/mapper_params_online_async.yaml'
     )
+
+    # Lifecycle node parameters
+    # use_lifecycle_manager = LaunchConfiguration('use_lifecycle_manager', default='true')
 
     return LaunchDescription([
         # LiDAR configuration arguments
@@ -61,7 +64,6 @@ def generate_launch_description():
             default_value=scan_mode,
             description='Specifying scan mode of lidar'),
 
-
         # Start odom Node
         Node(
             package='motor_controller2',
@@ -94,20 +96,13 @@ def generate_launch_description():
             name='joy2vel',
             output='screen'
         ),
-        
-        # Start SLAM Toolbox Node
-        Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments=['0.0104', '0', '0.099', '0', '0', '0', 'base_link', 'laser'],
-            output='screen'
-        ),
 
+        # Start LiDAR Node
         Node(
             package='sllidar_ros2',
             executable='sllidar_node',
             name='sllidar_node',
-            parameters=[{'channel_type':channel_type,
+            parameters=[{'channel_type': channel_type,
                          'serial_port': serial_port, 
                          'serial_baudrate': serial_baudrate, 
                          'frame_id': frame_id,
@@ -118,20 +113,38 @@ def generate_launch_description():
             output='screen'),
 
 
-    
-        # Add static transform publisher
+        # Start SLAM Toolbox Node
         #Node(
-        #    package='sensor_package',
-        #    executable='lsm6dsm.py',
-        #    name='imu_node',
-        #    output='screen'
+        #    parameters=[
+        #      slam_params_file:='/home/alexander/simplebot2/ros2_workspace/src/mapper_params_online_async.yaml'
+        #    ],
+        #    package='slam_toolbox',
+        #    executable='async_slam_toolbox_node',
+        #    name='slam_toolbox',
+        #    output='screen',
+        #    namespace=''
         #),
 
-        #Node(
-        #   package='robot_localization',
-        #   executable='ekf_node',
-        #   name='ekf_filter_node',
-        #   output='screen',
-        #   parameters=['/home/alexander/simplebot2/ros2_workspace/src/ekf.yaml']
-        #)
+        # Start static transform publisher
+        Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            arguments=['0.0104', '0', '0.099', '0', '0', '0', 'base_link', 'laser'],
+            output='screen'
+        ),
+
+        
+        # Start SLAM Toolbox Node with 5 second delay
+        #TimerAction(
+        #    period=10.0,  # 5 seconds delay
+        #    actions=[
+        #        Node(
+        #            package='slam_toolbox',
+        #            executable='async_slam_toolbox_node',
+        #            name='slam_toolbox',
+        #            parameters=[slam_params_file, {'use_sim_time': use_sim_time}],
+        #            output='screen'
+        #        )
+        #    ]
+        #),
     ])

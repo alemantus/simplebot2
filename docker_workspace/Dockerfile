@@ -31,10 +31,9 @@ RUN sudo apt install ros-jazzy-robot-state-publisher -y
 RUN sudo apt install ros-jazzy-geographic-msgs -y
 #RUN sudo apt install libgeographic-dev -y
 RUN sudo apt install ros-jazzy-robot-localization -y
+RUN sudo apt install ros-jazzy-foxglove-bridge -y
 
 RUN sudo apt install python3-pip -y
-
-
 RUN pip3 install setuptools --break-system-packages
 RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
 RUN pip3 install scipy --break-system-packages
