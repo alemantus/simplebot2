@@ -6,11 +6,10 @@ yes | docker container prune
 # Function to run docker command with error handling
 docker run --network host \
     --name ros2 \
-    --user 1001:alexander \
+    --user 1000:1000 \
     --group-add $(getent group dialout | cut -d: -f3) \
+    --group-add $(getent group alexander | cut -d: -f3) \
     --group-add=messagebus \
-    --group-add $(getent group i2c | cut -d: -f3) \
-    --group-add $(getent group gpio | cut -d: -f3) \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
@@ -23,4 +22,4 @@ docker run --network host \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     --restart unless-stopped \
     -it \
-    ros2 bash
+    ros2:v0.1 bash

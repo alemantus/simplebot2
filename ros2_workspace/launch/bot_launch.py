@@ -101,9 +101,21 @@ def generate_launch_description():
             executable='static_transform_publisher',
             arguments=['0.0104', '0', '0.099', '0', '0', '0', 'base_link', 'laser'],
             output='screen'
-        )
+        ),
 
-
+        Node(
+            package='sllidar_ros2',
+            executable='sllidar_node',
+            name='sllidar_node',
+            parameters=[{'channel_type':channel_type,
+                         'serial_port': serial_port, 
+                         'serial_baudrate': serial_baudrate, 
+                         'frame_id': frame_id,
+                         'inverted': inverted, 
+                         'angle_compensate': angle_compensate, 
+                         'scan_mode': scan_mode,
+                         'sample_rate': 1}],
+            output='screen'),
 
 
     

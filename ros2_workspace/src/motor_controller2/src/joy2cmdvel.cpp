@@ -20,16 +20,20 @@ private:
         twist_msg->linear.y = msg->axes[0];  // Assuming left/right control
 
         float rotation_z = 0.0;
-        float rotation_z_left = msg->axes[3];
-        float rotation_z_right = msg->axes[4];
-        
+        float rotation_z_left = msg->axes[4];
+        float rotation_z_right = msg->axes[5];
+
+        // Map rotation_z_left and rotation_z_right from range [-1, 1] to [0, 1]
+        rotation_z_left = (rotation_z_left + 1) / 2;
+        rotation_z_right = (rotation_z_right + 1) / 2;
+
         if (rotation_z_right-rotation_z_left != 0){
             rotation_z = (rotation_z_right-rotation_z_left);
         }
         else{
             rotation_z = 0;
         }
-        twist_msg->angular.z = rotation_z;
+        twist_msg->angular.z = rotation_z*1.2;
         publisher_->publish(*twist_msg);
     }
 

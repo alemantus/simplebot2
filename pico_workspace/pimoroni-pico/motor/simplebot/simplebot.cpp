@@ -23,7 +23,7 @@ constexpr float COUNTS_PER_REV = 44 * GEAR_RATIO; // The counts per revolution o
 
 constexpr float SPEED_SCALE = 3.78; // The scaling to apply to each motor's speed to match its real-world speed
 
-constexpr int UPDATES = 1000; // How many times to update the motor per second
+constexpr int UPDATES = 100; // How many times to update the motor per second
 constexpr float UPDATE_RATE = 1.0 / UPDATES;
 constexpr float ZERO_POINT = 0.0; // The duty cycle that corresponds with zero speed when plotting the motor's speed as a straight line
 constexpr float DEAD_ZONE = 5;    // The duty cycle below which the motor's friction prevents it from moving
