@@ -45,12 +45,17 @@ RUN sudo pip3 install Jetson.GPIO --break-system-packages
 # ARG to specify the username during build (default is "myuser")
 ARG USERNAME=alexander
 
-RUN groupadd alexander
-# Add a new user and grant sudo privileges
-RUN useradd -u 1001 -g alexander -m $USERNAME && \
+ARG UID=1000
+ARG GID=1000
+
+# Find the existing group with GID 1000
+#RUN EXISTING_USER=$(getent passwd $UID | cut -d: -f1) && \
+RUN usermod -l $USERNAME ubuntu && \
+    groupmod -n $USERNAME $(id -gn $EXISTING_USER) && \
+    usermod -d /home/$USERNAME -m $USERNAME && \
     echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME
-    
+
 # ARG GPIO_GID=999
 # RUN sudo groupadd --gid ${GPIO_GID} gpio
 # RUN sudo usermod -a -G gpio ${USERNAME} 

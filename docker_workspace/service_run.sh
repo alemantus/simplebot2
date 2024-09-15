@@ -6,8 +6,9 @@ yes | docker container prune
 # Function to run docker command with error handling
 docker run --network host \
     --name ros2 \
-    --user 1001:alexander \
+    --user 1000:1000 \
     --group-add $(getent group dialout | cut -d: -f3) \
+    --group-add $(getent group alexander | cut -d: -f3) \
     --group-add=messagebus \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
