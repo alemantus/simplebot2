@@ -1,1 +1,5 @@
 ros2 run joy joy_node --ros-args -p device_id:=0
+
+ros2 launch stereo_image_proc stereo_image_proc.launch.py namespace:=stereo approximateync:=true
+
+ros2 run camera_package camera_publisher_python.py --ros-args   --param left_config_file:=/home/alexander/simplebot2/ros2_workspace/src/camera_package/calibration_files/left_calibration.yaml   --param right_config_file:=/home/alexander/simplebot2/ros2_workspace/src/camera_package/calibration_files/right_calibration.yaml
