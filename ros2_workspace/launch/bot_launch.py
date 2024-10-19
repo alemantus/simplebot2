@@ -1,11 +1,14 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, TimerAction
+from launch.actions import DeclareLaunchArgument, TimerAction, IncludeLaunchDescription
 from launch_ros.actions import Node
 from launch_ros.actions import SetParameter
 from launch.substitutions import LaunchConfiguration
 import os
 from ament_index_python.packages import get_package_share_directory
 import time 
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_xml.launch_description_sources import XMLLaunchDescriptionSource  # Corrected import for XML
+
 
 def generate_launch_description():
     # LiDAR parameters
@@ -24,6 +27,19 @@ def generate_launch_description():
         default='/home/alexander/simplebot2/ros2_workspace/src/mapper_params_online_async.yaml'
     )
 
+
+    # Path to the second launch file (same directory as current file)
+    online_async_launch_path = os.path.join(
+        os.path.dirname(__file__),  # Get the directory of the current launch file
+        'online_async_launch.py'
+    )
+
+    # Path to the foxglove_bridge XML launch file
+    foxglove_bridge_launch_path = os.path.join(
+        get_package_share_directory('rosbridge_server'),  # Assuming foxglove_bridge is installed and findable
+        'launch',
+        'rosbridge_websocket_launch.xml'
+    )
     # Lifecycle node parameters
     # use_lifecycle_manager = LaunchConfiguration('use_lifecycle_manager', default='true')
 
@@ -133,6 +149,14 @@ def generate_launch_description():
             output='screen'
         ),
 
+        # Include another launch file (online_async_launch.py)
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(online_async_launch_path)
+        ),
+        # Include the foxglove_bridge XML launch file
+        IncludeLaunchDescription(
+            XMLLaunchDescriptionSource(foxglove_bridge_launch_path)
+        ),
         
         # Start SLAM Toolbox Node with 5 second delay
         #TimerAction(
