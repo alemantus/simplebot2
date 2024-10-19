@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Prune Docker containers
-yes | docker container prune
+# yes | docker container prune
+if [ "$(docker ps -a | grep ros2)" ]; then
+    # Remove the container
+    docker rm ros2
+fi
 
 # Function to run docker command with error handling
 docker run --network host \
@@ -21,6 +25,5 @@ docker run --network host \
     --env="UDEV=1" \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
-    --restart unless-stopped \
-    -it \
-    ros2:v0.1 bash
+    -d \
+    ros2:v0.2 bash -c "ros2 launch /home/alexander/simplebot2/ros2_workspace/launch/bot_launch.py; bash"
