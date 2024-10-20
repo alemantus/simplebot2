@@ -3,7 +3,7 @@ import time
 import threading
 
 # Replace "COMx" with the actual COM port of your device
-ser = serial.Serial("/dev/ttyACM0", baudrate=115200, timeout=1)
+ser = serial.Serial("/dev/motor_controller", baudrate=115200, timeout=1)
 
 def read_serial():
     while True:

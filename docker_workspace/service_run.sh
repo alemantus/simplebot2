@@ -22,7 +22,9 @@ docker run --network host \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --volume="/etc/localtime:/etc/localtime:ro" \
     --volume="/etc/timezone:/etc/timezone:ro" \
+    --volume=/dev:/dev \
     --env="UDEV=1" \
+    --env="BLINKA_MCP2221"=1 \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -d \

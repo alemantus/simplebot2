@@ -29,6 +29,12 @@ def generate_launch_description():
 
 
     # Path to the second launch file (same directory as current file)
+    cmd_vel_mux_path = os.path.join(
+        get_package_share_directory('cmd_vel_mux'),
+        'launch',  
+        'cmd_vel_mux-launch.py'
+    )
+
     online_async_launch_path = os.path.join(
         os.path.dirname(__file__),  # Get the directory of the current launch file
         'online_async_launch.py'
@@ -153,6 +159,11 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(online_async_launch_path)
         ),
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(cmd_vel_mux_path)
+        ),
+        
         # Include the foxglove_bridge XML launch file
         IncludeLaunchDescription(
             XMLLaunchDescriptionSource(foxglove_bridge_launch_path)

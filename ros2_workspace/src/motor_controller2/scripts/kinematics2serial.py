@@ -27,7 +27,7 @@ class MechDriveNode(Node):
         # Publishers
         self.encoder_pub = self.create_publisher(Float64MultiArray, '/encoder_data', 10)
 
-        self.ser = serial.Serial("/dev/ttyACM0", baudrate=115200, timeout=10)
+        self.ser = serial.Serial("/dev/motor_controller", baudrate=115200, timeout=10)
         self.wheel_radius = 0.067/2
         self.wheel_circumference = 2*math.pi*self.wheel_radius
 

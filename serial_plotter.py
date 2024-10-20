@@ -2,7 +2,7 @@ import serial
 import matplotlib.pyplot as plt
 
 # Open serial port
-ser = serial.Serial('/dev/ttyACM0', 115200)  # Replace 'COM1' with your serial port and 9600 with baud rate
+ser = serial.Serial('/dev/motor_controller', 115200)  # Replace 'COM1' with your serial port and 9600 with baud rate
 
 #  Initialize empty lists for data
 data1 = []

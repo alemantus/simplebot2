@@ -43,7 +43,7 @@ RUN pip3 install setuptools --break-system-packages
 RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
 RUN pip3 install scipy --break-system-packages
 RUN pip3 install pyserial --break-system-packages
-RUN sudo pip3 install Jetson.GPIO --break-system-packages
+RUN pip3 install hidapi --break-system-packages
 
 
 # ARG to specify the username during build (default is "myuser")

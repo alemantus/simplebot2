@@ -25,7 +25,7 @@ run_docker_command docker run --network host \
     --device=/dev/i2c-1 \
     --device=/dev/gpiochip0 \
     --device=/dev/input/event2 \
-    --device=/dev/ttyACM0 \
+    --device=/dev/motor_controller \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -it \
