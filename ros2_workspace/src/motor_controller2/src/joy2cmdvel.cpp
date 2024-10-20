@@ -9,7 +9,7 @@ public:
     {
         subscription_ = this->create_subscription<sensor_msgs::msg::Joy>(
             "joy", 10, std::bind(&JoyToCmdVel::joy_callback, this, std::placeholders::_1));
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/input/joystick", 10);
     }
 
 private:
