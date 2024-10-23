@@ -20,6 +20,8 @@ def generate_launch_description():
     angle_compensate = LaunchConfiguration('angle_compensate', default='true')
     scan_mode = LaunchConfiguration('scan_mode', default='Standard')
 
+    robot_localization_file_path = os.path.join('/home/alexander/simplebot2/ros2_workspace', 'config/ekf.yaml') 
+
     # SLAM parameters
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     slam_params_file = LaunchConfiguration(
@@ -103,6 +105,14 @@ def generate_launch_description():
             output='screen'
         ),
 
+        Node(
+            package='sensor_package',
+            executable='lsm6dsm.py',
+            name='imu',
+            output='screen'
+        ),
+
+
         # Start motor_controller
         Node(
             package='motor_controller2',
@@ -134,7 +144,14 @@ def generate_launch_description():
                          'sample_rate': 1}],
             output='screen'),
 
-
+          # Start robot localization using an Extended Kalman filter
+         #Node(
+         #   package='robot_localization',
+         #   executable='ekf_node',
+         #   name='ekf_filter_node',
+         #   output='screen',
+         #   parameters=[robot_localization_file_path, 
+         #   {'use_sim_time': use_sim_time}]),
         # Start SLAM Toolbox Node
         #Node(
         #    parameters=[

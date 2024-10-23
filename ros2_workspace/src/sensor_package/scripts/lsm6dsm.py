@@ -9,15 +9,19 @@ from geometry_msgs.msg import Quaternion, Vector3
 import numpy as np
 import board
 from adafruit_lsm6ds.lsm6dsox import LSM6DSOX
+from adafruit_lsm6ds import Rate, AccelRange, GyroRange
 
 class IMUNode(Node):    
     def __init__(self):
         super().__init__('imu_publisher')
-        self.publisher_ = self.create_publisher(Imu, '/imu/data', 10)
-        self.timer_ = self.create_timer(0.1, self.publish_imu_data)
+        self.publisher_ = self.create_publisher(Imu, '/imu/data', 30)
+        self.timer_ = self.create_timer(1/100, self.publish_imu_data)
         self.i2c = board.I2C()  # uses board.SCL and board.SDA
         # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
         self.sensor = LSM6DSOX(self.i2c)
+
+        self.sensor.accelerometer_range = AccelRange.RANGE_8G
+        self.sensor.gyro_range = GyroRange.RANGE_2000_DPS
 
     def publish_imu_data(self):
         imu_msg = Imu()
@@ -25,10 +29,10 @@ class IMUNode(Node):
         imu_msg.header.frame_id = 'imu_link'
         
         # Populate orientation (setting it to identity quaternion for simplicity)
-        imu_msg.orientation = Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
+        # imu_msg.orientation = Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
         
         # Populate orientation covariance (assuming identity matrix)
-        imu_msg.orientation_covariance = [0.0] * 9
+        imu_msg.orientation_covariance = [-1] * 9
         
         # Populate angular velocity
         imu_msg.angular_velocity = Vector3(
@@ -48,7 +52,7 @@ class IMUNode(Node):
         )
         
         # Populate linear acceleration covariance (assuming identity matrix)
-        imu_msg.linear_acceleration_covariance = [0.0] * 9
+        # imu_msg.linear_acceleration_covariance = [0.0] * 9
         
         self.publisher_.publish(imu_msg)
 
