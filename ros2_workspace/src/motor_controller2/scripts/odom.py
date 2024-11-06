@@ -32,7 +32,7 @@ class OdometryPublisher(Node):
         self.wheel_separation_ = 0.222  # Distance between wheels (meters)
         self.wheel_separation_length_ = 0.13  # Distance between front and rear wheels (meters)
 
-        self.tf_broadcaster_ = tf2_ros.TransformBroadcaster(self)
+        # self.tf_broadcaster_ = tf2_ros.TransformBroadcaster(self)
 
     def encoder_callback(self, msg):
         # Assuming the encoder message has 4 elements: [front_left, front_right, rear_left, rear_right]
@@ -116,21 +116,21 @@ class OdometryPublisher(Node):
         self.publisher_.publish(odom_msg)
 
         # Broadcast transform
-        transform = TransformStamped()
-        transform.header.stamp = self.current_time_
-        transform.header.frame_id = 'odom'
-        transform.child_frame_id = 'base_link'
-        transform.transform.translation.x = self.x_
-        transform.transform.translation.y = self.y_
-        transform.transform.translation.z = 0.0
-        r = R.from_euler('xyz',[0, 0, self.theta_])
-
-        transform.transform.rotation.x = r.as_quat()[0]
-        transform.transform.rotation.y = r.as_quat()[1]
-        transform.transform.rotation.z = r.as_quat()[2]
-        transform.transform.rotation.w = r.as_quat()[3]
-
-        self.tf_broadcaster_.sendTransform(transform)
+        # transform = TransformStamped()
+        # transform.header.stamp = self.current_time_
+        # transform.header.frame_id = 'odom'
+        # transform.child_frame_id = 'base_link'
+        # transform.transform.translation.x = self.x_
+        # transform.transform.translation.y = self.y_
+        # transform.transform.translation.z = 0.0
+        # r = R.from_euler('xyz',[0, 0, self.theta_])
+ 
+        # transform.transform.rotation.x = r.as_quat()[0]
+        # transform.transform.rotation.y = r.as_quat()[1]
+        # transform.transform.rotation.z = r.as_quat()[2]
+        # transform.transform.rotation.w = r.as_quat()[3]
+ 
+         #self.tf_broadcaster_.sendTransform(transform)
 
         self.last_time_ = self.current_time_
 
