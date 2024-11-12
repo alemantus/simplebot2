@@ -49,6 +49,10 @@ class OdometryPublisher(Node):
         self.vx_ = (front_left + front_right + rear_left + rear_right) * 0.25  # Forward/backward
         self.vy_ = (-front_left + front_right + rear_left - rear_right) * 0.25  # Left/right
         self.vth_ = (-front_left + front_right - rear_left + rear_right) / (2 * (self.wheel_separation_ + self.wheel_separation_length_))
+        if self.vth_ > 10:
+            print(f"-front_left + front_right - rear_left + rear_right = {-front_left + front_right - rear_left + rear_right}")
+            print(f"(2 * (self.wheel_separation_ + self.wheel_separation_length_) = {2 * (self.wheel_separation_ + self.wheel_separation_length_)}")
+            print(f"front_left, front_right, rear_left, rear_right: {front_left}, {front_right}, {rear_left}, {rear_right}")
 
         self.publish_odometry()
         

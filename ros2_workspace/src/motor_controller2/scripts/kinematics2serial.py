@@ -58,6 +58,9 @@ class MechDriveNode(Node):
         # Convert rotations per second to linear speed in meters per second
         encoder_data_mps = [val * self.wheel_circumference for val in encoder_data]
 
+        for i in encoder_data_mps:
+            if i > 99999999:
+                print(f"encoder data, encoder_data_mps {encoder_data}, {encoder_data_mps}")
         msg = Float64MultiArray(data=encoder_data_mps)
         self.encoder_pub.publish(msg)
 
