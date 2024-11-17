@@ -24,10 +24,10 @@ def generate_launch_description():
 
     # SLAM parameters
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
-    slam_params_file = LaunchConfiguration(
-        'slam_params_file',
-        default='/home/alexander/simplebot2/ros2_workspace/src/mapper_params_online_async.yaml'
-    )
+    # slam_params_file = LaunchConfiguration(
+    #     'slam_params_file',
+    #     default='/home/alexander/simplebot2/ros2_workspace/config/mapper_params_online_async.yaml'
+    # )
 
 
     # Path to the second launch file (same directory as current file)
@@ -173,9 +173,9 @@ def generate_launch_description():
         ),
 
         # Include another launch file (online_async_launch.py)
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(online_async_launch_path)
-        ),
+        #IncludeLaunchDescription(
+        #    PythonLaunchDescriptionSource(online_async_launch_path)
+        #),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(cmd_vel_mux_path)
