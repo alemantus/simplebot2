@@ -4,7 +4,7 @@
 # yes | docker container prune
 if [ "$(docker ps -a | grep ros2)" ]; then
     # Remove the container
-    docker rm ros2
+    docker rm -f ros2
 fi
 
 # Function to run docker command with error handling
@@ -28,4 +28,4 @@ docker run --network host \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -d \
-    ros2:v0.2 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch /home/alexander/simplebot2/ros2_workspace/launch/bot_launch_legacy.py; bash"
+    ros2:v0.2 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch simplebot2 main_launch.py; bash"
