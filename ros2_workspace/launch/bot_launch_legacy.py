@@ -173,10 +173,10 @@ def generate_launch_description():
         ),
 
         # Include another launch file (online_async_launch.py)
-        #IncludeLaunchDescription(
-        #    PythonLaunchDescriptionSource(online_async_launch_path)
-        #),
-
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(online_async_launch_path)
+        ),
+        
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(cmd_vel_mux_path)
         ),

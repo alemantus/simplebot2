@@ -27,5 +27,5 @@ docker run --network host \
     --env="BLINKA_MCP2221"=1 \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
-    -d \
-    ros2:v0.2 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch simplebot2 main_launch.py; bash"
+    -it \
+    ros2:v0.2 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch /home/alexander/simplebot2/ros2_workspace/launch/bot_launch_legacy.py; bash"

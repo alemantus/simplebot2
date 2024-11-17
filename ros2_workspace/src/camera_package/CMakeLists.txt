@@ -42,6 +42,10 @@ install(PROGRAMS
   scripts/camera_publisher_python.py
   DESTINATION lib/${PROJECT_NAME})
 
+install(
+  DIRECTORY launch calibration_files
+  DESTINATION share/${PROJECT_NAME}
+)
 # Export necessary dependencies
 ament_export_include_directories(include)
 ament_export_dependencies(cv_bridge image_transport rclcpp sensor_msgs std_msgs OpenCV yaml-cpp)

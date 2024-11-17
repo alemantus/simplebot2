@@ -1,9 +1,10 @@
 from launch import LaunchDescription
+from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node
 import os
 
 def generate_launch_description():
-    robot_localization_file_path = os.path.join('/home/alexander/simplebot2/ros2_workspace', 'config/ekf2.yaml')
+    robot_localization_file_path = os.path.join(get_package_share_directory('simplebot2'), 'config', 'ekf2.yaml')
     
     return LaunchDescription([
         Node(
