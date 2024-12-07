@@ -7,6 +7,17 @@ import os
 
 def generate_launch_description():
 
+    # Declare the map argument
+    map_arg = DeclareLaunchArgument(
+        'map',
+        default_value=os.path.join(
+            get_package_share_directory('nav2_bringup'),  # Replace 'simplebot2' with your package
+            'maps',
+            'apartment_map/apartment.yaml'  # Replace with your map file name
+        ),
+        description='Full path to the map file to load'
+    )
+
     # Paths to external packages
     cmd_vel_mux_path = os.path.join(
         get_package_share_directory('cmd_vel_mux'),
@@ -42,16 +53,17 @@ def generate_launch_description():
         'joy_launch.py'
     )
     # Uncomment as needed
-    # nav2_bringup_launch_path = os.path.join(
+    nav2_bringup_launch_path = os.path.join(
+        get_package_share_directory('nav2_bringup'),
+        'launch',
+        'nav2_bringup_launch.py'
+    )
+    
+    # slam_launch_path = os.path.join(
     #     get_package_share_directory('simplebot2'),
     #     'launch',
-    #     'nav2_bringup_launch.py'
+    #     'online_async_launch.py'
     # )
-    slam_launch_path = os.path.join(
-        get_package_share_directory('simplebot2'),
-        'launch',
-        'online_async_launch.py'
-    )
 
     static_tf_path = os.path.join(
         get_package_share_directory('simplebot2'),
@@ -64,19 +76,13 @@ def generate_launch_description():
         'launch',
         'camera_launch.py'
     )
-    # Timer to delay the launch of SLAM toolbox by 10 seconds
 
     return LaunchDescription([
         # Include local package launch files
         IncludeLaunchDescription(PythonLaunchDescriptionSource(localization_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(static_tf_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(robot_control_launch_path)),
-        
         IncludeLaunchDescription(PythonLaunchDescriptionSource(lidar_launch_path)),
-        # Uncomment as needed
-        # IncludeLaunchDescription(PythonLaunchDescriptionSource(nav2_bringup_launch_path)),
-        #IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path)),
-        
         IncludeLaunchDescription(PythonLaunchDescriptionSource(joy_launch_path)),
 
         # Include external package launch files
@@ -84,6 +90,11 @@ def generate_launch_description():
         IncludeLaunchDescription(XMLLaunchDescriptionSource(foxglove_bridge_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
 
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path))
+        # IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path))
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(nav2_bringup_launch_path),
+            launch_arguments={'map': LaunchConfiguration('map')}.items()
+        ),
     
     ])
