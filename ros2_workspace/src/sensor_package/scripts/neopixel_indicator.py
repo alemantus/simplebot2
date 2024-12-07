@@ -8,7 +8,7 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 ss = seesaw.Seesaw(i2c)
 
 NEOPIXEL_PIN = 14  # Can be any pin
-NEOPIXEL_NUM = 60  # No more than 60 pixels!
+NEOPIXEL_NUM = 16  # No more than 60 pixels!
 
 pixels = neopixel.NeoPixel(ss, NEOPIXEL_PIN, NEOPIXEL_NUM)
 pixels.brightness = 0.3  # Not so bright!
