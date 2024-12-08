@@ -97,7 +97,9 @@ def generate_launch_description():
     )
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
-        'map', default_value='', description='Full path to map yaml file to load'
+        'map', 
+        default_value=os.path.join(bringup_dir, 'maps', 'apartment_map/apartment.yaml'),
+        description='Full path to the ROS2 parameters file to use for all launched nodes',
     )
 
     declare_use_localization_cmd = DeclareLaunchArgument(

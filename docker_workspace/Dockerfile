@@ -37,6 +37,7 @@ RUN sudo apt install python3-tornado -y
 RUN sudo apt install python3-pil -y
 RUN sudo apt install python3-bson -y
 RUN sudo apt install ros-jazzy-ros-testing -y
+RUN sudo apt install ros-jazzy-rmw-cyclonedds-cpp -y
 
 RUN sudo apt install python3-pip -y
 RUN pip3 install setuptools --break-system-packages

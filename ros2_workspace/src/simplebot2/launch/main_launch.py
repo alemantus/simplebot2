@@ -1,9 +1,10 @@
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, TimerAction
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
+from launch.substitutions import LaunchConfiguration
 import os
+from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 def generate_launch_description():
 
@@ -11,7 +12,7 @@ def generate_launch_description():
     map_arg = DeclareLaunchArgument(
         'map',
         default_value=os.path.join(
-            get_package_share_directory('nav2_bringup'),  # Replace 'simplebot2' with your package
+            get_package_share_directory('nav2_bringup'),
             'maps',
             'apartment_map/apartment.yaml'  # Replace with your map file name
         ),
@@ -31,7 +32,7 @@ def generate_launch_description():
         'rosbridge_websocket_launch.xml'
     )
 
-    # Paths to launch files within this package (e.g., 'simplebot2' or equivalent package name)
+    # Paths to launch files within this package
     lidar_launch_path = os.path.join(
         get_package_share_directory('sllidar_ros2'),
         'launch',
@@ -52,18 +53,12 @@ def generate_launch_description():
         'launch',
         'joy_launch.py'
     )
-    # Uncomment as needed
+
     nav2_bringup_launch_path = os.path.join(
         get_package_share_directory('nav2_bringup'),
         'launch',
-        'nav2_bringup_launch.py'
+        'bringup_launch.py'
     )
-    
-    # slam_launch_path = os.path.join(
-    #     get_package_share_directory('simplebot2'),
-    #     'launch',
-    #     'online_async_launch.py'
-    # )
 
     static_tf_path = os.path.join(
         get_package_share_directory('simplebot2'),
@@ -78,23 +73,24 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        # Declare map argument
+        map_arg,
+
         # Include local package launch files
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(robot_control_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(localization_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(static_tf_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(robot_control_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(lidar_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(joy_launch_path)),
 
         # Include external package launch files
         IncludeLaunchDescription(PythonLaunchDescriptionSource(cmd_vel_mux_path)),
         IncludeLaunchDescription(XMLLaunchDescriptionSource(foxglove_bridge_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
+        # IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
 
-        # IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path))
-
+        # Include the Nav2 bringup launch file with map argument substitution
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(nav2_bringup_launch_path),
             launch_arguments={'map': LaunchConfiguration('map')}.items()
         ),
-    
     ])
