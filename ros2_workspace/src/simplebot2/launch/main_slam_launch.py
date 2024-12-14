@@ -54,12 +54,6 @@ def generate_launch_description():
         'joy_launch.py'
     )
 
-    nav2_bringup_launch_path = os.path.join(
-        get_package_share_directory('nav2_bringup'),
-        'launch',
-        'bringup_launch.py'
-    )
-
     static_tf_path = os.path.join(
         get_package_share_directory('simplebot2'),
         'launch',
@@ -70,6 +64,13 @@ def generate_launch_description():
         get_package_share_directory('camera_package'),
         'launch',
         'camera_launch.py'
+    )
+    
+    
+    slam_launch_path = os.path.join(
+        get_package_share_directory('simplebot2'),
+        'launch',
+        'online_async_launch.py'
     )
 
     return LaunchDescription([
@@ -88,9 +89,6 @@ def generate_launch_description():
         IncludeLaunchDescription(XMLLaunchDescriptionSource(foxglove_bridge_launch_path)),
         # IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
 
-        # Include the Nav2 bringup launch file with map argument substitution
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(nav2_bringup_launch_path),
-            launch_arguments={'map': LaunchConfiguration('map')}.items()
-        ),
+        # Include the slam node
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path)),
     ])
