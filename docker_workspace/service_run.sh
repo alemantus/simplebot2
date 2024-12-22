@@ -14,6 +14,7 @@ docker run --network host \
     --group-add $(getent group dialout | cut -d: -f3) \
     --group-add $(getent group video | cut -d: -f3) \
     --group-add $(getent group alexander | cut -d: -f3) \
+    --group-add $(getent group plugdev | cut -d: -f3) \
     --group-add=messagebus \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
     --env="DISPLAY" \
