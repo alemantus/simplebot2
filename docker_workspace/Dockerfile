@@ -29,7 +29,6 @@ RUN sudo apt install ros-jazzy-joint-state-publisher-gui -y
 RUN sudo apt install ros-jazzy-xacro -y
 RUN sudo apt install ros-jazzy-robot-state-publisher -y
 RUN sudo apt install ros-jazzy-geographic-msgs -y
-#RUN sudo apt install libgeographic-dev -y
 RUN sudo apt install ros-jazzy-robot-localization -y
 RUN sudo apt install ros-jazzy-rosbridge-suite -y
 RUN sudo apt install ros-jazzy-sensor-msgs* -y
@@ -38,13 +37,11 @@ RUN sudo apt install python3-pil -y
 RUN sudo apt install python3-bson -y
 RUN sudo apt install ros-jazzy-ros-testing -y
 RUN sudo apt install ros-jazzy-rmw-cyclonedds-cpp -y
+RUN sudo apt-get install libusb-1.0 -y 
+RUN sudo apt install libudev-dev -y 
 
 RUN sudo apt install python3-pip -y
-RUN pip3 install setuptools --break-system-packages
-RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
-RUN pip3 install scipy --break-system-packages
-RUN pip3 install pyserial --break-system-packages
-RUN pip3 install hidapi --break-system-packages
+
 
 
 # ARG to specify the username during build (default is "myuser")
@@ -71,6 +68,14 @@ RUN usermod -l $USERNAME ubuntu && \
 
 # Set user to the newly created user
 USER $USERNAME
+
+
+RUN pip3 install setuptools --break-system-packages
+RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
+RUN pip3 install scipy --break-system-packages
+RUN pip3 install pyserial --break-system-packages
+RUN pip3 install hidapi --break-system-packages
+RUN pip3 install adafruit-circuitpython-seesaw --break-system-packages
 
 # Set the working directory
 WORKDIR /home/alexander/simplebot2/ros2_workspace
