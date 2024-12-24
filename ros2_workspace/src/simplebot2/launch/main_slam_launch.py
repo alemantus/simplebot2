@@ -73,10 +73,10 @@ def generate_launch_description():
         'online_async_launch.py'
     )
 
-    neopixel_launch_path = os.path.join(
+    i2c_launch_path = os.path.join(
         get_package_share_directory('sensor_package'),
         'launch',
-        'neopixel_launch.py'
+        'i2c_launch.py'
     )
 
     return LaunchDescription([
@@ -89,7 +89,7 @@ def generate_launch_description():
         IncludeLaunchDescription(PythonLaunchDescriptionSource(static_tf_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(lidar_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(joy_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(neopixel_launch_path)),
+        
 
         # Include external package launch files
         IncludeLaunchDescription(PythonLaunchDescriptionSource(cmd_vel_mux_path)),
@@ -98,4 +98,5 @@ def generate_launch_description():
 
         # Include the slam node
         IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path)),
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(i2c_launch_path)),
     ])

@@ -27,6 +27,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/lsm6dsm.py
   scripts/neopixel_indicator.py
+  scripts/i2c_devices.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

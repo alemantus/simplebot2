@@ -12,11 +12,11 @@ from adafruit_lsm6ds.lsm6dsox import LSM6DSOX
 from adafruit_lsm6ds import Rate, AccelRange, GyroRange
 
 class IMUNode(Node):    
-    def __init__(self):
+    def __init__(self, i2c):
         super().__init__('imu_publisher')
         self.publisher_ = self.create_publisher(Imu, '/imu/data', 30)
         self.timer_ = self.create_timer(1/100, self.publish_imu_data)
-        self.i2c = board.I2C()  # uses board.SCL and board.SDA
+        self.i2c = i2c # uses board.SCL and board.SDA
         # i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
         self.sensor = LSM6DSOX(self.i2c)
 

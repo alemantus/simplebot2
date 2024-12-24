@@ -30,6 +30,8 @@ def start_ros2_slam():
 
 
 def stop_ros2():
+    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_stop_nodes.sh"])
+    time.sleep(1)
     subprocess.run(["docker", "container", "rm", "-f", "ros2"])  # Replace with actual command
     time.sleep(0.1)
 

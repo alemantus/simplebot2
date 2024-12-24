@@ -9,14 +9,14 @@ from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray, String
 
 class NeopixelNode(Node):
-    def __init__(self):
+    def __init__(self,i2c):
         super().__init__('neopixel_node')
 
         # NeoPixel configuration
         self.NEOPIXEL_PIN = 14  # Pin number
         self.NEOPIXEL_NUM = 16  # Number of LEDs (max 60)
 
-        self.i2c = board.I2C()  # Uses board.SCL and board.SDA
+        self.i2c = i2c # Uses board.SCL and board.SDA
         self.ss = seesaw.Seesaw(self.i2c)
 
         # Initialize NeoPixels
@@ -63,7 +63,6 @@ class NeopixelNode(Node):
     def pattern_control_callback(self, msg):
         """Handles pattern selection messages."""
         pattern_func = int(msg.data[0])
-        pattern_args = (int(msg.data[1]),int(msg.data[2]),int(msg.data[3]))
 
         match pattern_func:
             case 0:
