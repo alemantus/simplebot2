@@ -7,18 +7,6 @@ import os
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 def generate_launch_description():
-
-    # Declare the map argument
-    map_arg = DeclareLaunchArgument(
-        'map',
-        default_value=os.path.join(
-            get_package_share_directory('nav2_bringup'),
-            'maps',
-            'apartment_map/apartment.yaml'  # Replace with your map file name
-        ),
-        description='Full path to the map file to load'
-    )
-
     # Paths to external packages
     cmd_vel_mux_path = os.path.join(
         get_package_share_directory('cmd_vel_mux'),
@@ -57,7 +45,7 @@ def generate_launch_description():
     nav2_bringup_launch_path = os.path.join(
         get_package_share_directory('nav2_bringup'),
         'launch',
-        'bringup_launch.py'
+        'bringup_wo_amcl_launch.py'
     )
 
     static_tf_path = os.path.join(
@@ -71,6 +59,12 @@ def generate_launch_description():
         'launch',
         'camera_launch.py'
     )
+
+    slam_launch_path = os.path.join(
+        get_package_share_directory('simplebot2'),
+        'launch',
+        'online_async_launch.py'
+    )
     
     i2c_launch_path = os.path.join(
         get_package_share_directory('sensor_package'),
@@ -81,8 +75,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         # Declare map argument
-        map_arg,
-
         # Include local package launch files
         IncludeLaunchDescription(PythonLaunchDescriptionSource(robot_control_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(localization_launch_path)),
@@ -97,10 +89,8 @@ def generate_launch_description():
         # IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
 
         # Include the Nav2 bringup launch file with map argument substitution
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(nav2_bringup_launch_path),
-            launch_arguments={'map': LaunchConfiguration('map')}.items()
-        ),
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path)),
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(nav2_bringup_launch_path)),
 
         IncludeLaunchDescription(PythonLaunchDescriptionSource(i2c_launch_path)),
     ])
