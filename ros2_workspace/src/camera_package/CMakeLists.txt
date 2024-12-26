@@ -29,9 +29,19 @@ target_link_libraries(camera_publisher
   ${OpenCV_LIBS}  # Link OpenCV libraries
 )
 
+add_executable(camera_compressed_publisher src/camera_compressed_publisher.cpp)
+target_link_libraries(camera_compressed_publisher
+  cv_bridge::cv_bridge
+  image_transport::image_transport
+  opencv_imgcodecs  # OpenCV module for image compression (cv::imencode)
+  rclcpp::rclcpp
+  ${OpenCV_LIBS}  # Link OpenCV libraries
+)
+
 # Install C++ executables
 install(TARGETS
   camera_publisher
+  camera_compressed_publisher
   DESTINATION lib/${PROJECT_NAME})
 
 # Python setup (if using Python in your package)

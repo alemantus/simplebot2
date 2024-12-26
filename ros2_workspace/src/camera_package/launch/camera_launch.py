@@ -12,5 +12,15 @@ def generate_launch_description():
                 # Add parameters here if needed
                 # 'param_name': param_value,
             }]
+        ),
+        Node(
+            package='camera_package',  # Replace with the actual package name
+            executable='camera_compressed_publisher',  # Replace with the actual executable name
+            name='camera_publisher_compressed',  # Optional: Rename the node if needed
+            output='screen',  # Prints the log to the terminal
+            parameters=[{
+                # Add parameters here if needed
+                # 'param_name': param_value,
+            }]
         )
     ])
