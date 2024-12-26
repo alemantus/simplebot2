@@ -100,8 +100,8 @@ controller_server:
       xy_goal_tolerance: 0.10
       yaw_goal_tolerance: 0.25
     FollowPath:
-      plugin: "nav2_rotation_shim_controller::RotationShimController"
-      primary_controller: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"
+      plugin: "dwb_core::DWBLocalPlanner"
+      primary_controller: "dwb_core::DWBLocalPlanner"
       time_steps: 16
       model_dt: 0.2
       batch_size: 2000
@@ -197,7 +197,7 @@ local_costmap:
       rolling_window: true
       width: 3
       height: 3
-      resolution: 0.02
+      resolution: 0.04
       robot_radius: 0.18
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
@@ -237,7 +237,7 @@ global_costmap:
       global_frame: map
       robot_base_frame: base_link
       robot_radius: 0.18
-      resolution: 0.02
+      resolution: 0.04
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:
