@@ -28,6 +28,10 @@ def start_ros2_slam():
     subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_slam_run.sh"])  # Replace with actual command
     time.sleep(0.1)
 
+def start_ros2_nav2_wo_amcl():
+    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_nav2_wo_amcl_run.sh"])  # Replace with actual command
+    time.sleep(0.1)
+
 
 def stop_ros2():
     subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_stop_nodes.sh"])
@@ -55,6 +59,13 @@ for event in device.read_loop():
                 print("ros2 start")
                 start_ros2_slam()
                 time.sleep(1)
+
+            # Check if both buttons are pressed
+            elif button_states[ecodes.BTN_WEST] == 1 and button_states[ecodes.BTN_NORTH] == 0:
+                print("ros2 start")
+                start_ros2_nav2_wo_amcl()
+                time.sleep(1)
+
 
 
             # Check if both buttons are pressed
