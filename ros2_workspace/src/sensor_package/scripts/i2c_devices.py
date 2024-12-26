@@ -22,10 +22,11 @@ def main(args=None):
     i2c = board.I2C()  # or board.SCL and board.SDA if not using STEMMA I2C
     imu_node = IMUNode(i2c)
 
-    time.sleep(0.5)
+    time.sleep(1)
     # Initialize NeoPixel node
     neopixel_node = NeopixelNode(i2c)
     neopixel_node.blink_pattern(2, 3, 0.2)
+    time.sleep(0.5)
 
     # Spin both nodes
     try:

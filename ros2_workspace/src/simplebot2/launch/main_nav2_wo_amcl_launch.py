@@ -72,6 +72,13 @@ def generate_launch_description():
         'i2c_launch.py'
     )
 
+    joy2pose_launch_path = os.path.join(
+        get_package_share_directory('misc'),
+        'launch',
+        'joy2pose_launch.py'
+    )
+
+
 
     return LaunchDescription([
         # Declare map argument
@@ -81,12 +88,13 @@ def generate_launch_description():
         IncludeLaunchDescription(PythonLaunchDescriptionSource(static_tf_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(lidar_launch_path)),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(joy_launch_path)),
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(joy2pose_launch_path)),
         
 
         # Include external package launch files
         IncludeLaunchDescription(PythonLaunchDescriptionSource(cmd_vel_mux_path)),
         IncludeLaunchDescription(XMLLaunchDescriptionSource(foxglove_bridge_launch_path)),
-        # IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(camera_launch_path)),
 
         # Include the Nav2 bringup launch file with map argument substitution
         IncludeLaunchDescription(PythonLaunchDescriptionSource(slam_launch_path)),
