@@ -22,26 +22,29 @@ def main(args=None):
     i2c = board.I2C()  # or board.SCL and board.SDA if not using STEMMA I2C
     imu_node = IMUNode(i2c)
 
+    time.sleep(0.5)
     # Initialize NeoPixel node
     neopixel_node = NeopixelNode(i2c)
     neopixel_node.blink_pattern(2, 3, 0.2)
 
-
-    executor = MultiThreadedExecutor()
-    executor.add_node(imu_node)
-    executor.add_node(neopixel_node)
-
+    # Spin both nodes
     try:
-        executor.spin()
+        rclpy.spin(imu_node)
     except KeyboardInterrupt:
         pass
-    finally:
+
+    time.sleep(0.5)
+    try:
+        rclpy.spin(neopixel_node)
+    except KeyboardInterrupt:
+        pass
+    
     # Cleanup
-        neopixel_node.blink_pattern(2, 2, 0.2)
-        neopixel_node.off_pattern()
-        imu_node.destroy_node()
-        neopixel_node.destroy_node()
-        rclpy.shutdown()
+    neopixel_node.blink_pattern(2, 2, 0.2)
+    neopixel_node.off_pattern()
+    imu_node.destroy_node()
+    neopixel_node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':
