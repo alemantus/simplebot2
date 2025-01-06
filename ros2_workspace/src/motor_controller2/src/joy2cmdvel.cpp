@@ -33,7 +33,7 @@ private:
         else{
             rotation_z = 0;
         }
-        twist_msg->angular.z = rotation_z*1.2;
+        twist_msg->angular.z = rotation_z*2.5;
         publisher_->publish(*twist_msg);
     }
 
