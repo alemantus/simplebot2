@@ -21,15 +21,15 @@ button_states = {
 }
 
 def start_ros2_nav2():
-    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_nav2_run.sh"])  # Replace with actual command
+    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_run.sh", "use_nav:=true", "use_nav2_wo_amcl:=false", "use_slam:=false"])  # Replace with actual command
     time.sleep(0.1)
 
 def start_ros2_slam():
-    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_slam_run.sh"])  # Replace with actual command
+    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_run.sh", "use_nav:=false", "use_nav2_wo_amcl:=false", "use_slam:=true"])  # Replace with actual command
     time.sleep(0.1)
 
 def start_ros2_nav2_wo_amcl():
-    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_nav2_wo_amcl_run.sh"])  # Replace with actual command
+    subprocess.run(["bash", "/home/alexander/simplebot2/docker_workspace/ros2_run.sh", "use_nav:=false", "use_nav2_wo_amcl:=true", "use_slam:=true"])  # Replace with actual command
     time.sleep(0.1)
 
 

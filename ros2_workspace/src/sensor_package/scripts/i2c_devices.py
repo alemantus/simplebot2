@@ -17,6 +17,8 @@ from neopixel_indicator import NeopixelNode
 
 def main(args=None):
     rclpy.init(args=args)
+    
+    time.sleep(1)
 
     # Initialize IMU node
     i2c = board.I2C()  # or board.SCL and board.SDA if not using STEMMA I2C

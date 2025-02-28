@@ -88,13 +88,13 @@ class NeopixelNode(Node):
     def blink_pattern(self, repeat=3, color=1, duration=0.5):
 
         match(color):
-            case 1:
+            case 1: # white
                 colors = (255, 255, 255)
-            case 2:
+            case 2: # red
                 colors = (255, 0, 0)
-            case 3:
+            case 3: # green
                 colors = (0, 255, 0)
-            case _:
+            case _: # white
                 colors = (255, 255, 255)
 
         """Makes the LEDs blink on and off."""
@@ -120,16 +120,14 @@ class NeopixelNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = NeopixelNode()
-    node.blink_pattern(2, 3, 0.2)
+    node.blink_pattern(repeat=2, color=3, duration=0.2)
 
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        pass
+        node.blink_pattern(repeat=2, color=2, duration=0.2)
+        time.sleep(0.4)
     finally:
-        # Ensure all LEDs are turned off on shutdown
-        node.blink_pattern(2, 2, 0.2)
-        node.off_pattern()
         rclpy.shutdown()
 
 if __name__ == '__main__':
