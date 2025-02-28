@@ -39,8 +39,14 @@ RUN sudo apt install ros-jazzy-ros-testing -y
 RUN sudo apt install ros-jazzy-rmw-cyclonedds-cpp -y
 RUN sudo apt-get install libusb-1.0 -y 
 RUN sudo apt install libudev-dev -y 
+RUN sudo apt install net-tools -y
+RUN sudo apt update
+RUN sudo apt install ros-jazzy-moveit-* -y
+RUN sudo apt install ros-jazzy-foxglove-bridge -y
+RUN sudo apt autoremove ros-jazzy-moveit-servo-* -y
 
 RUN sudo apt install python3-pip -y
+RUN sudo apt install python3.12-venv -y
 
 
 
@@ -58,24 +64,20 @@ RUN usermod -l $USERNAME ubuntu && \
     echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME
 
-# ARG GPIO_GID=999
-# RUN sudo groupadd --gid ${GPIO_GID} gpio
-# RUN sudo usermod -a -G gpio ${USERNAME} 
-# 
-# ARG I2C_GID=998
-# RUN sudo groupadd --gid ${I2C_GID} i2c
-# RUN sudo usermod -a -G i2c ${USERNAME} 
 
 # Set user to the newly created user
 USER $USERNAME
+RUN python3 -m venv /home/alexander/venv
+COPY ./requirements.txt /home/alexander/requirements.txt
+RUN /home/alexander/venv/bin/pip install --no-cache-dir -r /home/alexander/requirements.txt
+ENV PATH="/home/venv/bin:$PATH"
 
-
-RUN pip3 install setuptools --break-system-packages
-RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
-RUN pip3 install scipy --break-system-packages
-RUN pip3 install pyserial --break-system-packages
-RUN pip3 install hidapi --break-system-packages
-RUN pip3 install adafruit-circuitpython-seesaw --break-system-packages
+# RUN pip3 install setuptools --break-system-packages
+# RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages
+# RUN pip3 install scipy --break-system-packages
+# RUN pip3 install pyserial --break-system-packages
+# RUN pip3 install hidapi --break-system-packages
+# RUN pip3 install adafruit-circuitpython-seesaw --break-system-packages
 
 # Set the working directory
 WORKDIR /home/alexander/simplebot2/ros2_workspace
@@ -83,8 +85,6 @@ WORKDIR /home/alexander/simplebot2/ros2_workspace
 # Create GPIO group
 RUN id
 RUN groups
-
-
 
 RUN echo source /opt/ros/jazzy/install/setup.bash >> /home/alexander/.bashrc
 RUN echo source /opt/ros/jazzy/setup.bash >> /home/alexander/.bashrc

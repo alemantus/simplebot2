@@ -1,0 +1,14 @@
+# Roarm
+pyserial
+aiohttp
+ujson
+aiortc
+av
+opencv-python
+
+setuptools
+adafruit-circuitpython-lsm6ds
+scipy 
+pyserial
+hidapi 
+adafruit-circuitpython-seesaw
