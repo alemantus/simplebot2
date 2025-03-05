@@ -17,4 +17,4 @@ A image of the robot with an articulated arm. The arm in question is the wavesha
 ### 3. Autonomous Driving Demo
 A demonstration video showcasing the autonomous driving functionality in action.
 
-[![Autonomous Driving Video](show_case/autonomous_driving.mp4)](show_case/autonomous_driving.mp4)
+[![Autonomous Driving Video](show_case/autonomous_driving.gif)](show_case/autonomous_driving.gif)
