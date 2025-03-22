@@ -44,7 +44,7 @@ RUN sudo apt update
 RUN sudo apt install ros-jazzy-moveit-* -y
 RUN sudo apt install ros-jazzy-foxglove-bridge -y
 RUN sudo apt autoremove ros-jazzy-moveit-servo-* -y
-
+RUN sudo apt install ros-jazzy-py-binding-tools
 RUN sudo apt install python3-pip -y
 RUN sudo apt install python3.12-venv -y
 
@@ -67,10 +67,12 @@ RUN usermod -l $USERNAME ubuntu && \
 
 # Set user to the newly created user
 USER $USERNAME
-RUN python3 -m venv /home/alexander/venv
+RUN python3 -m venv /home/alexander/venv --system-site-packages
 COPY ./requirements.txt /home/alexander/requirements.txt
 RUN /home/alexander/venv/bin/pip install --no-cache-dir -r /home/alexander/requirements.txt
 ENV PATH="/home/venv/bin:$PATH"
+RUN echo 'export PYTHONPATH=$PYTHONPATH:/home/alexander/venv/lib/python3.12/site-packages/' >> ~/.bashrc
+
 
 # RUN pip3 install setuptools --break-system-packages
 # RUN pip3 install adafruit-circuitpython-lsm6ds --break-system-packages

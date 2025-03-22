@@ -1,0 +1,71 @@
+FROM ros:humble-ros-base-noble
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+
+
+# Update package lists and install sudo
+RUN apt-get update && \
+    apt-get install -y sudo && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+
+RUN sudo apt update -y && \
+    sudo apt install -y ros-humble-joy* -y
+
+RUN sudo apt upgrade -y
+
+RUN sudo apt install ros-humble-sensor-msgs* -y
+RUN sudo apt install ros-humble-rmw-cyclonedds-cpp -y
+RUN sudo apt-get install libusb-1.0 -y 
+RUN sudo apt install libudev-dev -y 
+RUN sudo apt install net-tools -y
+RUN sudo apt update
+RUN sudo apt install ros-humble-moveit-* -y
+RUN sudo apt install ros-humble-foxglove-bridge -y
+RUN sudo apt autoremove ros-humble-moveit-servo-* -y
+
+RUN sudo apt install python3-pip -y
+RUN sudo apt install python3.12-venv -y
+
+
+
+# ARG to specify the username during build (default is "myuser")
+ARG USERNAME=alexander
+
+ARG UID=1000
+ARG GID=1000
+
+# Find the existing group with GID 1000
+#RUN EXISTING_USER=$(getent passwd $UID | cut -d: -f1) && \
+RUN usermod -l $USERNAME ubuntu && \
+    groupmod -n $USERNAME $(id -gn $EXISTING_USER) && \
+    usermod -d /home/$USERNAME -m $USERNAME && \
+    echo "$USERNAME ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
+    chmod 0440 /etc/sudoers.d/$USERNAME
+
+
+# Set user to the newly created user
+USER $USERNAME
+RUN python3 -m venv /home/alexander/venv
+COPY ./requirements.txt /home/alexander/requirements.txt
+RUN /home/alexander/venv/bin/pip install --no-cache-dir -r /home/alexander/requirements.txt
+ENV PATH="/home/venv/bin:$PATH"
+RUN export PYTHONPATH=/home/alexander/venv/lib/python3.12/site-packages/:$PYTHONPATH
+
+
+# Set the working directory
+WORKDIR /home/alexander/simplebot2/ros2_workspace
+
+# Create GPIO group
+RUN id
+RUN groups
+
+RUN echo source /opt/ros/humble/install/setup.bash >> /home/alexander/.bashrc
+RUN echo source /opt/ros/humble/setup.bash >> /home/alexander/.bashrc
+RUN echo source /home/alexander/simplebot2/ros2_workspace/install/setup.bash >> /home/alexander/.bashrc
+ADD ros-entrypoint.sh /ros-entrypoint.sh
+ENTRYPOINT [ "/ros-entrypoint.sh" ]
+
+RUN sudo apt update && sudo apt upgrade -y
