@@ -171,7 +171,7 @@ def generate_launch_description():
         parameters=move_group_params,
         extra_debug_args=["--debug"],
         # Set the display variable, in case OpenGL code is used internally
-        # additional_env={"DISPLAY": os.environ["DISPLAY"]},
+        additional_env={"DISPLAY": os.environ["DISPLAY"]},
     )
     
     # Run Rviz and load the default config to see the state of the move_group node
