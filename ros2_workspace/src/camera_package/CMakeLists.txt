@@ -10,6 +10,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(OpenCV REQUIRED)  # Find OpenCV
 find_package(yaml-cpp REQUIRED)  # Find yaml-cpp for YAML parsing
+find_package(fastcdr REQUIRED)
 
 # Include directories
 include_directories(
