@@ -1,3 +1,5 @@
+#!/home/alexander/venv/bin/python
+
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, LogInfo
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -6,6 +8,7 @@ from launch.substitutions import LaunchConfiguration
 from launch.conditions import IfCondition
 from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 import os
+
 
 def generate_launch_description():
     # Declare arguments for conditional configurations
@@ -21,6 +24,11 @@ def generate_launch_description():
             'apartment_map/apartment.yaml'  # Replace with your map file name
         ),
         description='Full path to the map file to load'
+    )
+    log_level = DeclareLaunchArgument(
+        'log_level',
+        default_value='info',
+        description='Logging level (debug, info, warn, error, fatal)'
     )
 
     # Paths to launch files
@@ -38,7 +46,6 @@ def generate_launch_description():
     i2c_launch_path = os.path.join(get_package_share_directory('sensor_package'), 'launch', 'i2c_launch.py')
     joy2pose_launch_path = os.path.join(get_package_share_directory('misc'), 'launch', 'joy2pose_launch.py')
 
-
     return LaunchDescription([
         # Declare arguments
         use_slam,
@@ -46,19 +53,38 @@ def generate_launch_description():
         use_camera,
         map_file,
         use_nav2_wo_amcl,
-        
+        log_level,
 
         # Always included components
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(robot_control_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(localization_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(static_tf_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(lidar_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(joy_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(cmd_vel_mux_path)),
-        IncludeLaunchDescription(XMLLaunchDescriptionSource(foxglove_bridge_launch_path)),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(i2c_launch_path)),
-        
-
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(robot_control_launch_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(localization_launch_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(static_tf_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(lidar_launch_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(joy_launch_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(cmd_vel_mux_path),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        ),
+        # IncludeLaunchDescription(
+        #     XMLLaunchDescriptionSource(foxglove_bridge_launch_path),
+        #     launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
+        # ),
+        #IncludeLaunchDescription(PythonLaunchDescriptionSource(i2c_launch_path)),
         # three launch mode
         # 1) nav2 with map
         #   - launch with use_nav:=true use_nav2_wo_amcl:= false use_slam:=false
@@ -70,42 +96,45 @@ def generate_launch_description():
         # 3) mapping mode with just slam
         #   - launch with use_nav:=false use_nav2_wo_amcl:=false use_slam:=true
 
-
         # mode 1) nav2 with map
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(nav2_bringup_launch_path),
             condition=IfCondition(LaunchConfiguration('use_nav')),
-            launch_arguments={'map': LaunchConfiguration('map')}.items()
+            launch_arguments={
+                'map': LaunchConfiguration('map'),
+                'log_level': LaunchConfiguration('log_level')
+            }.items()
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy2pose_launch_path),
-            condition=IfCondition(LaunchConfiguration('use_nav'))
+            condition=IfCondition(LaunchConfiguration('use_nav')),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
         ),
-
 
         # mode 2) nav2 without amcl
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(nav2_bringup_wo_amcl_launch_path),
-            condition=IfCondition(LaunchConfiguration('use_nav2_wo_amcl'))
+            condition=IfCondition(LaunchConfiguration('use_nav2_wo_amcl')),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
         ),
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy2pose_launch_path),
-            condition=IfCondition(LaunchConfiguration('use_nav2_wo_amcl'))
+            condition=IfCondition(LaunchConfiguration('use_nav2_wo_amcl')),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
         ),
-
 
         # mode 3) conditionally include SLAM
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(slam_launch_path),
-            condition=IfCondition(LaunchConfiguration('use_slam'))
+            condition=IfCondition(LaunchConfiguration('use_slam')),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
         ),
-
-
 
         # Conditionally include Camera
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(camera_launch_path),
-            condition=IfCondition(LaunchConfiguration('use_camera'))
+            condition=IfCondition(LaunchConfiguration('use_camera')),
+            launch_arguments={'log_level': LaunchConfiguration('log_level')}.items()
         ),
 
         # Log info

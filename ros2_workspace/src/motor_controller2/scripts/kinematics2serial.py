@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/alexander/venv/bin/python
 import rclpy
 from rclpy.node import Node
 from rclpy.parameter import Parameter

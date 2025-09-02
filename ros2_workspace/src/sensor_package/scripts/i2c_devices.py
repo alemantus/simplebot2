@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/home/alexander/venv/bin/python
 import time
 import board
 from rainbowio import colorwheel
