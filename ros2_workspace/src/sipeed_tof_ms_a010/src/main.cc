@@ -10,6 +10,7 @@
 #include <std_msgs/msg/header.hpp>
 #include <std_msgs/msg/string.hpp>
 #include <string>
+#include <sensor_msgs/msg/compressed_image.hpp>
 
 #include "cJSON.h"
 #include "frame_struct.h"
@@ -113,6 +114,8 @@ class SipeedTOF_MSA010_Publisher : public rclcpp::Node {
         this->create_publisher<sensor_msgs::msg::PointCloud2>("cloud", 10);
     timer_ = this->create_wall_timer(
         30ms, std::bind(&SipeedTOF_MSA010_Publisher::timer_callback, this));
+    publisher_depth_compressed = this->create_publisher<sensor_msgs::msg::CompressedImage>("depth/compressed", 10);
+    
   }
 
   ~SipeedTOF_MSA010_Publisher() {}
@@ -122,6 +125,9 @@ class SipeedTOF_MSA010_Publisher : public rclcpp::Node {
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr publisher_depth;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr
       publisher_pointcloud;
+  rclcpp::Publisher<sensor_msgs::msg::CompressedImage>::SharedPtr publisher_depth_compressed;
+
+
 
   void timer_callback() {
     std::string s;
@@ -136,7 +142,7 @@ class SipeedTOF_MSA010_Publisher : public rclcpp::Node {
     if (!f) {
       goto _more;
     }
-    // cout << f << endl;
+
     uint8_t rows, cols, *depth;
     rows = f->frame_head.resolution_rows;
     cols = f->frame_head.resolution_cols;
@@ -151,9 +157,18 @@ class SipeedTOF_MSA010_Publisher : public rclcpp::Node {
 
     sensor_msgs::msg::Image msg_depth =
         *cv_bridge::CvImage(header, "mono8", md).toImageMsg().get();
-    RCLCPP_INFO(this->get_logger(), "Publishing: depth:%s",
-                sstream.str().c_str());
+    // RCLCPP_INFO(this->get_logger(), "Publishing: depth:%s",
+    //             sstream.str().c_str());
     publisher_depth->publish(msg_depth);
+
+    // --- Compressed ---
+    sensor_msgs::msg::CompressedImage msg_depth_compressed;
+    msg_depth_compressed.header = header;
+    msg_depth_compressed.format = "jpeg";  // "png" if you prefer lossless
+    std::vector<uchar> buffer;
+    cv::imencode(".jpg", md, buffer, {cv::IMWRITE_JPEG_QUALITY, 80}); // adjust quality
+    msg_depth_compressed.data = buffer;
+    publisher_depth_compressed->publish(msg_depth_compressed);
 
     sensor_msgs::msg::PointCloud2 pcmsg;
     pcmsg.header = header;

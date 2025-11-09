@@ -61,6 +61,7 @@ for event in device.read_loop():
                 time.sleep(1)
 
             # Check if both buttons are pressed
+            # this is the one for moving around and mapping, pressing buttons to save and move towards goal
             elif button_states[ecodes.BTN_WEST] == 1 and button_states[ecodes.BTN_NORTH] == 0:
                 print("ros2 start")
                 start_ros2_nav2_wo_amcl()
