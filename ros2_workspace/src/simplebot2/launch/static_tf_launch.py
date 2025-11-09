@@ -10,10 +10,10 @@ def generate_launch_description():
             arguments=['0.0104', '0', '0.099', '0', '0', '0', 'base_link', 'laser'],
             output='screen'
         ),
-        Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='tof_static_tf',
-        arguments=['0.10809', '0', '0.05045', '0', '2.356194', '0', 'base_link', 'tof']
-        ),
+        # Node(
+        # package='tf2_ros',
+        # executable='static_transform_publisher',
+        # name='tof_static_tf',
+        # arguments=['0.10809', '0', '0.05045', '0', '2.356194', '0', 'base_link', 'tof']
+        # ),
     ])

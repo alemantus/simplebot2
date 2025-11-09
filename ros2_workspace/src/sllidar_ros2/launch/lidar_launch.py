@@ -5,7 +5,7 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     channel_type = LaunchConfiguration('channel_type', default='serial')
-    serial_port = LaunchConfiguration('serial_port', default='/dev/ttyUSB0')
+    serial_port = LaunchConfiguration('serial_port', default='/dev/sllidar')
     serial_baudrate = LaunchConfiguration('serial_baudrate', default='460800')
     frame_id = LaunchConfiguration('frame_id', default='laser')
     inverted = LaunchConfiguration('inverted', default='false')
@@ -36,5 +36,20 @@ def generate_launch_description():
                 'sample_rate': 1
             }],
             output='screen'
-        )
+        ),
+        
+        # Add laser filter node
+        Node(
+            package='laser_filters',
+            executable='scan_to_scan_filter_chain',
+            name='lidar_filter',
+            parameters=[{
+                'filter_chain': '/path/to/lidar_filter.yaml'
+            }],
+            remappings=[
+                ('scan', '/scan'),                # input from lidar
+                ('scan_filtered', '/scan_filtered') # output topic
+            ],
+            output='screen'
+        ),
     ])

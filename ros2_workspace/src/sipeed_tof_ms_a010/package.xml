@@ -16,6 +16,9 @@
     <build_type>ament_cmake</build_type>
     <depend>std_msgs</depend>
     <depend>sensor_msgs</depend>
+    <depend>image_transport</depend>
+    <depend>compressed_image_transport</depend>
+
   </export>
 
   <exec_depend>launch</exec_depend>
