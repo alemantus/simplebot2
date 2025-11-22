@@ -63,3 +63,6 @@ CATKIN_IGNORE
 ros2_workspace/build/test_nodes/colcon_command_prefix_setup_py.sh.env
 ros2_workspace/build/motor_controller/motor_controller.egg-info/SOURCES.txt
 ros2_workspace/build/motor_controller/colcon_command_prefix_setup_py.sh.env
+
+*.log
+*.cmake

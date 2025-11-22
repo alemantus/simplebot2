@@ -37,7 +37,6 @@ def generate_launch_description():
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
-        name="rviz2",
         output="log",
         arguments=["-d", rviz_config_file],
         parameters=[
@@ -54,7 +53,7 @@ def generate_launch_description():
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "panda_link0"],
+        arguments=["--frame-id", "world", "--child-frame-id", "panda_link0"],
     )
 
     # Publish TF

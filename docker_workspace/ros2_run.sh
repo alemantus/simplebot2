@@ -35,4 +35,4 @@ docker run --network host \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -d \
-    ros2:v0.2.2 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch simplebot2 main_launch.py $1 $2 $3" 
+    ros2:v0.2.6 bash -c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch simplebot2 main_launch.py $1 $2 $3" 
