@@ -5,13 +5,13 @@
   <!-- Link bottom_bracket -->
   <link name="bottom_bracket">
     <inertial>
-      <origin xyz="0.0400408 0.188869 -0.0707852" rpy="0 0 0"/>
+      <origin xyz="-3.23026e-10 4.0693e-18 0.0211091" rpy="0 0 0"/>
       <mass value="0.426296"/>
-      <inertia ixx="0.00190478" ixy="-9.36048e-11" ixz="-2.8119e-08" iyy="0.00184221" iyz="-1.22606e-12" izz="0.00332037"/>
+      <inertia ixx="0.00184221" ixy="9.36048e-11" ixz="-1.22606e-12" iyy="0.00190478" iyz="2.8119e-08" izz="0.00332037"/>
     </inertial>
     <!-- Part frame3 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame3.stl"/>
       </geometry>
@@ -20,14 +20,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame3.stl"/>
       </geometry>
     </collision>
     <!-- Part side_bracket_right -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/side_bracket_right.stl"/>
       </geometry>
@@ -36,14 +36,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/side_bracket_right.stl"/>
       </geometry>
     </collision>
     <!-- Part frame2 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.38778e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame2.stl"/>
       </geometry>
@@ -52,14 +52,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.38778e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame2.stl"/>
       </geometry>
     </collision>
     <!-- Part part_33 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_33.stl"/>
       </geometry>
@@ -68,14 +68,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_33.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_front_right -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_front_right.stl"/>
       </geometry>
@@ -84,14 +84,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_front_right.stl"/>
       </geometry>
     </collision>
     <!-- Part part_1 -->
     <visual>
-      <origin xyz="0.0400408 0.143869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_1.stl"/>
       </geometry>
@@ -100,14 +100,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.143869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_1.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_front_left -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_front_left.stl"/>
       </geometry>
@@ -116,14 +116,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_front_left.stl"/>
       </geometry>
     </collision>
     <!-- Part frame4 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.1684e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame4.stl"/>
       </geometry>
@@ -132,14 +132,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.1684e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame4.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_rear_left -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_rear_left.stl"/>
       </geometry>
@@ -148,14 +148,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_rear_left.stl"/>
       </geometry>
     </collision>
     <!-- Part part_1_2 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="-6.16298e-33 -0 0"/>
+      <origin xyz="-0.085 3.46945e-18 -0.005" rpy="-6.16298e-33 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_1__2.stl"/>
       </geometry>
@@ -164,14 +164,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="-6.16298e-33 -0 0"/>
+      <origin xyz="-0.085 3.46945e-18 -0.005" rpy="-6.16298e-33 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_1__2.stl"/>
       </geometry>
     </collision>
     <!-- Part part_22 -->
     <visual>
-      <origin xyz="0.0400408 0.143869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_22.stl"/>
       </geometry>
@@ -180,14 +180,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.143869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_22.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_bracket_rear_right -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_rear_right.stl"/>
       </geometry>
@@ -196,14 +196,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_bracket_rear_right.stl"/>
       </geometry>
     </collision>
     <!-- Part frame1 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame1.stl"/>
       </geometry>
@@ -212,14 +212,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/frame1.stl"/>
       </geometry>
     </collision>
     <!-- Part side_bracket_left -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/side_bracket_left.stl"/>
       </geometry>
@@ -228,14 +228,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/side_bracket_left.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_front_right -->
     <visual>
-      <origin xyz="0.0400408 0.236369 0.0706057" rpy="-1.5708 -0 0"/>
+      <origin xyz="0.0475 0 0.1625" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_front_right.stl"/>
       </geometry>
@@ -244,14 +244,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.236369 0.0706057" rpy="-1.5708 -0 0"/>
+      <origin xyz="0.0475 0 0.1625" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_front_right.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_rear_left -->
     <visual>
-      <origin xyz="0.0400408 0.106369 -0.0593943" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0825 1.38778e-17 0.0325" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_rear_left.stl"/>
       </geometry>
@@ -260,14 +260,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.106369 -0.0593943" rpy="-1.5708 -0 0"/>
+      <origin xyz="-0.0825 1.38778e-17 0.0325" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_rear_left.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_rear_right -->
     <visual>
-      <origin xyz="0.0400408 0.141369 -0.0993943" rpy="1.5708 -0 0"/>
+      <origin xyz="-0.0475 1.04083e-17 -0.0075" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_rear_right.stl"/>
       </geometry>
@@ -276,14 +276,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.141369 -0.0993943" rpy="1.5708 -0 0"/>
+      <origin xyz="-0.0475 1.04083e-17 -0.0075" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_rear_right.stl"/>
       </geometry>
     </collision>
     <!-- Part bottom_bracket -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/bottom_bracket.stl"/>
       </geometry>
@@ -292,14 +292,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
+      <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/bottom_bracket.stl"/>
       </geometry>
     </collision>
     <!-- Part part_27 -->
     <visual>
-      <origin xyz="0.0400408 0.103869 -0.0993343" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_27.stl"/>
       </geometry>
@@ -308,14 +308,14 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.103869 -0.0993343" rpy="0 -0 0"/>
+      <origin xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/part_27.stl"/>
       </geometry>
     </collision>
     <!-- Part motor_front_left -->
     <visual>
-      <origin xyz="0.0400408 0.271369 -0.229394" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0825 -6.93889e-18 -0.1375" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_front_left.stl"/>
       </geometry>
@@ -324,7 +324,7 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="0.0400408 0.271369 -0.229394" rpy="1.5708 -0 0"/>
+      <origin xyz="0.0825 -6.93889e-18 -0.1375" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="package://assets/motor_front_left.stl"/>
       </geometry>
@@ -356,7 +356,7 @@
   </link>
   <!-- Joint from bottom_bracket to part_1 -->
   <joint name="Revolute 1" type="revolute">
-    <origin xyz="0.143049 0.123869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
+    <origin xyz="-0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="bottom_bracket"/>
     <child link="part_1"/>
     <axis xyz="0 0 1"/>
@@ -388,7 +388,7 @@
   </link>
   <!-- Joint from bottom_bracket to part_1_2 -->
   <joint name="Revolute 2" type="revolute">
-    <origin xyz="0.143049 0.253869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
+    <origin xyz="0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="bottom_bracket"/>
     <child link="part_1_2"/>
     <axis xyz="0 0 1"/>
@@ -420,7 +420,7 @@
   </link>
   <!-- Joint from bottom_bracket to part_1_3 -->
   <joint name="Revolute 3" type="revolute">
-    <origin xyz="-0.0629675 0.253869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
+    <origin xyz="0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="bottom_bracket"/>
     <child link="part_1_3"/>
     <axis xyz="0 0 1"/>
@@ -452,7 +452,7 @@
   </link>
   <!-- Joint from bottom_bracket to part_1_4 -->
   <joint name="Revolute 4" type="revolute">
-    <origin xyz="-0.0629675 0.123869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
+    <origin xyz="-0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="bottom_bracket"/>
     <child link="part_1_4"/>
     <axis xyz="0 0 1"/>
