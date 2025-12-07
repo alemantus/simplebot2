@@ -69,6 +69,10 @@ COPY ./requirements.txt /home/$USERNAME/requirements.txt
 RUN $VIRTUAL_ENV/bin/pip install --no-cache-dir -r /home/$USERNAME/requirements.txt
 RUN $VIRTUAL_ENV/bin/pip install --break-system-packages pillow
 
+RUN sudo apt update
+RUN sudo apt install ros-jazzy-nav2-waypoint-follower -y
+
+
 # Set up ROS 2 workspace
 WORKDIR /home/$USERNAME/simplebot2/ros2_workspace
 RUN echo "source /opt/ros/jazzy/install/setup.bash" >> /home/$USERNAME/.bashrc
