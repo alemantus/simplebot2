@@ -4,10 +4,10 @@
     "documentMicroversion": "ac26540d665cbcad3bdc2d01",
     "elementId": "7cb0b81673ac10f236b6e9ed",
     "fullConfiguration": "default",
-    "id": "M3AYVfuv31kO9Z7y3",
+    "id": "MoFDGtGY6SIKJf7v+",
     "isStandardContent": false,
-    "name": "frame2 <1>",
-    "partId": "RpCD",
+    "name": "motor_rear_left <1>",
+    "partId": "RkCD",
     "suppressed": false,
     "type": "Part"
 }

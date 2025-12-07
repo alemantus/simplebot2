@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "58d69eaf54d5097cb2ee2932",
-    "documentMicroversion": "ac26540d665cbcad3bdc2d01",
+    "documentMicroversion": "3e3819b96044c6a224d4b450",
     "elementId": "7cb0b81673ac10f236b6e9ed",
     "fullConfiguration": "default",
-    "id": "M3AYVfuv31kO9Z7y3",
+    "id": "MoFDGtGY6SIKJf7v+",
     "isStandardContent": false,
-    "name": "frame2 <1>",
-    "partId": "RpCD",
+    "name": "motor_rear_left <1>",
+    "partId": "RkCD",
     "suppressed": false,
     "type": "Part"
 }

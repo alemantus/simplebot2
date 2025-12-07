@@ -1,0 +1,6 @@
+{
+    "documentId": "58d69eaf54d5097cb2ee2932",
+    "outputFormat": "urdf",
+    "addDummyBaseLink": true,
+    "assemblyName": "Robot5"
+}

@@ -31,7 +31,7 @@ constexpr float DEAD_ZONE = 5;    // The duty cycle below which the motor's fric
 
 // PID values
 float VEL_KP = 3;      // Velocity proportional (P) gain
-float VEL_KI = 0.0;     // Velocity integral (I) gain
+float VEL_KI = 0.0;    // Velocity integral (I) gain
 float VEL_KD = 0.002f; // Velocity derivative (D) gain
 
 using namespace plasma;
@@ -105,17 +105,20 @@ void set_motor_speeds(Motor **motors, PID *vel_pids, float *speeds)
     }
 }
 
-
 Encoder::Capture captures[NUM_MOTORS];
 // Define your classes and functions here
 
-void set_motors_pids(float kp, float ki, float kd) {
-    for (auto i = 0u; i < NUM_MOTORS; i++) {
+void set_motors_pids(float kp, float ki, float kd)
+{
+    for (auto i = 0u; i < NUM_MOTORS; i++)
+    {
         // Delete previous instances if they exist
-        if (motors[i] != nullptr) {
+        if (motors[i] != nullptr)
+        {
             delete motors[i];
         }
-        if (encoders[i] != nullptr) {
+        if (encoders[i] != nullptr)
+        {
             delete encoders[i];
         }
 
@@ -131,7 +134,6 @@ void set_motors_pids(float kp, float ki, float kd) {
         vel_pids[i] = PID(kp, ki, kd, UPDATE_RATE);
     }
 }
-
 
 int main()
 {
@@ -175,42 +177,45 @@ int main()
             }
             set_motor_speeds(motors, vel_pids, speeds);
         }
-        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KP", strlen("VEL_KP")) == 0) {
+        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KP", strlen("VEL_KP")) == 0)
+        {
             response_type = 1;
             char serial_copy[128];
 
             // Safely copy and ensure null-termination
             strncpy(serial_copy, serial_input, sizeof(serial_copy) - 1);
             serial_copy[sizeof(serial_copy) - 1] = '\0';
-    
+
             char *token = serial_copy + strlen("VEL_KP:");
             VEL_KP = std::stof(std::string(token));
 
             // Reinitialize motors, encoders, and PIDs with new constants
             set_motors_pids(VEL_KP, VEL_KI, VEL_KD);
         }
-        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KI", strlen("VEL_KI")) == 0) {
+        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KI", strlen("VEL_KI")) == 0)
+        {
             response_type = 1;
             char serial_copy[128];
 
             // Safely copy and ensure null-termination
             strncpy(serial_copy, serial_input, sizeof(serial_copy) - 1);
             serial_copy[sizeof(serial_copy) - 1] = '\0';
-    
+
             char *token = serial_copy + strlen("VEL_KI:");
             VEL_KI = std::stof(std::string(token));
 
             // Reinitialize motors, encoders, and PIDs with new constants
             set_motors_pids(VEL_KP, VEL_KI, VEL_KD);
         }
-        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KD", strlen("VEL_KD")) == 0) {
+        else if (serial_input != nullptr && strncmp(serial_input, "VEL_KD", strlen("VEL_KD")) == 0)
+        {
             response_type = 1;
             char serial_copy[128];
 
             // Safely copy and ensure null-termination
             strncpy(serial_copy, serial_input, sizeof(serial_copy) - 1);
             serial_copy[sizeof(serial_copy) - 1] = '\0';
-    
+
             char *token = serial_copy + strlen("VEL_KD:");
             VEL_KD = std::stof(std::string(token));
 
@@ -220,7 +225,7 @@ int main()
         // Capture the state of all the encoders
         char output[200];
         int offset = 0; // Keeps track of the current position in the buffer
-        //char rotation_per_second[256];
+        // char rotation_per_second[256];
         for (uint i = 0; i < NUM_ENCODERS; ++i)
         {
             captures[i] = encoders[i]->capture();
@@ -228,20 +233,22 @@ int main()
             offset += sprintf(output + offset, "%f ", captures[i].revolutions_per_second());
         }
 
-        if (response_type){
+        if (response_type)
+        {
             printf("PID: KP=%.4f, KI=%.4f, KD=%.4f\n", VEL_KP, VEL_KI, VEL_KD);
         }
-        else{
+        else
+        {
             printf("%s\n", output);
         }
-        
-        //rotation_per_second[strlen(rotation_per_second) - 1] = '\0'; // Remove trailing comma
+
+        // rotation_per_second[strlen(rotation_per_second) - 1] = '\0'; // Remove trailing comma
 
         // Send data over serial if needed
 
         for (uint i = 0; i < NUM_MOTORS; ++i)
         {
-            
+
             // Calculate the acceleration to apply to the motor to move it closer to the velocity setpoint
             float accel = vel_pids[i].calculate(captures[i].revolutions_per_second());
 

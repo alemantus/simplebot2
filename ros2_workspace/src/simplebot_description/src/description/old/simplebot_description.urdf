@@ -2,8 +2,8 @@
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567 -->
 <robot name="simplebot2">
-  <!-- Link base_link -->
-  <link name="base_link">
+  <!-- Link bottom_bracket -->
+  <link name="bottom_bracket">
     <inertial>
       <origin xyz="0.0400408 0.188869 -0.0707852" rpy="0 0 0"/>
       <mass value="0.426296"/>
@@ -281,20 +281,20 @@
         <mesh filename="file://$(find simplebot_description)/meshes/motor_rear_right.stl"/>
       </geometry>
     </collision>
-    <!-- Part base_link -->
+    <!-- Part bottom_bracket -->
     <visual>
       <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/base_link.stl"/>
+        <mesh filename="file://$(find simplebot_description)/meshes/bottom_bracket.stl"/>
       </geometry>
-      <material name="base_link_material">
+      <material name="bottom_bracket_material">
         <color rgba="0.917647 0.917647 0.917647 1"/>
       </material>
     </visual>
     <collision>
       <origin xyz="0.0400408 0.103869 -0.0968943" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/base_link.stl"/>
+        <mesh filename="file://$(find simplebot_description)/meshes/bottom_bracket.stl"/>
       </geometry>
     </collision>
     <!-- Part part_27 -->
@@ -354,10 +354,10 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to part_1 -->
-  <joint name="Revolute 1" type="continuous">
+  <!-- Joint from bottom_bracket to part_1 -->
+  <joint name="Revolute 1" type="revolute">
     <origin xyz="0.143049 0.123869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
-    <parent link="base_link"/>
+    <parent link="bottom_bracket"/>
     <child link="part_1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
@@ -386,10 +386,10 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to part_1_2 -->
-  <joint name="Revolute 2" type="continuous">
+  <!-- Joint from bottom_bracket to part_1_2 -->
+  <joint name="Revolute 2" type="revolute">
     <origin xyz="0.143049 0.253869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
-    <parent link="base_link"/>
+    <parent link="bottom_bracket"/>
     <child link="part_1_2"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
@@ -418,10 +418,10 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to part_1_3 -->
-  <joint name="Revolute 3" type="continuous">
+  <!-- Joint from bottom_bracket to part_1_3 -->
+  <joint name="Revolute 3" type="revolute">
     <origin xyz="-0.0629675 0.253869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
-    <parent link="base_link"/>
+    <parent link="bottom_bracket"/>
     <child link="part_1_3"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
@@ -450,10 +450,10 @@
       </geometry>
     </collision>
   </link>
-  <!-- Joint from base_link to part_1_4 -->
-  <joint name="Revolute 4" type="continuous">
+  <!-- Joint from bottom_bracket to part_1_4 -->
+  <joint name="Revolute 4" type="revolute">
     <origin xyz="-0.0629675 0.123869 -0.0793943" rpy="-1.5708 -0 1.5708"/>
-    <parent link="base_link"/>
+    <parent link="bottom_bracket"/>
     <child link="part_1_4"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>

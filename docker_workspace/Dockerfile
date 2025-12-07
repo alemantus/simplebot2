@@ -18,7 +18,7 @@ RUN apt-get update && \
 
 # Install Python 3.10
 RUN add-apt-repository ppa:deadsnakes/ppa -y && \
-    apt-get update && \
+    apt-get update --fix-missing && \
     apt-get install -y python3 python3-venv python3-dev python3-pip
 
 #     update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 && \
@@ -26,7 +26,8 @@ RUN add-apt-repository ppa:deadsnakes/ppa -y && \
 #     python3 -m pip install --upgrade --no-cache-dir pip setuptools wheel --ignore-installed
 
 
-
+RUN sudo apt install avahi-utils -y
+RUN sudo apt install apt-utils -y 
 # Install ROS 2 packages
 RUN apt-get update && \
     apt-get install -y \
@@ -43,12 +44,15 @@ RUN apt-get update && \
         ros-jazzy-ros-testing \
         ros-jazzy-rmw-cyclonedds-cpp \
         ros-jazzy-rosapi \
-        ros-jazzy-moveit-* \
         ros-dev-tools \
         ros-jazzy-generate-parameter-library \
         ros-jazzy-py-binding-tools \
-        python3-tornado python3-pil python3-bson && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+        python3-tornado python3-pil python3-bson 
+
+
+#&& \
+
+#    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Remove unwanted OpenCV packages
 RUN apt-get purge -y '*opencv*'
@@ -68,10 +72,6 @@ RUN python3 -m venv $VIRTUAL_ENV
 COPY ./requirements.txt /home/$USERNAME/requirements.txt
 RUN $VIRTUAL_ENV/bin/pip install --no-cache-dir -r /home/$USERNAME/requirements.txt
 RUN $VIRTUAL_ENV/bin/pip install --break-system-packages pillow
-
-RUN sudo apt update
-RUN sudo apt install ros-jazzy-nav2-waypoint-follower -y
-
 
 # Set up ROS 2 workspace
 WORKDIR /home/$USERNAME/simplebot2/ros2_workspace
