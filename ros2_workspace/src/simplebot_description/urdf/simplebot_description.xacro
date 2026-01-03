@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567 -->
-<robot name="simplebot2">
+<robot name="simplebot2" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
@@ -334,7 +334,7 @@
   <link name="part_1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_3 -->
@@ -355,7 +355,7 @@
     </collision>
   </link>
   <!-- Joint from base_link to part_1 -->
-  <joint name="Revolute 1" type="revolute">
+  <joint name="Revolute_1" type="revolute">
     <origin xyz="-0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="base_link"/>
     <child link="part_1"/>
@@ -366,7 +366,7 @@
   <link name="part_1_2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_4 -->
@@ -387,7 +387,7 @@
     </collision>
   </link>
   <!-- Joint from base_link to part_1_2 -->
-  <joint name="Revolute 2" type="revolute">
+  <joint name="Revolute_2" type="revolute">
     <origin xyz="0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="base_link"/>
     <child link="part_1_2"/>
@@ -398,7 +398,7 @@
   <link name="part_1_3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_5 -->
@@ -419,7 +419,7 @@
     </collision>
   </link>
   <!-- Joint from base_link to part_1_3 -->
-  <joint name="Revolute 3" type="revolute">
+  <joint name="Revolute_3" type="revolute">
     <origin xyz="0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="base_link"/>
     <child link="part_1_3"/>
@@ -430,7 +430,7 @@
   <link name="part_1_4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_6 -->
@@ -451,11 +451,35 @@
     </collision>
   </link>
   <!-- Joint from base_link to part_1_4 -->
-  <joint name="Revolute 4" type="revolute">
+  <joint name="Revolute_4" type="revolute">
     <origin xyz="-0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
     <parent link="base_link"/>
     <child link="part_1_4"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
+
+<gazebo>
+  <plugin
+    filename="gz-sim-diff-drive-system"
+    name="gz::sim::systems::DiffDrive">
+
+    <left_joint>Revolute_1</left_joint>
+    <left_joint>Revolute_3</left_joint>
+
+    <right_joint>Revolute_2</right_joint>
+    <right_joint>Revolute_4</right_joint>
+
+    <wheel_separation>0.206</wheel_separation>
+    <wheel_radius>0.03</wheel_radius>
+
+    <command_topic>cmd_vel</command_topic>
+    <odometry_topic>odom</odometry_topic>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
+
+    <publish_odom_tf>true</publish_odom_tf>
+  </plugin>
+</gazebo>
+
 </robot>

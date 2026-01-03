@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567 -->
-<robot name="simplebot2">
+<robot name="simplebot2" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Link base_link -->
   <link name="base_link">
     <inertial>
@@ -334,7 +334,7 @@
   <link name="part_1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_3 -->
@@ -366,7 +366,7 @@
   <link name="part_1_2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_4 -->
@@ -398,7 +398,7 @@
   <link name="part_1_3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_5 -->
@@ -430,7 +430,7 @@
   <link name="part_1_4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
+      <mass value="0.2"/>
       <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
     </inertial>
     <!-- Part part_1_6 -->
@@ -458,4 +458,28 @@
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
   </joint>
+
+<gazebo>
+  <plugin
+    filename="gz-sim-diff-drive-system"
+    name="gz::sim::systems::DiffDrive">
+
+    <left_joint>Revolute 1</left_joint>
+    <left_joint>Revolute 3</left_joint>
+
+    <right_joint>Revolute 2</right_joint>
+    <right_joint>Revolute 4</right_joint>
+
+    <wheel_separation>0.206</wheel_separation>
+    <wheel_radius>0.03</wheel_radius>
+
+    <command_topic>cmd_vel</command_topic>
+    <odometry_topic>odom</odometry_topic>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
+
+    <publish_odom_tf>true</publish_odom_tf>
+  </plugin>
+</gazebo>
+
 </robot>

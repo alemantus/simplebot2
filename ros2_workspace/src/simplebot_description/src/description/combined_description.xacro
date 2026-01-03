@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<robot name="combined_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:include filename="$(find simplebot_description)/description/simplebot_description.xacro" />
+    <xacro:include filename="$(find roarm_description)/urdf/roarm_m2/roarm_m2.xacro" />
+
+
+    <joint name="world_to_roarm_base_link" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+</robot>
