@@ -1,6 +1,7 @@
 {
-    "files.associations": {
-        "*.tcc": "cpp",
-        "string": "cpp"
-    }
+  "files.associations": {
+    "*.tcc": "cpp",
+    "string": "cpp"
+  },
+  "cmake.sourceDirectory": "/home/alexander/simplebot2/motor"
 }

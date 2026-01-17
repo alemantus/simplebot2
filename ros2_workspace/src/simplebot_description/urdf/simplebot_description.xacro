@@ -2,7 +2,16 @@
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567 -->
 <robot name="simplebot2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find simplebot_description)/urdf/wheel.xacro"/>
   <!-- Link base_link -->
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
   <link name="base_link">
     <inertial>
       <origin xyz="-3.23026e-10 4.0693e-18 0.0211091" rpy="0 0 0"/>
@@ -10,7 +19,7 @@
       <inertia ixx="0.00184221" ixy="9.36048e-11" ixz="-1.22606e-12" iyy="0.00190478" iyz="2.8119e-08" izz="0.00332037"/>
     </inertial>
     <!-- Part frame3 -->
-    <visual>
+    <visual name="frame3">
       <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame3.stl"/>
@@ -19,14 +28,9 @@
         <color rgba="0.615686 0.811765 0.929412 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame3.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part side_bracket_right -->
-    <visual>
+    <visual name="side_bracket_right">
       <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/side_bracket_right.stl"/>
@@ -35,14 +39,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/side_bracket_right.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part frame2 -->
-    <visual>
+    <visual name="frame2">
       <origin xyz="-0.085 1.38778e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame2.stl"/>
@@ -51,14 +50,9 @@
         <color rgba="0.615686 0.811765 0.929412 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.38778e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame2.stl"/>
-      </geometry>
-    </collision>
+   
     <!-- Part part_33 -->
-    <visual>
+    <visual name="part_33">
       <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_33.stl"/>
@@ -67,14 +61,9 @@
         <color rgba="0.980392 0.713725 0.00392157 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_33.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_bracket_front_right -->
-    <visual>
+    <visual name="motor_bracket_front_right">
       <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_front_right.stl"/>
@@ -83,30 +72,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_front_right.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_1 -->
-    <visual>
-      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1.stl"/>
-      </geometry>
-      <material name="part_1_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_bracket_front_left -->
-    <visual>
+    <visual name="motor_bracket_front_left">
       <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_front_left.stl"/>
@@ -115,14 +83,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.77556e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_front_left.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part frame4 -->
-    <visual>
+    <visual name="frame4">
       <origin xyz="-0.085 2.1684e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame4.stl"/>
@@ -131,14 +94,9 @@
         <color rgba="0.615686 0.811765 0.929412 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.1684e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame4.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_bracket_rear_left -->
-    <visual>
+    <visual name="motor_bracket_rear_left">
       <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_rear_left.stl"/>
@@ -147,30 +105,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_rear_left.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_1_2 -->
-    <visual>
-      <origin xyz="-0.085 3.46945e-18 -0.005" rpy="-6.16298e-33 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__2.stl"/>
-      </geometry>
-      <material name="part_1_2_material">
-        <color rgba="0.231373 0.380392 0.705882 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="-0.085 3.46945e-18 -0.005" rpy="-6.16298e-33 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__2.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part part_22 -->
-    <visual>
+    <visual name="part_22">
       <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_22.stl"/>
@@ -179,14 +116,9 @@
         <color rgba="0.917647 0.917647 0.917647 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_22.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_bracket_rear_right -->
-    <visual>
+    <visual name="motor_bracket_rear_right">
       <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_rear_right.stl"/>
@@ -195,14 +127,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_bracket_rear_right.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part frame1 -->
-    <visual>
+    <visual name="frame1">
       <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame1.stl"/>
@@ -211,14 +138,9 @@
         <color rgba="0.615686 0.811765 0.929412 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/frame1.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part side_bracket_left -->
-    <visual>
+    <visual name="side_bracket_left">
       <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/side_bracket_left.stl"/>
@@ -227,14 +149,9 @@
         <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/side_bracket_left.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_front_right -->
-    <visual>
+    <visual name="motor_front_right">
       <origin xyz="0.0475 0 0.1625" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_front_right.stl"/>
@@ -243,14 +160,9 @@
         <color rgba="0.8 0.807843 0.8 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="0.0475 0 0.1625" rpy="-1.5708 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_front_right.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_rear_left -->
-    <visual>
+    <visual name="motor_rear_left">
       <origin xyz="-0.0825 1.38778e-17 0.0325" rpy="-1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_rear_left.stl"/>
@@ -259,14 +171,9 @@
         <color rgba="0.8 0.807843 0.8 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.0825 1.38778e-17 0.0325" rpy="-1.5708 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_rear_left.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_rear_right -->
-    <visual>
+    <visual name="motor_rear_right">
       <origin xyz="-0.0475 1.04083e-17 -0.0075" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_rear_right.stl"/>
@@ -275,14 +182,9 @@
         <color rgba="0.8 0.807843 0.8 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.0475 1.04083e-17 -0.0075" rpy="1.5708 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_rear_right.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part base_link -->
-    <visual>
+    <visual name="chassis_plate">
       <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/base_link.stl"/>
@@ -291,14 +193,9 @@
         <color rgba="0.917647 0.917647 0.917647 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/base_link.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part part_27 -->
-    <visual>
+    <visual name="part_27">
       <origin xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_27.stl"/>
@@ -307,14 +204,9 @@
         <color rgba="0.980392 0.713725 0.00392157 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_27.stl"/>
-      </geometry>
-    </collision>
+
     <!-- Part motor_front_left -->
-    <visual>
+    <visual name="motor_front_left">
       <origin xyz="0.0825 -6.93889e-18 -0.1375" rpy="1.5708 -0 -1.5708"/>
       <geometry>
         <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_front_left.stl"/>
@@ -323,163 +215,67 @@
         <color rgba="0.8 0.807843 0.8 1"/>
       </material>
     </visual>
-    <collision>
-      <origin xyz="0.0825 -6.93889e-18 -0.1375" rpy="1.5708 -0 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/motor_front_left.stl"/>
-      </geometry>
-    </collision>
+
   </link>
-  <!-- Link part_1 -->
-  <link name="part_1">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_1_3 -->
-    <visual>
-      <origin xyz="0 0 0.0075" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-      <material name="part_1_3_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.0075" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to part_1 -->
-  <joint name="Revolute_1" type="revolute">
-    <origin xyz="-0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
+
+<xacro:wheel name="wheel_front_left" color="0.1 0.1 0.1 1"/>
+  <joint name="joint_front_left" type="continuous">
     <parent link="base_link"/>
-    <child link="part_1"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
-  </joint>
-  <!-- Link part_1_2 -->
-  <link name="part_1_2">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_1_4 -->
-    <visual>
-      <origin xyz="0 0 0.0075" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-      <material name="part_1_4_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0.0075" rpy="1.5708 1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to part_1_2 -->
-  <joint name="Revolute_2" type="revolute">
-    <origin xyz="0.065 -0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
-    <parent link="base_link"/>
-    <child link="part_1_2"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
-  </joint>
-  <!-- Link part_1_3 -->
-  <link name="part_1_3">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_1_5 -->
-    <visual>
-      <origin xyz="0 0 -0.0075" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-      <material name="part_1_5_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 -0.0075" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to part_1_3 -->
-  <joint name="Revolute_3" type="revolute">
-    <origin xyz="0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
-    <parent link="base_link"/>
-    <child link="part_1_3"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
-  </joint>
-  <!-- Link part_1_4 -->
-  <link name="part_1_4">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_1_6 -->
-    <visual>
-      <origin xyz="0 0 -0.0075" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-      <material name="part_1_6_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 -0.0075" rpy="-1.5708 -1.5708 0"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/part_1__3.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from base_link to part_1_4 -->
-  <joint name="Revolute_4" type="revolute">
-    <origin xyz="-0.065 0.103008 0.0125" rpy="-1.5708 -0 -1.66533e-16"/>
-    <parent link="base_link"/>
-    <child link="part_1_4"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <child link="wheel_front_left"/>
+    <origin xyz="0.065 0.103008 0.010" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="5.0" velocity="20.0"/>
   </joint>
 
-<gazebo>
-  <plugin
+  <xacro:wheel name="wheel_front_right" color="0.1 0.1 0.1 1"/>
+  <joint name="joint_front_right" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_front_right"/>
+    <origin xyz="0.065 -0.103008 0.010" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="5.0" velocity="20.0"/>
+  </joint>
+
+  <xacro:wheel name="wheel_rear_left" color="0.1 0.1 0.1 1"/>
+  <joint name="joint_rear_left" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_rear_left"/>
+    <origin xyz="-0.065 0.103008 0.010" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="5.0" velocity="20.0"/>
+  </joint>
+
+  <xacro:wheel name="wheel_rear_right" color="0.1 0.1 0.1 1"/>
+  <joint name="joint_rear_right" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_rear_right"/>
+    <origin xyz="-0.065 -0.103008 0.010" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="5.0" velocity="20.0"/>
+  </joint>
+
+  <gazebo>
+    <plugin
     filename="gz-sim-diff-drive-system"
     name="gz::sim::systems::DiffDrive">
+      <front_left_joint>joint_front_left</front_left_joint>
+      <front_right_joint>joint_front_right</front_right_joint>
+      <rear_left_joint>joint_rear_left</rear_left_joint>
+      <rear_right_joint>joint_rear_right</rear_right_joint>
 
-    <left_joint>Revolute_1</left_joint>
-    <left_joint>Revolute_3</left_joint>
+      <wheel_separation>0.206</wheel_separation>
+      <wheelbase>0.13</wheelbase>
+      <wheel_radius>0.03</wheel_radius>
 
-    <right_joint>Revolute_2</right_joint>
-    <right_joint>Revolute_4</right_joint>
+      <topic>/cmd_vel</topic>
+      <odom_topic>/odom</odom_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
 
-    <wheel_separation>0.206</wheel_separation>
-    <wheel_radius>0.03</wheel_radius>
-
-    <command_topic>cmd_vel</command_topic>
-    <odometry_topic>odom</odometry_topic>
-    <odometry_frame>odom</odometry_frame>
-    <robot_base_frame>base_link</robot_base_frame>
-
-    <publish_odom_tf>true</publish_odom_tf>
-  </plugin>
-</gazebo>
-
+      <min_acceleration>-10</min_acceleration>
+      <max_acceleration>10</max_acceleration>
+      <min_velocity>-10</min_velocity>
+      <max_velocity>10</max_velocity>
+    </plugin>
+  </gazebo>
 </robot>

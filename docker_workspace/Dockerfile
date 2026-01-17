@@ -31,23 +31,27 @@ RUN sudo apt install apt-utils -y
 # Install ROS 2 packages
 RUN apt-get update && \
     apt-get install -y \
-        ros-jazzy-joy* \
-        ros-jazzy-navigation2 \
-        ros-jazzy-nav2-bringup \
-        ros-jazzy-joint-state-publisher-gui \
-        ros-jazzy-xacro \
-        ros-jazzy-robot-state-publisher \
-        ros-jazzy-geographic-msgs \
-        ros-jazzy-robot-localization \
-        ros-jazzy-rosbridge-suite \
-        ros-jazzy-sensor-msgs* \
-        ros-jazzy-ros-testing \
-        ros-jazzy-rmw-cyclonedds-cpp \
-        ros-jazzy-rosapi \
-        ros-dev-tools \
-        ros-jazzy-generate-parameter-library \
-        ros-jazzy-py-binding-tools \
-        python3-tornado python3-pil python3-bson 
+    ros-jazzy-joy* \
+    ros-jazzy-navigation2 \
+    ros-jazzy-nav2-bringup \
+    ros-jazzy-joint-state-publisher-gui \
+    ros-jazzy-xacro \
+    ros-jazzy-robot-state-publisher \
+    ros-jazzy-geographic-msgs \
+    ros-jazzy-robot-localization \
+    ros-jazzy-rosbridge-suite \
+    ros-jazzy-sensor-msgs* \
+    ros-jazzy-ros-testing \
+    ros-jazzy-rmw-cyclonedds-cpp \
+    ros-jazzy-rosapi \
+    ros-dev-tools \
+    ros-jazzy-generate-parameter-library \
+    ros-jazzy-py-binding-tools \
+    python3-tornado python3-pil python3-bson  \
+    ros-jazzy-ros-gz* \
+    ros-jazzy-gazebo-msgs \
+    ros-jazzy-rviz2 
+
 
 
 #&& \

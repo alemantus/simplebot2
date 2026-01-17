@@ -6,7 +6,7 @@
 <xacro:include filename="$(find roarm_description)/urdf/roarm_m2/roarm_m2.gazebo" />
 <link name="world"></link>
 
-<link name="base_link">
+<link name="roarm_base_link">
   <inertial>
     <origin xyz="0.0032 0 0.04" rpy="0 0 0" />
     <mass value="0.2562183" />
@@ -15,14 +15,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <geometry>
-      <mesh filename="file://$(find roarm_description)/meshes/roarm_m2/base_link.stl"  scale="1.0 1.0 1.0"/>
+      <mesh filename="file://$(find roarm_description)/meshes/roarm_m2/roarm_base_link.stl"  scale="1.0 1.0 1.0"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <geometry>
-      <mesh filename="file://$(find roarm_description)/meshes/roarm_m2/base_link.stl"  scale="1.0 1.0 1.0"/>
+      <mesh filename="file://$(find roarm_description)/meshes/roarm_m2/roarm_base_link.stl"  scale="1.0 1.0 1.0"/>
     </geometry>
   </collision>
 </link>
@@ -113,16 +113,16 @@
 
 <link name="hand_tcp"></link>
 
-<joint name="world_to_base_link" type="fixed">
+<joint name="world_to_roarm_base_link" type="fixed">
   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
   <parent link="world"/>
-  <child link="base_link"/>
+  <child link="roarm_base_link"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>  
   
-<joint name="base_link_to_link1" type="revolute">
+<joint name="roarm_base_link_to_link1" type="revolute">
   <origin xyz="0.0100000008759151 0 0.123059270461044" rpy="0 0 0" />
-  <parent link="base_link" />
+  <parent link="roarm_base_link" />
   <child link="link1" />
   <axis xyz="0 0 1" />
   <limit lower="-3.1416" upper="3.1416" effort="0" velocity="0" />
