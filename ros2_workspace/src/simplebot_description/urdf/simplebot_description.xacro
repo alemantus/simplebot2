@@ -4,20 +4,25 @@
 <robot name="simplebot2" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:include filename="$(find simplebot_description)/urdf/wheel.xacro"/>
   <!-- Link base_link -->
-  <link name="base_footprint"/>
-
-  <joint name="base_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="base_link"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-  </joint>
-
   <link name="base_link">
     <inertial>
       <origin xyz="-3.23026e-10 4.0693e-18 0.0211091" rpy="0 0 0"/>
       <mass value="0.426296"/>
       <inertia ixx="0.00184221" ixy="9.36048e-11" ixz="-1.22606e-12" iyy="0.00190478" iyz="2.8119e-08" izz="0.00332037"/>
     </inertial>
+
+        <!-- Part base_link -->
+    <visual name="chassis_plate">
+      <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/base_link.stl"/>
+      </geometry>
+      <material name="base_link_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+
+
     <!-- Part frame3 -->
     <visual name="frame3">
       <origin xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708"/>
@@ -183,17 +188,6 @@
       </material>
     </visual>
 
-    <!-- Part base_link -->
-    <visual name="chassis_plate">
-      <origin xyz="-0.085 -6.93889e-18 -0.005" rpy="0 -2.31296e-16 -1.5708"/>
-      <geometry>
-        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/base_link.stl"/>
-      </geometry>
-      <material name="base_link_material">
-        <color rgba="0.917647 0.917647 0.917647 1"/>
-      </material>
-    </visual>
-
     <!-- Part part_27 -->
     <visual name="part_27">
       <origin xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708"/>
@@ -213,6 +207,16 @@
       </geometry>
       <material name="motor_front_left_material">
         <color rgba="0.8 0.807843 0.8 1"/>
+      </material>
+    </visual>
+
+    <visual>
+      <origin xyz="0.111 0 -0.005" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="file://$(find simplebot_description)/meshes/simplebot/rplidar_c1.stl"/>
+      </geometry>
+      <material name="rplidar_c1_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
       </material>
     </visual>
 
@@ -258,10 +262,20 @@
     <plugin
     filename="gz-sim-diff-drive-system"
     name="gz::sim::systems::DiffDrive">
+    <!--
       <front_left_joint>joint_front_left</front_left_joint>
       <front_right_joint>joint_front_right</front_right_joint>
       <rear_left_joint>joint_rear_left</rear_left_joint>
       <rear_right_joint>joint_rear_right</rear_right_joint>
+    -->
+
+      <!-- LEFT wheels -->
+      <left_joint>joint_front_left</left_joint>
+      <left_joint>joint_rear_left</left_joint>
+
+      <!-- RIGHT wheels -->
+      <right_joint>joint_front_right</right_joint>
+      <right_joint>joint_rear_right</right_joint>
 
       <wheel_separation>0.206</wheel_separation>
       <wheelbase>0.13</wheelbase>
@@ -270,7 +284,7 @@
       <topic>/cmd_vel</topic>
       <odom_topic>/odom</odom_topic>
       <frame_id>odom</frame_id>
-      <child_frame_id>base_footprint</child_frame_id>
+      <child_frame_id>base_link</child_frame_id>
 
       <min_acceleration>-10</min_acceleration>
       <max_acceleration>10</max_acceleration>

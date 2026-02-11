@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "58d69eaf54d5097cb2ee2932",
-    "documentMicroversion": "ef227b5fd76dfada9edc2f68",
+    "documentMicroversion": "4476d1bfbdaeec69e6a3b7d2",
     "elementId": "7cb0b81673ac10f236b6e9ed",
     "fullConfiguration": "default",
-    "id": "MKqvgH7tedVI7ypT7",
+    "id": "MIsB103o5MeQ2gVU/",
     "isStandardContent": false,
-    "name": "frame4 <1>",
-    "partId": "RqCD",
+    "name": "rplidar-c1 <1>",
+    "partId": "RUDD",
     "suppressed": false,
     "type": "Part"
 }

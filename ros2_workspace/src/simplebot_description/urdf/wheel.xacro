@@ -19,15 +19,19 @@
       <collision>
         <origin xyz="0 0 0" rpy="-1.5708 0 0"/>
         <geometry>
-          <sphere radius="0.03"/>
+          <cylinder radius="0.03" length="0.015"/>
         </geometry>
       </collision>
     </link>
     <gazebo reference="${name}">
-      <mu1>0.5</mu1>
-      <mu2>0.5</mu2>
-      <kp>1000000.0</kp>
-      <kd>100.0</kd>
-    </gazebo>
+  <surface>
+    <friction>
+      <ode>
+        <mu>1.0</mu>
+        <mu2>1.0</mu2>
+      </ode>
+    </friction>
+  </surface>
+</gazebo>
   </xacro:macro>
 </robot>

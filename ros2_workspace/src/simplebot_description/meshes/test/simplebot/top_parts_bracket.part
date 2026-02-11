@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "58d69eaf54d5097cb2ee2932",
-    "documentMicroversion": "ef227b5fd76dfada9edc2f68",
+    "documentMicroversion": "4476d1bfbdaeec69e6a3b7d2",
     "elementId": "7cb0b81673ac10f236b6e9ed",
     "fullConfiguration": "default",
-    "id": "MKqvgH7tedVI7ypT7",
+    "id": "MdWmSxcVjJbBnyJER",
     "isStandardContent": false,
-    "name": "frame4 <1>",
-    "partId": "RqCD",
+    "name": "top_parts_bracket <1>",
+    "partId": "RtCD",
     "suppressed": false,
     "type": "Part"
 }

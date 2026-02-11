@@ -1,7 +1,9 @@
 {
     // Onshape URL of the assembly
-    "url": "https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567",
+    //"url": "https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/3159eab8c0fb4f293d9f6567",
+    "url": "https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/c562299726437d1b04c86cff", 
+
     // Output format
-    "output_format": "urdf"
+    "output_format": "urdf",
     "output_filename": "simplebot_description.xacro"
 }

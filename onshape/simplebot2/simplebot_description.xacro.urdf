@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/58d69eaf54d5097cb2ee2932/w/94ca09f7b1264f3339bd84c4/e/c562299726437d1b04c86cff -->
+<robot name="simplebot2">
+  <!-- Link frame4 -->
+  <link name="frame4">
+    <inertial>
+      <origin xyz="-3.43853e-10 -0.0243167 0.0253545" rpy="0 0 0"/>
+      <mass value="1.22548"/>
+      <inertia ixx="0.00516387" ixy="-9.47574e-11" ixz="-1.56623e-11" iyy="0.00308896" iyz="-0.000170816" izz="0.00729188"/>
+    </inertial>
+    <!-- Part a010 -->
+    <visual>
+      <origin xyz="3.46945e-17 -0.085 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/a010.stl"/>
+      </geometry>
+      <material name="a010_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="3.46945e-17 -0.085 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/a010.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part rplidar_c1 -->
+    <visual>
+      <origin xyz="0 -0.045 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/rplidar_c1.stl"/>
+      </geometry>
+      <material name="rplidar_c1_material">
+        <color rgba="0.647059 0.647059 0.647059 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.045 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/rplidar_c1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part frame4 -->
+    <visual>
+      <origin xyz="7.02021e-18 -0.085 -0.005" rpy="0 -2.31296e-16 0"/>
+      <geometry>
+        <mesh filename="package://assets/frame4.stl"/>
+      </geometry>
+      <material name="frame4_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="7.02021e-18 -0.085 -0.005" rpy="0 -2.31296e-16 0"/>
+      <geometry>
+        <mesh filename="package://assets/frame4.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part top_parts_bracket -->
+    <visual>
+      <origin xyz="2.08167e-17 -0.045 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/top_parts_bracket.stl"/>
+      </geometry>
+      <material name="top_parts_bracket_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="2.08167e-17 -0.045 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/top_parts_bracket.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part a010_bracket -->
+    <visual>
+      <origin xyz="3.46945e-17 -0.085 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/a010_bracket.stl"/>
+      </geometry>
+      <material name="a010_bracket_material">
+        <color rgba="0.980392 0.713725 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="3.46945e-17 -0.085 -0.005" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/a010_bracket.stl"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
