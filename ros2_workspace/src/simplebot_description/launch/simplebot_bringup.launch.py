@@ -18,14 +18,15 @@ def generate_launch_description():
 
     # Use sim time is critical for Gazebo + RViz synchronization
     use_sim_time = LaunchConfiguration('use_sim_time')
+    use_sim_time = True
 
     return LaunchDescription([
 
-        DeclareLaunchArgument(
-            name='use_sim_time',
-            default_value='true',
-            description='Use simulation (Gazebo) clock if true'
-        ),
+        # DeclareLaunchArgument(
+        #     name='use_sim_time',
+        #     default_value='true',
+        #     description='Use simulation (Gazebo) clock if true'
+        # ),
 
         DeclareLaunchArgument(
             name='model',
