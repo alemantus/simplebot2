@@ -18,7 +18,7 @@ def generate_launch_description():
     else:
         os.environ['GZ_SIM_RESOURCE_PATH'] = install_dir + '/share'
 
-    xacro_file = os.path.join(pkg_description, 'urdf', 'simplebot_description.xacro')
+    xacro_file = os.path.join(pkg_description, 'urdf', 'simplebot_description.urdf.xacro')
     rviz_config = os.path.join(pkg_description, 'rviz', 'urdf_config.rviz')
 
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -59,7 +59,7 @@ def generate_launch_description():
             package='ros_gz_bridge',
             executable='parameter_bridge',
             arguments=[
-                '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
+                '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
                 '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
                 '/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
                 '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',

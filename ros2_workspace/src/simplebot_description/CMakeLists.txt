@@ -22,6 +22,13 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Install config
+install(
+  DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
 # Install RViz configs
 install(
   DIRECTORY rviz

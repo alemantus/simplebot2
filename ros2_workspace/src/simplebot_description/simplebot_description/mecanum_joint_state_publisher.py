@@ -13,10 +13,10 @@ class MecanumJointStatePublisher(Node):
 
         # The names in your URDF
         self.target_joint_names = [
-            "joint_front_left",
-            "joint_front_right",
-            "joint_rear_left",
-            "joint_rear_right"
+            "front_left_wheel_joint",
+            "front_right_wheel_joint",
+            "rear_left_wheel_joint",
+            "rear_right_wheel_joint"
         ]
 
         # Subscription to the bridged Gazebo topic
