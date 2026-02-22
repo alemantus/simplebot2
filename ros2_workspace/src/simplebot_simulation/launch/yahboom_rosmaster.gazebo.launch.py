@@ -231,6 +231,13 @@ def generate_launch_description():
             'config_file': default_ros_gz_bridge_config_file_path,
         }],
         output='screen')
+    
+    clock_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=['/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock'],
+        output='screen'
+    )
 
     # Includes optimizations to minimize latency and bandwidth when streaming image data
     start_gazebo_ros_image_bridge_cmd = Node(

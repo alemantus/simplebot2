@@ -31,28 +31,44 @@ RUN sudo apt install apt-utils -y
 # Install ROS 2 packages
 RUN apt-get update && \
     apt-get install -y \
-    ros-jazzy-joy* \
+    ros-dev-tools \
+    ros-jazzy-rmw-cyclonedds-cpp \
+    ros-jazzy-ros2-control \
+    ros-jazzy-ros2-controllers \
+    ros-jazzy-controller-interface \
+    ros-jazzy-hardware-interface \
+    ros-jazzy-realtime-tools \
+    ros-jazzy-ros2-control-test-assets \
+    ros-jazzy-backward-ros \
+    ros-jazzy-generate-parameter-library \
+    ros-jazzy-pluginlib \
+    ros-jazzy-rcpputils \
+    ros-jazzy-tf2 \
+    ros-jazzy-tf2-msgs \
+    ros-jazzy-geometry-msgs \
+    ros-jazzy-nav-msgs \
+    ros-jazzy-pal-statistics-msgs \
+    ros-jazzy-rclcpp \
+    ros-jazzy-rclcpp-lifecycle \
+    ros-jazzy-ament-cmake-gmock \
+    ros-jazzy-controller-manager \
+    ros-jazzy-hardware-interface-testing \
     ros-jazzy-navigation2 \
     ros-jazzy-nav2-bringup \
+    ros-jazzy-robot-state-publisher \
     ros-jazzy-joint-state-publisher-gui \
     ros-jazzy-xacro \
-    ros-jazzy-robot-state-publisher \
-    ros-jazzy-geographic-msgs \
     ros-jazzy-robot-localization \
+    ros-jazzy-geographic-msgs \
     ros-jazzy-rosbridge-suite \
-    ros-jazzy-sensor-msgs* \
-    ros-jazzy-ros-testing \
-    ros-jazzy-rmw-cyclonedds-cpp \
     ros-jazzy-rosapi \
-    ros-dev-tools \
-    ros-jazzy-generate-parameter-library \
-    ros-jazzy-py-binding-tools \
-    python3-tornado python3-pil python3-bson  \
+    ros-jazzy-rviz2 \
     ros-jazzy-ros-gz* \
+    ros-jazzy-gz-ros2-control \
     ros-jazzy-gazebo-msgs \
-    ros-jazzy-rviz2 
-
-
+    python3-tornado \
+    python3-pil \
+    python3-bson
 
 #&& \
 
@@ -85,4 +101,5 @@ RUN echo "source /home/$USERNAME/simplebot2/ros2_workspace/install/setup.bash" >
 
 # Add entrypoint
 ADD ros-entrypoint.sh /ros-entrypoint.sh
+RUN sudo apt update && sudo apt upgrade -y
 ENTRYPOINT ["/ros-entrypoint.sh"]

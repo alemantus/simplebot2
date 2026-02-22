@@ -35,8 +35,8 @@
 
   <xacro:drive_wheel side="left"  position="front" x="0.065"  y="0.103008"  z="0.010"/>
   <xacro:drive_wheel side="right" position="front" x="0.065"  y="-0.103008" z="0.010"/>
-  <xacro:drive_wheel side="left"  position="rear"  x="-0.065" y="0.103008"  z="0.010"/>
-  <xacro:drive_wheel side="right" position="rear"  x="-0.065" y="-0.103008" z="0.010"/>
+  <xacro:drive_wheel side="left"  position="back"  x="-0.065" y="0.103008"  z="0.010"/>
+  <xacro:drive_wheel side="right" position="back"  x="-0.065" y="-0.103008" z="0.010"/>
 
 
 

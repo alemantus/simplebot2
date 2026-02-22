@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find simplebot_description)/urdf/wheel.xacro"/>
+
+  <xacro:macro name="drive_wheel" params="side position x y z">
+    <xacro:wheel name="wheel_${position}_${side}" color="0.1 0.1 0.1 1"/>
+    
+    <joint name="${position}_${side}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="wheel_${position}_${side}"/>
+      <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <limit effort="5.0" velocity="20.0"/>
+    </joint>
+  </xacro:macro>
+</robot>
