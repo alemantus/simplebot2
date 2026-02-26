@@ -1,15 +1,13 @@
 #!/bin/bash
 
-# Prune Docker containers
-# yes | docker container prune
+# Remove existing container if it exists
 if [ "$(docker ps -a | grep ros2)" ]; then
-    # Remove the container
     docker rm -f ros2
 fi
 
-# Function to run docker command with error handling
 docker run --network host \
     --name ros2 \
+    --gpus all \
     --user 1000:1000 \
     --group-add $(getent group dialout | cut -d: -f3) \
     --group-add $(getent group video | cut -d: -f3) \
@@ -17,7 +15,12 @@ docker run --network host \
     --group-add $(getent group plugdev | cut -d: -f3) \
     --group-add=messagebus \
     --volume /home/alexander/simplebot2/ros2_workspace/:/home/alexander/simplebot2/ros2_workspace/ \
-    --env="DISPLAY" \
+    --env="DISPLAY=$DISPLAY" \
+    --runtime=nvidia \
+    --env="NVIDIA_VISIBLE_DEVICES=all" \
+    --env="NVIDIA_DRIVER_CAPABILITIES=all" \
+    --env="__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json" \
+    --env="ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST" \
     --env="QT_X11_NO_MITSHM=1" \
     --privileged \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
@@ -29,4 +32,4 @@ docker run --network host \
     -v /var/run/dbus:/var/run/dbus \
     -v /var/run/avahi-daemon/socket:/var/run/avahi-daemon/socket \
     -it \
-    ros2:v0.2.7 bash #-c "RCUTILS_LOGGING_SEVERITY_THRESHOLD=DEBUG ros2 launch simplebot2 main_launch.py" 
+    ros2:v0.2.7 bash

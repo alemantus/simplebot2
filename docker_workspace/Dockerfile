@@ -102,4 +102,5 @@ RUN echo "source /home/$USERNAME/simplebot2/ros2_workspace/install/setup.bash" >
 # Add entrypoint
 ADD ros-entrypoint.sh /ros-entrypoint.sh
 RUN sudo apt update && sudo apt upgrade -y
+RUN sudo apt-get install libnvidia-egl-wayland1 -y
 ENTRYPOINT ["/ros-entrypoint.sh"]
