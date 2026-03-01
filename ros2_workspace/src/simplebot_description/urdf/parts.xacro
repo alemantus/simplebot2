@@ -34,14 +34,14 @@
     <xacro:visual_part name="side_bracket_left" mesh_file="side_bracket_left"  xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
     <xacro:visual_part name="side_bracket_right" mesh_file="side_bracket_right"  xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
 
-    <xacro:visual_part name="roarm_bracket" mesh_file="roarm_bracket"  xyz="-0.085 1.04083e-17 -0.00744" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
+    <xacro:visual_part name="roarm_bracket" mesh_file="roarm_bracket"  xyz="-0.085 1.04083e-17 -0.005" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
 
     <xacro:visual_part name="a010_bracket" mesh_file="a010_bracket"  xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
 
     <xacro:visual_part name="top_bracket" mesh_file="top_bracket"  xyz="-0.085 2.42861e-17 -0.005" rpy="0 -0 -1.5708" color="0.6 0.6 0.6 1"/>
 
 
-    <xacro:visual_part name="lidar" mesh_file="rplidar_c1" xyz="0.111 0 -0.005" rpy="0 0 1.5708" color="0.2 0.2 0.2 1"/>
   </xacro:macro>
+
 
 </robot>
